@@ -100,7 +100,7 @@ pd.set_option('display.max_columns', None)
 
 def main():
     # ----------------- Load Data -----------------
-    df = load_DB_data("SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=24 AND year=2024;")
+    df = load_DB_data("SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2024;")
     statistics_result = calculate_descriptive_stats(df)
 
     print("--- Descriptive Statistics for Features ---")
@@ -111,27 +111,27 @@ def main():
 
     #----------------- Data Normalization -----------------
     # 2. Select the columns you want to normalize (must be passed as a DataFrame/2D array)
-    features_to_scale = df[['bed_level']]
+    features_to_scale = df[['slope', 'roughness', 'bed_level']]
     min_max_normalize(df, features_to_scale)
     # Print the original and normalized values to check the result
     print(df.head())
     print("\n--- Original vs. Normalized Values (First 5 Rows) ---")
-    print(df[['bed_level', 'bed_level_norm']].head())
+    print(df[['bed_level', 'bed_level_norm', 'slope', 'slope_norm', 'roughness', 'roughness_norm']].head())
 
     # ----------------- Correlation Analysis -----------------
     # Calculate the Pearson correlation coefficient
 
-    # correction_matrix = df[['slope', 'roughness', 'bed_level']].corr(method='pearson')
-    # print(f"--- Correlation between features ---")
-    # print(correction_matrix)
+    correction_matrix = df[['slope', 'roughness', 'bed_level']].corr(method='pearson')
+    print(f"--- Correlation between features ---")
+    print(correction_matrix)
 
     # ----------------- Plotting -----------------
-    # # Scatterplot
-    # for i, j in combinations(['slope', 'roughness', 'bed_level'],2):
-    #     plot_scatter(df, i, j)
+    # Scatterplot
+    for i, j in combinations(['slope', 'roughness', 'bed_level'],2):
+        plot_scatter(df, i, j)
 
     # Histogram
-    for feature in ['bed_level']:
+    for feature in ['slope', 'roughness', 'bed_level']:
         plot_histogram(df, feature)
 
 if __name__ == '__main__':
