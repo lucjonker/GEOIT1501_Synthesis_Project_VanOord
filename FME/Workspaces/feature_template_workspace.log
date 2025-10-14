@@ -1,155 +1,160 @@
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Current FME version: FME 2025.1.2.0 (20250829 - Build 25630 - linux-x64)
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|System Time: 20251003095612 UTC
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME_HOME is '/opt/fme-form-2025/'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME license: FME Student Edition (node locked-crc)
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Serial Number: YXS7V2LNXIE7KUCJ2S37
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Machine host name is: ljonker-laptop
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|OS Locale Name     : en_US
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|OS Locale Encoding : UTF-8
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME API version: '4.0 20250515'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is '/home/ljonker/Documents/GEOIT1501_Synthesis_Project_VanOord/FME/Workspaces/'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'feature_template_workspace.fmw'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2025.1.2.0'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Operating System: Ubuntu 24.04.3 LTS (Noble Numbat)
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Platform: linux-x64
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|The memory allocator being used by FME is : `/lib/x86_64-linux-gnu/libtcmalloc_minimal.so.4'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|System Status: 158.10 GB of disk space available in the FME temporary folder (/tmp/wbrun_1759480131250_10411/fmetmp_26)
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|System Status: 15.43 GB of physical memory available
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|System Status: 19.43 GB of virtual memory available
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|START - ProcessID: 24492, peak process heap usage: 18778 kB, current process heap usage: 18778 kB
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `/opt/fme-form-2025/fme' `/home/ljonker/Documents/GEOIT1501_Synthesis_Project_VanOord/FME/Workspaces/wb-xlate-1759485371929_10411' `--FME_LAUNCH_VIEWER_APP' `WORKBENCH' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `33685' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `45333'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: '/home/ljonker/.Safe Software/FME/'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for formats are : /opt/fme-form-2025/datasources;/home/ljonker/.fme/Formats
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for transformers are : /home/ljonker/.Safe Software/FME/Packages/25630-linux-x64/transformers;/opt/fme-form-2025/transformers;/home/ljonker/.Safe Software/FME/FME Store/Transformers
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : /home/ljonker/.fme/CoordinateSystems
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : /home/ljonker/.fme/CoordinateSystemExceptions
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : /home/ljonker/.fme/CoordinateSystemGridOverrides
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : /home/ljonker/.fme/CsmapTransformationExceptions
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Shared folders for transformer categories are : /home/ljonker/.fme/TransformerCategories
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `/home/ljonker/Documents/GEOIT1501_Synthesis_Project_VanOord/FME/Workspaces'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `/tmp/wbrun_1759480131250_10411/fmetmp_26', set from environment variable `FME_TEMP'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Cache folder is '/tmp'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `/opt/fme-form-2025/'
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the heap exceeds 18.26 GB or address space exceeds 18.84 GB
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the heap is below 13.69 GB and address space is below 14.13 GB
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Creating writer for format: 
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Creating reader for format: 
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
-2025-10-03 11:56:12|   0.0|  0.0|INFORM|Emptying factory pipeline
-2025-10-03 11:56:12|   0.0|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2025-10-03 11:56:12|   0.0|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |public.side_channels_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |public.tiles_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |2_2024 Monitoring Bossenwaard Bathy USV - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |2_2024 Monitoring Bossenwaard Bathy USV - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |3_2024 Monitoring Graafsche Waard Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |3_2024 Monitoring Graafsche Waard Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |4_2024 Monitoring Lexmond Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |4_2024 Monitoring Lexmond Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |5_2024 Monitoring 't Waalse Waard Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |5_2024 Monitoring 't Waalse Waard Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |6_2024 Monitoring Pontwaard Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |6_2024 Monitoring Pontwaard Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |7_2024 Monitoring Palmerswaard Bathy - Version 240418 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |7_2024 Monitoring Palmerswaard Bathy - Version 240418 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |8_2024 Monitoring Blauwe Kamer Bathy - Version 240417 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |8_2024 Monitoring Blauwe Kamer Bathy - Version 240417 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |9_2024 Monitoring Heesselt Bathy - Version 240314 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |9_2024 Monitoring Heesselt Bathy - Version 240314 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |11_2023-2024 USV Snellius_AHN5 - NG Oevergetijdengeul Vianen/Lek - Version 241120 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |11_2023-2024 USV Snellius_AHN5 - NG Oevergetijdengeul Vianen/Lek - Version 241120 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |12_2023-2024 KAVEL10 _ USV Snellius - NG Afferden - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |12_2023-2024 KAVEL10 _ USV Snellius - NG Afferden - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |13_2023-2024 KAVEL10 _ USV Snellius - NG Stadswaard - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |13_2023-2024 KAVEL10 _ USV Snellius - NG Stadswaard - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |14_2023-2024 KAVEL10 _ USV Snellius - NG Klompenwaard - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |14_2023-2024 KAVEL10 _ USV Snellius - NG Klompenwaard - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |15_2023-2024 KAVEL10 USV2024 NG Bakenhof - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |15_2023-2024 KAVEL10 USV2024 NG Bakenhof - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |16_2023-2024 KAVEL10 USV2024 TOPO2024 NG Bakenhof - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |16_2023-2024 KAVEL10 USV2024 TOPO2024 NG Bakenhof - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |19_2023-2024 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |19_2023-2024 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |20_2023-2024 KAVEL10 USV2024 - NG Lexmond - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |20_2023-2024 KAVEL10 USV2024 - NG Lexmond - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |21_2023-2024 KAVEL10 USV 2024 - NG Graafsche Waard _de Horde_ - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |21_2023-2024 KAVEL10 USV 2024 - NG Graafsche Waard _de Horde_ - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |22_2023-2024 KAVEL10 _ USV Snellius Sonans - NG Brakel - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |22_2023-2024 KAVEL10 _ USV Snellius Sonans - NG Brakel - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |23_2023-2024 KAVEL10 _ Sonans - NG Langsdam Ophemert - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |23_2023-2024 KAVEL10 _ Sonans - NG Langsdam Ophemert - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |25_2023-2024 KAVEL10 - USV Snellius NG Pontwaard - Version Okt 2023 & 16 April - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |25_2023-2024 KAVEL10 - USV Snellius NG Pontwaard - Version Okt 2023 & 16 April - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |26_2023-2024 KAVEL10_ USV Snellius - NG Bossenwaard - Version Okt 2023 April 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |26_2023-2024 KAVEL10_ USV Snellius - NG Bossenwaard - Version Okt 2023 April 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |27_2023-2024 KAVEL10 USV Snellius- NG t Waalse Waard - Version Okt 2023 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |27_2023-2024 KAVEL10 USV Snellius- NG t Waalse Waard - Version Okt 2023 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |30_2023-2024 KAVEL10 _USV2024 NG Schoutenwaard - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |31_2023-2024 KAVEL10 _ Sonans - NG Heeselt - Version NG2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |31_2023-2024 KAVEL10 _ Sonans - NG Heeselt - Version NG2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |33_2023-2024 USV Sonans_AHN5 - NG Avelingerdiep - Version 240202 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |34_2023-2024 USV Sonans_AHN5 - NG Avelingen - Version 240202 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |36_2023-2024 KAVEL 10_USV Snellius_As-Built Ploegam - NG Elsterbuitenwaarde - Version 231002 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |37_2023-2024 USV Snellius_AHN5 - NG Willige Langerak - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |37_2023-2024 USV Snellius_AHN5 - NG Willige Langerak - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |40_2023-2024 CIV 2023 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |40_2023-2024 CIV 2023 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |44_2023-2024 KAVEL10 - USV Snellius AHN5 Pontwaard - Version Okt 2023 & 16 April - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |44_2023-2024 KAVEL10 - USV Snellius AHN5 Pontwaard - Version Okt 2023 & 16 April - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |46_2023-2024 KAVEL10 _ USV Snellius_Sonans NG Beneden-Leeuwen - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |46_2023-2024 KAVEL10 _ USV Snellius_Sonans NG Beneden-Leeuwen - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |47_2023-2024 Kavel10 - USV Snellius - NG Blauwekamer - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |47_2023-2024 Kavel10 - USV Snellius - NG Blauwekamer - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |49_2023-2024 KAVEL10 USV Snellius - NG Pannerden - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |49_2023-2024 KAVEL10 USV Snellius - NG Pannerden - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |50_2023-2024 KAVEL10 _ Sonans 2024 - NG Spiegelwaal - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |50_2023-2024 KAVEL10 _ Sonans 2024 - NG Spiegelwaal - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.0|  0.0|STATS |VO_AS_WOCU_WOCU_ObjectsPoint_SHAPEFILE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:12|   0.3|  0.3|STATS |Restoring 3 feature(s) from FME feature store file `/tmp/wb-cache-feature_template_workspace-STOzcd/Main_PointOnAreaOverlayer -1 102 fo 0 POINT  0  016bb8689832e4b7ff6de7ec07496bf556bd00d6.ffs'
-2025-10-03 11:56:12|   0.3|  0.0|STATS |Restoring 1 feature(s) from FME feature store file `/tmp/wb-cache-feature_template_workspace-STOzcd/Main_PointOnAreaOverlayer -1 102 fo 1 AREA  0  c6a3db94b7bca5ab2b2ab00e9f07cbb074144299.ffs'
-2025-10-03 11:56:12|   0.3|  0.0|STATS |Storing feature(s) to FME feature store file `/tmp/wb-inspectors-EfaxHF/inspector.ffs'
-2025-10-03 11:56:12|   0.4|  0.1|INFORM|FFS writer: Writing 2037 feature(s) to file '/tmp/wb-inspectors-EfaxHF/inspector.fts'
-2025-10-03 11:56:12|   0.4|  0.0|INFORM|Spatial Index: Adding 2037 features
-2025-10-03 11:56:12|   0.4|  0.0|INFORM|FFS writer: Writing 100000 feature(s) to file '/tmp/wb-inspectors-EfaxHF/inspector_1.fts'
-2025-10-03 11:56:12|   0.5|  0.1|WARN  |Schema scanning encountered features with different coordinate systems. Preserving 'EPSG:28992' and ignoring 'Netherlands-RDNew-2008'
-2025-10-03 11:56:12|   0.5|  0.0|INFORM|Spatial Index: Adding 100000 features
-2025-10-03 11:56:12|   0.5|  0.0|INFORM|FFS writer: Writing 100000 feature(s) to file '/tmp/wb-inspectors-EfaxHF/inspector_2.fts'
-2025-10-03 11:56:12|   0.6|  0.1|INFORM|Spatial Index: Adding 100000 features
-2025-10-03 11:56:13|   0.7|  0.1|INFORM|FFS writer: Writing 30746 feature(s) to file '/tmp/wb-inspectors-EfaxHF/inspector_3.fts'
-2025-10-03 11:56:13|   0.8|  0.1|INFORM|Spatial Index: Adding 30746 features
-2025-10-03 11:56:13|   1.0|  0.2|STATS |Stored 4 feature(s) to FME feature store file `/tmp/wb-inspectors-EfaxHF/inspector.ffs'
-2025-10-03 11:56:13|   1.0|  0.0|INFORM|Saving spatial index into file '/tmp/wb-inspectors-EfaxHF/inspector.fsi'
-2025-10-03 11:56:13|   1.0|  0.0|INFORM|Finished saving spatial index into file '/tmp/wb-inspectors-EfaxHF/inspector.fsi'
-2025-10-03 11:56:13|   1.0|  0.0|STATS |Inspector_Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:13|   1.0|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2025-10-03 11:56:13|   1.0|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:13|   1.0|  0.0|STATS |VisualizerProcessor (CreationFactory): Created 1 features
-2025-10-03 11:56:13|   1.0|  0.0|STATS |VisualizerCleaner (TeeFactory): Cloned 1 input feature(s) into 0 output feature(s)
-2025-10-03 11:56:13|   1.0|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-03 11:56:13|   1.0|  0.0|STATS |                            Features Read Summary
-2025-10-03 11:56:13|   1.0|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-03 11:56:13|   1.0|  0.0|STATS |==============================================================================
-2025-10-03 11:56:13|   1.0|  0.0|STATS |Total Features Read                                                          0
-2025-10-03 11:56:13|   1.0|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-03 11:56:13|   1.0|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-03 11:56:13|   1.0|  0.0|STATS |                           Features Written Summary
-2025-10-03 11:56:13|   1.0|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-03 11:56:13|   1.0|  0.0|STATS |==============================================================================
-2025-10-03 11:56:13|   1.0|  0.0|STATS |Total Features Written                                                       0
-2025-10-03 11:56:13|   1.0|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~                                                                             ~-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~      Data caches have been recorded at every stage of the translation.      ~-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~                click the data cache icons next to the ports.                ~-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~                                                                             ~-
-2025-10-03 11:56:13|   1.0|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2025-10-03 11:56:13|   1.0|  0.0|INFORM|Translation was SUCCESSFUL with 8 warning(s) (0 feature(s) output)
-2025-10-03 11:56:13|   1.0|  0.0|INFORM|FME Session Duration: 1 second. (CPU: 0.7s user, 0.3s system)
-2025-10-03 11:56:13|   1.0|  0.0|INFORM|END - ProcessID: 24492, peak process heap usage: 142120 kB, current process heap usage: 76444 kB
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Current FME version: FME 2025.1.2.0 (20250829 - Build 25630 - WIN64)
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|System Time: 20251014093013 UTC
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME license: FME Student Edition (node locked-crc)
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Serial Number: 1K9ICPC2H0B7D8MSYWSH
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Machine host name is: LaptopYair
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|OS Locale Name     : nl_NL
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME API version: '4.0 20250515'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces/'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'feature_template_workspace.fmw'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2025.1.2.0'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 26100)
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Platform: WIN64
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|System Status: 141.14 GB of disk space available in the FME temporary folder (C:\Users\yairr\AppData\Local\Temp\wbrun_1760428928938_12184\fmetmp_14)
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|System Status: 15.78 GB of physical memory available
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|System Status: 63.11 GB of virtual memory available
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|START - ProcessID: 19928, peak process memory usage: 41492 kB, current process memory usage: 41492 kB
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\wb-xlate-1760434212819_12184' `--FME_LAUNCH_VIEWER_APP' `WORKBENCH' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `58232' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `54052'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\yairr\AppData\Roaming\Safe Software\FME\'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\yairr\Documents\FME\Formats
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\yairr\AppData\Roaming\Safe Software\FME\Packages\25630-win64\transformers;C:\Program Files\FME\transformers;C:\Users\yairr\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\yairr\Documents\FME\CoordinateSystems
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\yairr\Documents\FME\CoordinateSystemExceptions
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\yairr\Documents\FME\CoordinateSystemGridOverrides
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\yairr\Documents\FME\CsmapTransformationExceptions
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\yairr\Documents\FME\TransformerCategories
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\yairr\AppData\Local\Temp\wbrun_1760428928938_12184\fmetmp_14', set from environment variable `FME_TEMP'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Users\yairr\AppData\Local\Temp'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 47.33 GB
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 35.50 GB
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Creating writer for format: 
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Creating reader for format: 
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2025-10-14 11:30:13|   0.0|  0.0|INFORM|Emptying factory pipeline
+2025-10-14 11:30:13|   0.0|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
+2025-10-14 11:30:13|   0.0|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |VO_AS_WOCU_WOCU_ObjectsPoint_SHAPEFILE_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |public.side_channels_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |public.tiles_POSTGIS_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |2_2024 Monitoring Bossenwaard Bathy USV - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |2_2024 Monitoring Bossenwaard Bathy USV - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |3_2024 Monitoring Graafsche Waard Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |3_2024 Monitoring Graafsche Waard Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |4_2024 Monitoring Lexmond Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |4_2024 Monitoring Lexmond Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |5_2024 Monitoring 't Waalse Waard Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |5_2024 Monitoring 't Waalse Waard Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |6_2024 Monitoring Pontwaard Bathy - Version 240416 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |6_2024 Monitoring Pontwaard Bathy - Version 240416 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |7_2024 Monitoring Palmerswaard Bathy - Version 240418 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |7_2024 Monitoring Palmerswaard Bathy - Version 240418 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |8_2024 Monitoring Blauwe Kamer Bathy - Version 240417 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |8_2024 Monitoring Blauwe Kamer Bathy - Version 240417 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |9_2024 Monitoring Heesselt Bathy - Version 240314 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |9_2024 Monitoring Heesselt Bathy - Version 240314 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |11_2023-2024 USV Snellius_AHN5 - NG Oevergetijdengeul Vianen/Lek - Version 241120 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |11_2023-2024 USV Snellius_AHN5 - NG Oevergetijdengeul Vianen/Lek - Version 241120 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |12_2023-2024 KAVEL10 _ USV Snellius - NG Afferden - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |12_2023-2024 KAVEL10 _ USV Snellius - NG Afferden - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |13_2023-2024 KAVEL10 _ USV Snellius - NG Stadswaard - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |13_2023-2024 KAVEL10 _ USV Snellius - NG Stadswaard - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |14_2023-2024 KAVEL10 _ USV Snellius - NG Klompenwaard - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |14_2023-2024 KAVEL10 _ USV Snellius - NG Klompenwaard - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |15_2023-2024 KAVEL10 USV2024 NG Bakenhof - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |15_2023-2024 KAVEL10 USV2024 NG Bakenhof - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |16_2023-2024 KAVEL10 USV2024 TOPO2024 NG Bakenhof - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |16_2023-2024 KAVEL10 USV2024 TOPO2024 NG Bakenhof - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |19_2023-2024 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |19_2023-2024 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |20_2023-2024 KAVEL10 USV2024 - NG Lexmond - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |20_2023-2024 KAVEL10 USV2024 - NG Lexmond - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |21_2023-2024 KAVEL10 USV 2024 - NG Graafsche Waard _de Horde_ - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |21_2023-2024 KAVEL10 USV 2024 - NG Graafsche Waard _de Horde_ - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |22_2023-2024 KAVEL10 _ USV Snellius Sonans - NG Brakel - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |22_2023-2024 KAVEL10 _ USV Snellius Sonans - NG Brakel - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |23_2023-2024 KAVEL10 _ Sonans - NG Langsdam Ophemert - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |23_2023-2024 KAVEL10 _ Sonans - NG Langsdam Ophemert - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |25_2023-2024 KAVEL10 - USV Snellius NG Pontwaard - Version Okt 2023 & 16 April - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |25_2023-2024 KAVEL10 - USV Snellius NG Pontwaard - Version Okt 2023 & 16 April - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |26_2023-2024 KAVEL10_ USV Snellius - NG Bossenwaard - Version Okt 2023 April 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |26_2023-2024 KAVEL10_ USV Snellius - NG Bossenwaard - Version Okt 2023 April 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |27_2023-2024 KAVEL10 USV Snellius- NG t Waalse Waard - Version Okt 2023 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |27_2023-2024 KAVEL10 USV Snellius- NG t Waalse Waard - Version Okt 2023 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |30_2023-2024 KAVEL10 _USV2024 NG Schoutenwaard - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |31_2023-2024 KAVEL10 _ Sonans - NG Heeselt - Version NG2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |31_2023-2024 KAVEL10 _ Sonans - NG Heeselt - Version NG2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |33_2023-2024 USV Sonans_AHN5 - NG Avelingerdiep - Version 240202 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |34_2023-2024 USV Sonans_AHN5 - NG Avelingen - Version 240202 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |36_2023-2024 KAVEL 10_USV Snellius_As-Built Ploegam - NG Elsterbuitenwaarde - Version 231002 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |37_2023-2024 USV Snellius_AHN5 - NG Willige Langerak - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |37_2023-2024 USV Snellius_AHN5 - NG Willige Langerak - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |40_2023-2024 CIV 2023 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |40_2023-2024 CIV 2023 KAVEL10 _Sonans - NG Hurwenen - Version NG2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |44_2023-2024 KAVEL10 - USV Snellius AHN5 Pontwaard - Version Okt 2023 & 16 April - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |44_2023-2024 KAVEL10 - USV Snellius AHN5 Pontwaard - Version Okt 2023 & 16 April - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |46_2023-2024 KAVEL10 _ USV Snellius_Sonans NG Beneden-Leeuwen - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |46_2023-2024 KAVEL10 _ USV Snellius_Sonans NG Beneden-Leeuwen - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |47_2023-2024 Kavel10 - USV Snellius - NG Blauwekamer - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |47_2023-2024 Kavel10 - USV Snellius - NG Blauwekamer - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |49_2023-2024 KAVEL10 USV Snellius - NG Pannerden - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |49_2023-2024 KAVEL10 USV Snellius - NG Pannerden - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |50_2023-2024 KAVEL10 _ Sonans 2024 - NG Spiegelwaal - Version NG 2024 - Average_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.0|  0.0|STATS |50_2023-2024 KAVEL10 _ Sonans 2024 - NG Spiegelwaal - Version NG 2024 - StandardDeviation_GEOPACKAGE_RASTER_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:13|   0.1|  0.1|STATS |Restoring 49 feature(s) from FME feature store file `C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_template_workspace-IUTiQh\Main_AreaCalculator -1 110 fo 0 OUTPUT  0  f4a563e859f43698b6359a5f57952733ad5ed9de.ffs'
+2025-10-14 11:30:13|   0.2|  0.1|INFORM|FME Configuration: Using connection values from 'featurebase' for POSTGRES_1
+2025-10-14 11:30:13|   0.2|  0.0|INFORM|Creating writer for format: PostgreSQL
+2025-10-14 11:30:13|   0.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for writer named `POSTGRES'
+2025-10-14 11:30:13|   0.2|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2025-10-14 11:30:13|   0.2|  0.0|INFORM|Writer `POSTGRES_1' of type `POSTGRES' using group definition keyword `POSTGRES_1_DEF'
+2025-10-14 11:30:13|   0.3|  0.1|INFORM|Opening POSTGRES writer for dataset 'postgres'...
+2025-10-14 11:30:13|   0.3|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2025-10-14 11:30:14|   0.3|  0.0|INFORM|PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 13.2.0, 64-bit
+2025-10-14 11:30:14|   0.3|  0.0|WARN  |POSTGRES Writer: Bulk Insert is set to Yes, but a conflicting Feature Operation has been detected. Feature type 'side_channels' has a Feature Operation of 'Update'. Bulk Insert is now being set to No, which can cause insert operations to be much slower
+2025-10-14 11:30:14|   0.5|  0.2|INFORM|Testing for the existence of table 'public.side_channels'...
+2025-10-14 11:30:14|   0.5|  0.0|INFORM|Using existing table 'public.side_channels'
+2025-10-14 11:30:15|   0.5|  0.0|INFORM|POSTGRES Writer: Creating 'Insert' feature type processor for feature type 'side_channels'
+2025-10-14 11:30:16|   0.6|  0.1|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 49 input feature(s), wrote 49 output feature(s): 0 matched merge filters, 49 were routed to output, 0 could not be routed.
+2025-10-14 11:30:16|   0.6|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 11:30:16|   0.6|  0.0|INFORM|Successfully closed POSTGRES database writer
+2025-10-14 11:30:16|   0.6|  0.0|INFORM|=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|INFORM|Feature output statistics for `POSTGRES' writer using keyword `POSTGRES_1':
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |                           Features Written Summary
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |side_channels                                                               49
+2025-10-14 11:30:16|   0.6|  0.0|STATS |==============================================================================
+2025-10-14 11:30:16|   0.6|  0.0|STATS |Total Features Written                                                      49
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |                            Features Read Summary
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |==============================================================================
+2025-10-14 11:30:16|   0.6|  0.0|STATS |Total Features Read                                                          0
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |                           Features Written Summary
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|STATS |side_channels                                                               49
+2025-10-14 11:30:16|   0.6|  0.0|STATS |==============================================================================
+2025-10-14 11:30:16|   0.6|  0.0|STATS |Total Features Written                                                      49
+2025-10-14 11:30:16|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~                                                                             ~-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~      Data caches have been recorded at every stage of the translation.      ~-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~                click the data cache icons next to the ports.                ~-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~                                                                             ~-
+2025-10-14 11:30:16|   0.6|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2025-10-14 11:30:16|   0.6|  0.0|INFORM|Translation was SUCCESSFUL with 8 warning(s) (49 feature(s) output)
+2025-10-14 11:30:16|   0.6|  0.0|INFORM|FME Session Duration: 3 seconds. (CPU: 0.5s user, 0.1s system)
+2025-10-14 11:30:16|   0.6|  0.0|INFORM|END - ProcessID: 19928, peak process memory usage: 94932 kB, current process memory usage: 94896 kB
