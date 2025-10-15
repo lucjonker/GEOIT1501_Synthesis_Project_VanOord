@@ -1,4 +1,4 @@
-from main import load_DB_data, min_max_normalize
+from main import load_DB_data
 import pandas as pd
 import numpy as np
 import keras
