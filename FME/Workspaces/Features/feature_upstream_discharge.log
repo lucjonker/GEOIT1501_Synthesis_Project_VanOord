@@ -1,141 +1,346 @@
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Current FME version: FME 2025.1.2.0 (20250829 - Build 25630 - WIN64)
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|System Time: 20251013150949 UTC
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME license: FME Student Edition (node locked-crc)
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Serial Number: 1K9ICPC2H0B7D8MSYWSH
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Machine host name is: LaptopYair
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|OS Locale Name     : nl_NL
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME API version: '4.0 20250515'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features/'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'feature_upstream_discharge.fmw'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2025.1.2.0'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 26100)
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Platform: WIN64
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|System Status: 136.05 GB of disk space available in the FME temporary folder (C:\Users\yairr\AppData\Local\Temp\wbrun_1760357376765_23140\fmetmp_34)
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|System Status: 15.78 GB of physical memory available
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|System Status: 63.11 GB of virtual memory available
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|START - ProcessID: 6848, peak process memory usage: 41236 kB, current process memory usage: 41236 kB
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features\wb-xlate-1760368189052_23140' `--FME_LAUNCH_VIEWER_APP' `WORKBENCH' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `60462' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `60560'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\yairr\AppData\Roaming\Safe Software\FME\'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\yairr\Documents\FME\Formats
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\yairr\AppData\Roaming\Safe Software\FME\Packages\25630-win64\transformers;C:\Program Files\FME\transformers;C:\Users\yairr\AppData\Roaming\Safe Software\FME\FME Store\Transformers
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\yairr\Documents\FME\CoordinateSystems
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\yairr\Documents\FME\CoordinateSystemExceptions
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\yairr\Documents\FME\CoordinateSystemGridOverrides
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\yairr\Documents\FME\CsmapTransformationExceptions
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\yairr\Documents\FME\TransformerCategories
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\yairr\AppData\Local\Temp\wbrun_1760357376765_23140\fmetmp_34', set from environment variable `FME_TEMP'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Users\yairr\AppData\Local\Temp'
-2025-10-13 17:09:49|   0.0|  0.0|WARN  |Failed to free sufficient memory to reach the process usage limit. To improve stability and performance please increase the memory available to FME. Available memory can be increased by adding physical RAM, increasing swap space, or closing other applications
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
-2025-10-13 17:09:49|   0.0|  0.0|WARN  |FME Configuration: Extremely low initial memory conditions detected. To improve stability and performance please increase the memory available to FME. Available memory can be increased by adding physical RAM, increasing swap space, or closing other applications
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Creating writer for format: 
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Creating reader for format: 
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Using MultiWriter with keyword `MULTI_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): The following statistics will be calculated 'NUMERIEKEWAARDE.min,NUMERIEKEWAARDE.max,NUMERIEKEWAARDE.total_count,NUMERIEKEWAARDE.mean'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|Emptying factory pipeline
-2025-10-13 17:09:49|   0.0|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2025-10-13 17:09:49|   0.0|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-13 17:09:49|   0.0|  0.0|STATS |CSV_CSV2_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-13 17:09:49|   0.0|  0.0|STATS |CSV_CSV2_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-13 17:09:49|   0.0|  0.0|STATS |Restoring 10 feature(s) from FME feature store file `C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_Tester_2 -1 16 fo 0 PASSED  0  2125d170550e4c722a3b55e6dd72901ac1d22f2e.ffs'
-2025-10-13 17:09:49|   0.0|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 52241 features into groups
-2025-10-13 17:09:49|   0.1|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 52241 features into groups
-2025-10-13 17:09:49|   0.1|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:49|   0.4|  0.3|INFORM|... Last line repeated 6 times ...
-2025-10-13 17:09:49|   0.4|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 92123 features into groups
-2025-10-13 17:09:49|   0.4|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 92123 features into groups
-2025-10-13 17:09:49|   0.4|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:50|   0.9|  0.5|INFORM|... Last line repeated 12 times ...
-2025-10-13 17:09:50|   0.9|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 7491 features into groups
-2025-10-13 17:09:50|   1.0|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 7491 features into groups
-2025-10-13 17:09:50|   1.0|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:50|   1.0|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 83375 features into groups
-2025-10-13 17:09:50|   1.1|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 83375 features into groups
-2025-10-13 17:09:50|   1.1|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:51|   1.7|  0.6|INFORM|... Last line repeated 11 times ...
-2025-10-13 17:09:51|   1.7|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 22981 features into groups
-2025-10-13 17:09:51|   1.7|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 22981 features into groups
-2025-10-13 17:09:51|   1.7|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:51|   1.7|  0.0|INFORM|... Last line repeated 2 times ...
-2025-10-13 17:09:51|   1.7|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 99483 features into groups
-2025-10-13 17:09:51|   1.8|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 99483 features into groups
-2025-10-13 17:09:51|   1.9|  0.1|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:52|   2.4|  0.5|INFORM|... Last line repeated 14 times ...
-2025-10-13 17:09:52|   2.4|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 22891 features into groups
-2025-10-13 17:09:52|   2.4|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 22891 features into groups
-2025-10-13 17:09:52|   2.4|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:52|   2.5|  0.1|INFORM|... Last line repeated 2 times ...
-2025-10-13 17:09:52|   2.5|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 83738 features into groups
-2025-10-13 17:09:52|   2.6|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 83738 features into groups
-2025-10-13 17:09:52|   2.6|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:52|   3.0|  0.4|INFORM|... Last line repeated 11 times ...
-2025-10-13 17:09:52|   3.0|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 37850 features into groups
-2025-10-13 17:09:52|   3.0|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 37850 features into groups
-2025-10-13 17:09:52|   3.0|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:53|   3.2|  0.2|INFORM|... Last line repeated 4 times ...
-2025-10-13 17:09:53|   3.2|  0.0|INFORM|stats_2023 (StatisticsCalculatorFactory): Preparing to divide 65896 features into groups
-2025-10-13 17:09:53|   3.3|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Dividing 65896 features into groups
-2025-10-13 17:09:53|   3.4|  0.1|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:53|   4.0|  0.6|INFORM|... Last line repeated 9 times ...
-2025-10-13 17:09:53|   4.0|  0.0|INFORM|FFS writer: Writing 52241 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb.fts'
-2025-10-13 17:09:53|   4.0|  0.0|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:54|   4.4|  0.4|INFORM|Spatial Index: Adding 52241 features
-2025-10-13 17:09:54|   4.6|  0.2|INFORM|FFS writer: Writing 92123 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_1.fts'
-2025-10-13 17:09:55|   5.4|  0.8|INFORM|Spatial Index: Adding 92123 features
-2025-10-13 17:09:55|   5.8|  0.4|INFORM|FFS writer: Writing 7491 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_2.fts'
-2025-10-13 17:09:55|   5.9|  0.1|INFORM|Spatial Index: Adding 7491 features
-2025-10-13 17:09:55|   5.9|  0.0|INFORM|FFS writer: Writing 83375 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_3.fts'
-2025-10-13 17:09:56|   6.6|  0.7|INFORM|Spatial Index: Adding 83375 features
-2025-10-13 17:09:56|   6.9|  0.3|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:56|   7.0|  0.1|INFORM|FFS writer: Writing 20747 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_4.fts'
-2025-10-13 17:09:57|   7.2|  0.2|INFORM|Spatial Index: Adding 20747 features
-2025-10-13 17:09:57|   7.3|  0.1|INFORM|FFS writer: Writing 20005 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_5.fts'
-2025-10-13 17:09:57|   7.5|  0.2|INFORM|Spatial Index: Adding 20005 features
-2025-10-13 17:09:57|   7.6|  0.1|INFORM|FFS writer: Writing 83738 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_6.fts'
-2025-10-13 17:09:58|   8.3|  0.7|INFORM|Spatial Index: Adding 83738 features
-2025-10-13 17:09:58|   8.7|  0.4|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:58|   8.8|  0.1|INFORM|FFS writer: Writing 37850 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_7.fts'
-2025-10-13 17:09:58|   9.1|  0.3|INFORM|Spatial Index: Adding 37850 features
-2025-10-13 17:09:59|   9.3|  0.2|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:09:59|   9.3|  0.0|INFORM|FFS writer: Writing 65896 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_8.fts'
-2025-10-13 17:09:59|   9.8|  0.5|INFORM|Spatial Index: Adding 65896 features
-2025-10-13 17:10:00|  10.2|  0.4|INFORM|FFS writer: Writing 2234 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_9.fts'
-2025-10-13 17:10:00|  10.2|  0.0|INFORM|Spatial Index: Adding 2234 features
-2025-10-13 17:10:00|  10.2|  0.0|INFORM|FFS writer: Writing 99483 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_10.fts'
-2025-10-13 17:10:00|  11.1|  0.9|INFORM|Spatial Index: Adding 99483 features
-2025-10-13 17:10:01|  11.5|  0.4|INFORM|ResourceManager: Optimizing Memory Usage.  Please wait...
-2025-10-13 17:10:01|  11.5|  0.0|INFORM|FFS writer: Writing 2886 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache--Hgdxqh\Main_stats_2023 -1 18 fo 1 COMPLETE  1  daeada876732cc162995293c1b32ff289ff53feb_11.fts'
-2025-10-13 17:10:01|  11.6|  0.1|INFORM|Spatial Index: Adding 2886 features
-2025-10-13 17:10:01|  11.7|  0.1|INFORM|stats_2023 (StatisticsCalculatorFactory): Processing complete
-2025-10-13 17:10:02|  12.3|  0.6|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2025-10-13 17:10:02|  12.3|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-13 17:10:02|  12.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-13 17:10:02|  12.3|  0.0|STATS |                            Features Read Summary
-2025-10-13 17:10:02|  12.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-13 17:10:02|  12.3|  0.0|STATS |==============================================================================
-2025-10-13 17:10:02|  12.3|  0.0|STATS |Total Features Read                                                          0
-2025-10-13 17:10:02|  12.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-13 17:10:02|  12.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-13 17:10:02|  12.3|  0.0|STATS |                           Features Written Summary
-2025-10-13 17:10:02|  12.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-13 17:10:02|  12.3|  0.0|STATS |==============================================================================
-2025-10-13 17:10:02|  12.3|  0.0|STATS |Total Features Written                                                       0
-2025-10-13 17:10:02|  12.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~                                                                             ~-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~      Data caches have been recorded at every stage of the translation.      ~-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~                click the data cache icons next to the ports.                ~-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~                                                                             ~-
-2025-10-13 17:10:02|  12.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2025-10-13 17:10:02|  12.3|  0.0|INFORM|Translation was SUCCESSFUL with 9 warning(s) (0 feature(s) output)
-2025-10-13 17:10:02|  12.3|  0.0|INFORM|FME Session Duration: 12.8 seconds. (CPU: 5.7s user, 6.6s system)
-2025-10-13 17:10:02|  12.3|  0.0|INFORM|END - ProcessID: 6848, peak process memory usage: 220880 kB, current process memory usage: 94912 kB
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Current FME version: FME 2025.1.2.0 (20250829 - Build 25630 - WIN64)
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|System Time: 20251014112923 UTC
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME license: FME Student Edition (node locked-crc)
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Serial Number: 1K9ICPC2H0B7D8MSYWSH
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Machine host name is: LaptopYair
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|OS Locale Name     : nl_NL
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME API version: '4.0 20250515'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features/'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'feature_upstream_discharge.fmw'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2025.1.2.0'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 26100)
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Platform: WIN64
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|System Status: 140.70 GB of disk space available in the FME temporary folder (C:\Users\yairr\AppData\Local\Temp\wbrun_1760436743983_2496\fmetmp_3)
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|System Status: 15.78 GB of physical memory available
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|System Status: 63.11 GB of virtual memory available
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|START - ProcessID: 16156, peak process memory usage: 41336 kB, current process memory usage: 41336 kB
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features\wb-xlate-1760441363073_2496' `--FME_LAUNCH_VIEWER_APP' `WORKBENCH' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `61446' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `65533'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\yairr\AppData\Roaming\Safe Software\FME\'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\yairr\Documents\FME\Formats
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\yairr\AppData\Roaming\Safe Software\FME\Packages\25630-win64\transformers;C:\Program Files\FME\transformers;C:\Users\yairr\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\yairr\Documents\FME\CoordinateSystems
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\yairr\Documents\FME\CoordinateSystemExceptions
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\yairr\Documents\FME\CoordinateSystemGridOverrides
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\yairr\Documents\FME\CsmapTransformationExceptions
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\yairr\Documents\FME\TransformerCategories
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\yairr\AppData\Local\Temp\wbrun_1760436743983_2496\fmetmp_3', set from environment variable `FME_TEMP'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Users\yairr\AppData\Local\Temp'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 47.33 GB
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 35.50 GB
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Creating writer for format: 
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Creating reader for format: 
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding CSV2 Reader with keyword CSV2_2
+2025-10-14 13:29:23|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2025-10-14 13:29:23|   0.1|  0.1|INFORM|Creating reader for format: CSV (Comma Separated Value)
+2025-10-14 13:29:23|   0.1|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `CSV2'
+2025-10-14 13:29:23|   0.1|  0.0|INFORM|FME Configuration: Source coordinate system for reader CSV2_2[CSV2] set to `EPSG:25831'
+2025-10-14 13:29:23|   0.3|  0.2|INFORM|Coordinate System `EPSG:25831' parameters: CS_NAME=`ETRS89.UTM-31N' DESC_NM=`Transverse Mercator (ETRS89-TM31)' DT_NAME=`ETRF89' EPSG_QD=`1' GROUP=`UTMN' MAP_SCL=`1' MAX_LAT=`83.16666666666667' MAX_LNG=`6.516666666666667' MIN_LAT=`36.25' MIN_LNG=`-0.5' PARM1=`3' PROJ=`TM' QUAD=`1' SCL_RED=`0.9996' SOURCE=`EPSG, V6.3, 25831 [Large and medium scale topographic mappi]' UNIT=`Meter' X_OFF=`500000' Y_OFF=`0.0' ZERO_X=`0.0001' ZERO_Y=`0.0001'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Opening dataset 'C:\Users\yairr\OneDrive - Delft University of Technology\Michel Beeren's files - Van Oord Synthesis Project\00_Data\RWS_data\afvoer_data_full\20251013_054.csv'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_TRIM_FEATURE_TYPE_NAME' has the value 'Yes'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_SUPPORTED_READER_ARCHIVE_EXTENSIONS' has the value 'csv.gz,txt.gz'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_DELIMITER' has the value 'auto'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_DELIMITER_DETECTION_ALGORITHM' has the value 'EQUAL_FIELDS_PER_LINE'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_FIELD_NAMES_LINE' has the value '1'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_DATA_START_LINE' has the value '2'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_SCAN_MAX_ROWS' has the value '250000'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_READ_SKIPPED_LINES' has the value 'No'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_ENCODING' has the value 'windows-1252'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive 'FME_NAMES_ENCODING' has the value 'UTF-8'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_SKIP_DUPLICATE_DELIMITERS' has the value 'No'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_FIELD_QUALIFIER_CHARACTER' has the value '"'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_FIELD_QUALIFIER_ESCAPE_CHARACTER' has the value '"'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_TRIM_FIELD_NAME_QUALIFIERS' has the value 'Yes'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_TRIM_FIELD_VALUE_QUALIFIERS' has the value 'Yes'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_PRESERVE_SOURCE_ENCODING' has the value 'No'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_CASE_SENSITIVE_FIELD_NAMES' has the value 'Yes'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_ENFORCE_STRICT_SCHEMA' has the value 'No'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_SCAN_TYPES' has the value 'Yes'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_TYPE_ATTRIBUTE_HANDLING' has the value 'STANDARD_TYPES'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_STRING_TYPE_ATTRIBUTE_HANDLING' has the value 'EXPLICIT_WIDTH'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_SCAN_ADDITIONAL_FIELDS' has the value 'No'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_DATE_INPUT_FORMAT' has the value 'ISO'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_CHUNK_SIZE' has the value '100000'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_TRIM_FIELD_NAME_WHITESPACE' has the value 'Yes'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_READ_EMPTY_VALUES_AS' has the value 'Null'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|CSV reader: Directive '_REPLACE_ATTR_NAME_INVALID_CHARS' has the value 'No'
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|Using MultiWriter with keyword `PRIMARY_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|Writer output will be ordered by value of multi_writer_id
+2025-10-14 13:29:23|   0.3|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): The following statistics will be calculated 'NUMERIEKEWAARDE.min,NUMERIEKEWAARDE.max,NUMERIEKEWAARDE.total_count,NUMERIEKEWAARDE.mean'
+2025-10-14 13:29:23|   0.4|  0.1|INFORM|stats_2024 (StatisticsCalculatorFactory): The following statistics will be calculated 'NUMERIEKEWAARDE.min,NUMERIEKEWAARDE.max,NUMERIEKEWAARDE.total_count,NUMERIEKEWAARDE.mean'
+2025-10-14 13:29:23|   0.4|  0.0|WARN  |CSV reader: Detected excess data and/or delimiters in addition to the defined schema in line 2 with value ' Arnhem ARNHM   Debiet Q    m3/s   Oppervlaktewater OW   Debiet uit Q-f relatie (2018) other:F230   1-1-2024 00:00:00  984,74 984.74 Normale waarde    Ongecontroleerd ONXXREG_AFVOER       -999999999 NVT 25831 700000,7768 5762308,246        ' read from file 'C:\Users\yairr\OneDrive - Delft University of Technology\Michel Beeren's files - Van Oord Synthesis Project\00_Data\RWS_data\afvoer_data_full\20251013_054.csv'.  Excess data will not be read.  This can occur if the file is not uniform in the number of fields per row or if fields have been intentionally removed from the source feature type.  In order to read the excess data, recreate the source feature type and set a larger value for the 'Maximum Rows to Scan' option to scan additional rows for fields.  If the file contains field names, ensure that the field names line represents all of the columns in data rows, or enable the 'Scan for Additional Fields' option.  This may also be caused by a misplaced field qualifier character.  In this case, ensure that field qualifiers in the row are correct, or consider changing the Field Qualifier Character value
+2025-10-14 13:29:24|   1.3|  0.9|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:29|  10.0|  8.7|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 75.314 of 100.000 features
+2025-10-14 13:29:30|  11.6|  1.6|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3.fts'
+2025-10-14 13:29:30|  11.6|  0.0|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:30|  11.7|  0.1|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:29:32|  13.5|  1.8|WARN  |... Last line repeated 95100 times ...
+2025-10-14 13:29:32|  13.5|  0.0|INFORM|FFS writer: Writing 95101 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b.fts'
+2025-10-14 13:29:32|  13.7|  0.2|INFORM|Spatial Index: Adding 95101 features
+2025-10-14 13:29:32|  13.7|  0.0|INFORM|FFS writer: Writing 92478 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c.fts'
+2025-10-14 13:29:33|  13.7|  0.0|INFORM|Spatial Index: Adding 92478 features
+2025-10-14 13:29:33|  13.8|  0.1|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 92478 features into groups
+2025-10-14 13:29:33|  13.8|  0.0|INFORM|FFS writer: Writing 2623 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 1 FAILED  0  e452cf30627591677d8d3fd0a8c1b4f5f7801dfe.fts'
+2025-10-14 13:29:33|  13.8|  0.0|INFORM|Spatial Index: Adding 2623 features
+2025-10-14 13:29:33|  13.8|  0.0|INFORM|FFS writer: Writing 4899 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf.fts'
+2025-10-14 13:29:33|  13.9|  0.1|INFORM|Spatial Index: Adding 4899 features
+2025-10-14 13:29:33|  13.9|  0.0|INFORM|FFS writer: Writing 4898 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96.fts'
+2025-10-14 13:29:33|  13.9|  0.0|INFORM|Spatial Index: Adding 4898 features
+2025-10-14 13:29:33|  13.9|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 4898 features into groups
+2025-10-14 13:29:33|  13.9|  0.0|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:29:33|  14.0|  0.1|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:29:33|  14.0|  0.0|INFORM|CSV reader: Read 200.000 features
+2025-10-14 13:29:33|  14.0|  0.0|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:38|  19.1|  5.1|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 81.478 of 100.000 features
+2025-10-14 13:29:39|  20.3|  1.2|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_1.fts'
+2025-10-14 13:29:39|  20.3|  0.0|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:39|  20.4|  0.1|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:29:41|  22.2|  1.8|WARN  |... Last line repeated 99999 times ...
+2025-10-14 13:29:41|  22.2|  0.0|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_1.fts'
+2025-10-14 13:29:41|  22.3|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:41|  22.4|  0.1|INFORM|FFS writer: Writing 96455 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_1.fts'
+2025-10-14 13:29:41|  22.6|  0.2|INFORM|Spatial Index: Adding 96455 features
+2025-10-14 13:29:41|  22.6|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 96455 features into groups
+2025-10-14 13:29:41|  22.6|  0.0|INFORM|FFS writer: Writing 3545 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 1 FAILED  0  e452cf30627591677d8d3fd0a8c1b4f5f7801dfe_1.fts'
+2025-10-14 13:29:41|  22.6|  0.0|INFORM|Spatial Index: Adding 3545 features
+2025-10-14 13:29:41|  22.6|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:29:41|  22.6|  0.0|INFORM|CSV reader: Read 300.000 features
+2025-10-14 13:29:42|  22.8|  0.2|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:47|  27.7|  4.9|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 81.238 of 100.000 features
+2025-10-14 13:29:48|  28.9|  1.2|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_2.fts'
+2025-10-14 13:29:48|  29.0|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:48|  29.0|  0.0|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:29:50|  30.8|  1.8|WARN  |... Last line repeated 90201 times ...
+2025-10-14 13:29:50|  30.8|  0.0|INFORM|FFS writer: Writing 90202 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_2.fts'
+2025-10-14 13:29:50|  30.9|  0.1|INFORM|Spatial Index: Adding 90202 features
+2025-10-14 13:29:50|  30.9|  0.0|INFORM|FFS writer: Writing 83741 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_2.fts'
+2025-10-14 13:29:50|  31.1|  0.2|INFORM|Spatial Index: Adding 83741 features
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 83741 features into groups
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|FFS writer: Writing 6461 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 1 FAILED  0  e452cf30627591677d8d3fd0a8c1b4f5f7801dfe_2.fts'
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|Spatial Index: Adding 6461 features
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|FFS writer: Writing 9798 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf_1.fts'
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|Spatial Index: Adding 9798 features
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|FFS writer: Writing 9742 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96_1.fts'
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|Spatial Index: Adding 9742 features
+2025-10-14 13:29:50|  31.1|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 9742 features into groups
+2025-10-14 13:29:50|  31.2|  0.1|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:29:50|  31.2|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:29:50|  31.2|  0.0|INFORM|CSV reader: Read 400.000 features
+2025-10-14 13:29:50|  31.3|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:55|  36.4|  5.1|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 82.657 of 100.000 features
+2025-10-14 13:29:56|  37.4|  1.0|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_3.fts'
+2025-10-14 13:29:56|  37.5|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:56|  37.5|  0.0|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:29:58|  39.4|  1.9|WARN  |... Last line repeated 99999 times ...
+2025-10-14 13:29:58|  39.4|  0.0|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_3.fts'
+2025-10-14 13:29:58|  39.5|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:29:58|  39.5|  0.0|INFORM|FFS writer: Writing 99635 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_3.fts'
+2025-10-14 13:29:59|  39.7|  0.2|INFORM|Spatial Index: Adding 99635 features
+2025-10-14 13:29:59|  39.7|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 99635 features into groups
+2025-10-14 13:29:59|  39.7|  0.0|INFORM|Tester_6_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:29:59|  39.7|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:29:59|  39.7|  0.0|INFORM|CSV reader: Read 500.000 features
+2025-10-14 13:29:59|  39.8|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:04|  44.9|  5.1|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 83.018 of 100.000 features
+2025-10-14 13:30:05|  45.9|  1.0|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_4.fts'
+2025-10-14 13:30:05|  46.0|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:05|  46.0|  0.0|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:30:06|  47.2|  1.2|WARN  |... Last line repeated 53986 times ...
+2025-10-14 13:30:06|  47.2|  0.0|INFORM|FFS writer: Writing 53987 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_4.fts'
+2025-10-14 13:30:06|  47.2|  0.0|INFORM|Spatial Index: Adding 53987 features
+2025-10-14 13:30:06|  47.2|  0.0|INFORM|FFS writer: Writing 53499 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_4.fts'
+2025-10-14 13:30:06|  47.4|  0.2|INFORM|Spatial Index: Adding 53499 features
+2025-10-14 13:30:06|  47.4|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 53499 features into groups
+2025-10-14 13:30:06|  47.4|  0.0|INFORM|Tester_6_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:06|  47.4|  0.0|INFORM|FFS writer: Writing 46013 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf_2.fts'
+2025-10-14 13:30:06|  47.5|  0.1|INFORM|Spatial Index: Adding 46013 features
+2025-10-14 13:30:06|  47.5|  0.0|INFORM|FFS writer: Writing 45957 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96_2.fts'
+2025-10-14 13:30:06|  47.5|  0.0|INFORM|Spatial Index: Adding 45957 features
+2025-10-14 13:30:06|  47.5|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 45957 features into groups
+2025-10-14 13:30:07|  47.7|  0.2|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:07|  47.7|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:30:07|  47.7|  0.0|INFORM|CSV reader: Read 600.000 features
+2025-10-14 13:30:07|  47.8|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:12|  52.7|  4.9|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 71.218 of 100.000 features
+2025-10-14 13:30:14|  55.0|  2.3|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_5.fts'
+2025-10-14 13:30:14|  55.1|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:14|  55.1|  0.0|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:30:17|  57.7|  2.6|WARN  |... Last line repeated 95100 times ...
+2025-10-14 13:30:17|  57.7|  0.0|INFORM|FFS writer: Writing 95101 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_5.fts'
+2025-10-14 13:30:17|  57.9|  0.2|INFORM|Spatial Index: Adding 95101 features
+2025-10-14 13:30:17|  58.1|  0.2|INFORM|FFS writer: Writing 89382 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_5.fts'
+2025-10-14 13:30:17|  58.3|  0.2|INFORM|Spatial Index: Adding 89382 features
+2025-10-14 13:30:18|  58.3|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 89382 features into groups
+2025-10-14 13:30:18|  58.3|  0.0|INFORM|FFS writer: Writing 5719 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 1 FAILED  0  e452cf30627591677d8d3fd0a8c1b4f5f7801dfe_3.fts'
+2025-10-14 13:30:18|  58.4|  0.1|INFORM|Spatial Index: Adding 5719 features
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|FFS writer: Writing 4899 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf_3.fts'
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|Spatial Index: Adding 4899 features
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|FFS writer: Writing 4890 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96_3.fts'
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|Spatial Index: Adding 4890 features
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 4890 features into groups
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:30:18|  58.4|  0.0|INFORM|CSV reader: Read 700.000 features
+2025-10-14 13:30:18|  58.5|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:23|  63.4|  4.9|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 70.135 of 100.000 features
+2025-10-14 13:30:25|  65.4|  2.0|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_6.fts'
+2025-10-14 13:30:25|  65.5|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:25|  65.6|  0.1|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:30:26|  67.0|  1.4|WARN  |... Last line repeated 58879 times ...
+2025-10-14 13:30:26|  67.0|  0.0|INFORM|FFS writer: Writing 58880 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_6.fts'
+2025-10-14 13:30:26|  67.0|  0.0|INFORM|Spatial Index: Adding 58880 features
+2025-10-14 13:30:26|  67.1|  0.1|INFORM|FFS writer: Writing 57684 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_6.fts'
+2025-10-14 13:30:27|  67.2|  0.1|INFORM|Spatial Index: Adding 57684 features
+2025-10-14 13:30:27|  67.3|  0.1|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 57684 features into groups
+2025-10-14 13:30:27|  67.3|  0.0|INFORM|Tester_6_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:27|  67.3|  0.0|INFORM|FFS writer: Writing 41120 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf_4.fts'
+2025-10-14 13:30:27|  67.4|  0.1|INFORM|Spatial Index: Adding 41120 features
+2025-10-14 13:30:27|  67.4|  0.0|INFORM|FFS writer: Writing 41066 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96_4.fts'
+2025-10-14 13:30:27|  67.4|  0.0|INFORM|Spatial Index: Adding 41066 features
+2025-10-14 13:30:27|  67.5|  0.1|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 41066 features into groups
+2025-10-14 13:30:27|  67.7|  0.2|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:27|  67.7|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:30:27|  67.7|  0.0|INFORM|CSV reader: Read 800.000 features
+2025-10-14 13:30:27|  67.8|  0.1|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:32|  72.9|  5.1|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 59.601 of 100.000 features
+2025-10-14 13:30:36|  76.4|  3.5|INFORM|FFS writer: Writing 100000 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_7.fts'
+2025-10-14 13:30:36|  76.4|  0.0|INFORM|Spatial Index: Adding 100000 features
+2025-10-14 13:30:36|  76.6|  0.2|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:30:38|  78.5|  1.9|WARN  |... Last line repeated 83367 times ...
+2025-10-14 13:30:38|  78.5|  0.0|INFORM|FFS writer: Writing 83368 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_7.fts'
+2025-10-14 13:30:38|  78.6|  0.1|INFORM|Spatial Index: Adding 83368 features
+2025-10-14 13:30:38|  78.6|  0.0|INFORM|FFS writer: Writing 80566 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_7.fts'
+2025-10-14 13:30:38|  78.8|  0.2|INFORM|Spatial Index: Adding 80566 features
+2025-10-14 13:30:38|  78.9|  0.1|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 80566 features into groups
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|FFS writer: Writing 2802 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 1 FAILED  0  e452cf30627591677d8d3fd0a8c1b4f5f7801dfe_4.fts'
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|Spatial Index: Adding 2802 features
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|FFS writer: Writing 16632 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf_5.fts'
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|Spatial Index: Adding 16632 features
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|FFS writer: Writing 16627 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96_5.fts'
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|Spatial Index: Adding 16627 features
+2025-10-14 13:30:38|  78.9|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 16627 features into groups
+2025-10-14 13:30:38|  79.0|  0.1|INFORM|stats_2025 (StatisticsCalculatorFactory): Splitting bulk features into individual features
+2025-10-14 13:30:38|  79.0|  0.0|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:38|  79.0|  0.0|INFORM|DateTimeConverter_2 (DateTimeConverterFactory): Processed 100.000 of 100.000 features
+2025-10-14 13:30:38|  79.0|  0.0|INFORM|CSV reader: Read 855.014 features
+2025-10-14 13:30:39|  79.1|  0.1|INFORM|Spatial Index: Adding 55014 features
+2025-10-14 13:30:43|  84.0|  4.9|INFORM|FFS writer: Writing 55014 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_DateTimeConverter_2 -1 21 fo 0 OUTPUT  0  191ab63920c74a0689433e5d1de674116fba07a3_8.fts'
+2025-10-14 13:30:43|  84.1|  0.1|INFORM|Spatial Index: Adding 55014 features
+2025-10-14 13:30:44|  84.1|  0.0|WARN  |Tester_5 (TestFactory): TestFactory: Unable to do a date/time comparison of '2024' and '2025'.  Comparing as strings instead.
+2025-10-14 13:30:45|  85.2|  1.1|WARN  |... Last line repeated 52655 times ...
+2025-10-14 13:30:45|  85.2|  0.0|INFORM|FFS writer: Writing 2358 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 0 PASSED  0  e488d196a444b894a7abc5fc0b4ea0281cca0ddf_6.fts'
+2025-10-14 13:30:45|  85.3|  0.1|INFORM|Spatial Index: Adding 2358 features
+2025-10-14 13:30:45|  85.3|  0.0|INFORM|FFS writer: Writing 2335 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_4 -1 23 fo 0 PASSED  0  f9b30e32230a56fcdbbc00e513e21e6be0d59e96_6.fts'
+2025-10-14 13:30:45|  85.3|  0.0|INFORM|Spatial Index: Adding 2335 features
+2025-10-14 13:30:45|  85.3|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Preparing to divide 2335 features into groups
+2025-10-14 13:30:45|  85.3|  0.0|WARN  |stats_2025 (StatisticsCalculatorFactory): Switching to bulk mode feature processing
+2025-10-14 13:30:45|  85.3|  0.0|INFORM|Tester_4_FAILED Feature Recorder -1 2147680279 (RecorderFactory): Splitting bulk features into individual features
+2025-10-14 13:30:45|  85.3|  0.0|INFORM|FFS writer: Writing 52656 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_5 -1 24 fo 1 FAILED  0  95b562801a590e2dd341aad9401465ab6b611d0b_8.fts'
+2025-10-14 13:30:45|  85.3|  0.0|INFORM|Spatial Index: Adding 52656 features
+2025-10-14 13:30:45|  85.4|  0.1|INFORM|FFS writer: Writing 8885 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 0 PASSED  0  cc92c5740fa9f81e78e6e12d67dd8d54c352154c_8.fts'
+2025-10-14 13:30:45|  85.4|  0.0|INFORM|Spatial Index: Adding 8885 features
+2025-10-14 13:30:45|  85.4|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Preparing to divide 8885 features into groups
+2025-10-14 13:30:45|  85.4|  0.0|INFORM|FFS writer: Writing 43771 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_Tester_6 -1 30 fo 1 FAILED  0  e452cf30627591677d8d3fd0a8c1b4f5f7801dfe_5.fts'
+2025-10-14 13:30:45|  85.5|  0.1|INFORM|Spatial Index: Adding 43771 features
+2025-10-14 13:30:45|  85.5|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 855014 features from 1 readers
+2025-10-14 13:30:45|  85.5|  0.0|INFORM|Emptying factory pipeline
+2025-10-14 13:30:45|  85.5|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 855014 input feature(s), wrote 855014 output feature(s): 855014 matched merge filters, 855014 were routed to output, 0 could not be routed.
+2025-10-14 13:30:45|  85.5|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 13:30:45|  85.5|  0.0|STATS |public.side_channels_POSTGIS_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 13:30:45|  85.5|  0.0|STATS |CSV_CSV2_2 Splitter (TeeFactory): Cloned 855014 input feature(s) into 855014 output feature(s)
+2025-10-14 13:30:45|  85.5|  0.0|STATS |CSV_CSV2_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 13:30:45|  85.5|  0.0|STATS |Tester_5 (TestFactory): Tested 855014 input feature(s) -- 125719 feature(s) passed and 729295 feature(s) failed
+2025-10-14 13:30:45|  85.5|  0.0|STATS |Tester_4 (TestFactory): Tested 125719 input feature(s) -- 125515 feature(s) passed and 204 feature(s) failed
+2025-10-14 13:30:45|  85.5|  0.0|INFORM|FFS writer: Writing 4851 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575.fts'
+2025-10-14 13:30:45|  85.5|  0.0|INFORM|Spatial Index: Adding 4851 features
+2025-10-14 13:30:45|  85.6|  0.1|INFORM|FFS writer: Writing 4891 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_1.fts'
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|Spatial Index: Adding 4891 features
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|FFS writer: Writing 4898 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_2.fts'
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|Spatial Index: Adding 4898 features
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|FFS writer: Writing 4890 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_3.fts'
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|Spatial Index: Adding 4890 features
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|FFS writer: Writing 4896 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_4.fts'
+2025-10-14 13:30:45|  85.6|  0.0|INFORM|Spatial Index: Adding 4896 features
+2025-10-14 13:30:45|  85.7|  0.1|INFORM|FFS writer: Writing 2335 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_5.fts'
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|Spatial Index: Adding 2335 features
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|FFS writer: Writing 4890 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_6.fts'
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|Spatial Index: Adding 4890 features
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|FFS writer: Writing 4890 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_7.fts'
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|Spatial Index: Adding 4890 features
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|FFS writer: Writing 41067 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_8.fts'
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|Spatial Index: Adding 41067 features
+2025-10-14 13:30:45|  85.7|  0.0|INFORM|FFS writer: Writing 41066 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_9.fts'
+2025-10-14 13:30:45|  85.8|  0.1|INFORM|Spatial Index: Adding 41066 features
+2025-10-14 13:30:45|  85.8|  0.0|INFORM|FFS writer: Writing 4898 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2025 -1 22 fo 1 COMPLETE  0  40217c67db8fd71f9d339afdd7b4b679b5f7a575_10.fts'
+2025-10-14 13:30:45|  85.8|  0.0|INFORM|Spatial Index: Adding 4898 features
+2025-10-14 13:30:45|  85.8|  0.0|INFORM|stats_2025 (StatisticsCalculatorFactory): Processing complete
+2025-10-14 13:30:45|  85.8|  0.0|STATS |Tester_6 (TestFactory): Tested 729295 input feature(s) -- 662325 feature(s) passed and 66970 feature(s) failed
+2025-10-14 13:30:45|  85.8|  0.0|INFORM|FFS writer: Writing 51342 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3.fts'
+2025-10-14 13:30:45|  85.9|  0.1|INFORM|Spatial Index: Adding 51342 features
+2025-10-14 13:30:45|  85.9|  0.0|INFORM|FFS writer: Writing 86329 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_1.fts'
+2025-10-14 13:30:45|  85.9|  0.0|INFORM|Spatial Index: Adding 86329 features
+2025-10-14 13:30:45|  86.1|  0.2|INFORM|FFS writer: Writing 10484 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_2.fts'
+2025-10-14 13:30:45|  86.1|  0.0|INFORM|Spatial Index: Adding 10484 features
+2025-10-14 13:30:45|  86.1|  0.0|INFORM|FFS writer: Writing 52494 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_3.fts'
+2025-10-14 13:30:46|  86.1|  0.0|INFORM|Spatial Index: Adding 52494 features
+2025-10-14 13:30:46|  86.1|  0.0|INFORM|FFS writer: Writing 21579 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_4.fts'
+2025-10-14 13:30:46|  86.1|  0.0|INFORM|Spatial Index: Adding 21579 features
+2025-10-14 13:30:46|  86.1|  0.0|INFORM|FFS writer: Writing 26202 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_5.fts'
+2025-10-14 13:30:46|  86.2|  0.1|INFORM|Spatial Index: Adding 26202 features
+2025-10-14 13:30:46|  86.2|  0.0|INFORM|FFS writer: Writing 49951 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_6.fts'
+2025-10-14 13:30:46|  86.2|  0.0|INFORM|Spatial Index: Adding 49951 features
+2025-10-14 13:30:46|  86.3|  0.1|INFORM|FFS writer: Writing 45124 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_7.fts'
+2025-10-14 13:30:46|  86.4|  0.1|INFORM|Spatial Index: Adding 45124 features
+2025-10-14 13:30:46|  86.4|  0.0|INFORM|FFS writer: Writing 30615 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_8.fts'
+2025-10-14 13:30:46|  86.4|  0.0|INFORM|Spatial Index: Adding 30615 features
+2025-10-14 13:30:46|  86.5|  0.1|INFORM|FFS writer: Writing 39984 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_9.fts'
+2025-10-14 13:30:46|  86.5|  0.0|INFORM|Spatial Index: Adding 39984 features
+2025-10-14 13:30:46|  86.5|  0.0|INFORM|FFS writer: Writing 10126 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_10.fts'
+2025-10-14 13:30:46|  86.5|  0.0|INFORM|Spatial Index: Adding 10126 features
+2025-10-14 13:30:46|  86.5|  0.0|INFORM|FFS writer: Writing 44779 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_11.fts'
+2025-10-14 13:30:46|  86.6|  0.1|INFORM|Spatial Index: Adding 44779 features
+2025-10-14 13:30:46|  86.6|  0.0|INFORM|FFS writer: Writing 31920 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_12.fts'
+2025-10-14 13:30:46|  86.6|  0.0|INFORM|Spatial Index: Adding 31920 features
+2025-10-14 13:30:46|  86.6|  0.0|INFORM|FFS writer: Writing 21915 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_13.fts'
+2025-10-14 13:30:46|  86.7|  0.1|INFORM|Spatial Index: Adding 21915 features
+2025-10-14 13:30:46|  86.7|  0.0|INFORM|FFS writer: Writing 54856 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_14.fts'
+2025-10-14 13:30:46|  86.7|  0.0|INFORM|Spatial Index: Adding 54856 features
+2025-10-14 13:30:46|  86.8|  0.1|INFORM|FFS writer: Writing 8885 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_15.fts'
+2025-10-14 13:30:46|  86.8|  0.0|INFORM|Spatial Index: Adding 8885 features
+2025-10-14 13:30:46|  86.8|  0.0|INFORM|FFS writer: Writing 63180 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_16.fts'
+2025-10-14 13:30:46|  87.0|  0.2|INFORM|Spatial Index: Adding 63180 features
+2025-10-14 13:30:46|  87.0|  0.0|INFORM|FFS writer: Writing 12560 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_upstream_discharge-TSpvrU\Main_stats_2024 -1 29 fo 1 COMPLETE  0  6682a944b61aaf173fc43c156e28d9708b6482d3_17.fts'
+2025-10-14 13:30:46|  87.0|  0.0|INFORM|Spatial Index: Adding 12560 features
+2025-10-14 13:30:46|  87.0|  0.0|INFORM|stats_2024 (StatisticsCalculatorFactory): Processing complete
+2025-10-14 13:30:50|  90.3|  3.3|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
+2025-10-14 13:30:50|  90.3|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-14 13:30:50|  90.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 13:30:50|  90.3|  0.0|STATS |                            Features Read Summary
+2025-10-14 13:30:50|  90.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 13:30:50|  90.3|  0.0|STATS |CSV                                                                     855014
+2025-10-14 13:30:50|  90.3|  0.0|STATS |==============================================================================
+2025-10-14 13:30:50|  90.3|  0.0|STATS |Total Features Read                                                     855014
+2025-10-14 13:30:50|  90.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 13:30:50|  90.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 13:30:50|  90.3|  0.0|STATS |                           Features Written Summary
+2025-10-14 13:30:50|  90.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 13:30:50|  90.3|  0.0|STATS |==============================================================================
+2025-10-14 13:30:50|  90.3|  0.0|STATS |Total Features Written                                                       0
+2025-10-14 13:30:50|  90.3|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~                                                                             ~-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~      Data caches have been recorded at every stage of the translation.      ~-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~                click the data cache icons next to the ports.                ~-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~                                                                             ~-
+2025-10-14 13:30:50|  90.3|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2025-10-14 13:30:50|  90.3|  0.0|INFORM|Translation was SUCCESSFUL with 729304 warning(s) (0 feature(s) output)
+2025-10-14 13:30:50|  90.4|  0.1|INFORM|FME Session Duration: 1 minute 26.9 seconds. (CPU: 84.1s user, 6.3s system)
+2025-10-14 13:30:50|  90.4|  0.0|INFORM|END - ProcessID: 16156, peak process memory usage: 1550748 kB, current process memory usage: 836000 kB

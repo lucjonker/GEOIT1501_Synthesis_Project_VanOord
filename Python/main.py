@@ -33,7 +33,7 @@ def calculate_descriptive_stats(df):
 
     return stats_df.T
 
-def load_DB_data(query):
+def load_db_data(query):
     #Load data from PostGIS
     db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
     con = create_engine(db_connection_url)
@@ -100,7 +100,7 @@ pd.set_option('display.max_columns', None)
 
 def main():
     # ----------------- Load Data -----------------
-    df = load_DB_data("SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2024;")
+    df = load_db_data("SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2024;")
     statistics_result = calculate_descriptive_stats(df)
 
     print("--- Descriptive Statistics for Features ---")
