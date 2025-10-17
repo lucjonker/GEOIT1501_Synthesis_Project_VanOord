@@ -1,3 +1,4 @@
+# Data Manipulation and Analysis Libraries
 geopandas==1.1.1
 pandas==2.3.2
 SQLAlchemy==2.0.43
@@ -5,5 +6,7 @@ psycopg2==2.9.10
 matplotlib==3.10.6
 scikit-learn==1.7.2
 numpy==2.3.3
+
+# Deep Learning Libraries
 keras==3.11.3
 tensorflow==2.20.0
