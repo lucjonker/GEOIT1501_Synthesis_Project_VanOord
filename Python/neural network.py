@@ -1,14 +1,14 @@
-from main import load_DB_data
+from main import load_db_data
 import pandas as pd
-import numpy as np
+# import numpy as np
 import keras
 from keras import layers
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
-df_2024 = load_DB_data("SELECT tid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2024;")
+df_2024 = load_db_data("SELECT tid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2024;")
 
-df_2025 = load_DB_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2025;")
+df_2025 = load_db_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2025;")
 
 df = pd.merge(df_2024, df_2025, on='tid', how='inner')
 df.dropna(inplace=True)
@@ -23,6 +23,8 @@ df['change_norm'] = y_scaled
 print(df.head())
 
 X = df[['bed_level_x', 'slope', 'roughness', 'aspect']].values
+print("Look here")
+print(df.head())
 y = df['change_norm'].values
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
