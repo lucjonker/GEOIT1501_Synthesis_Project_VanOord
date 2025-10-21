@@ -1,784 +1,97 @@
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Current FME version: FME 2025.1.2.0 (20250829 - Build 25630 - WIN64)
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|System Time: 20251017104054 UTC
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME license: FME Student Edition (node locked-crc)
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Serial Number: 1K9ICPC2H0B7D8MSYWSH
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Machine host name is: LaptopYair
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|OS Locale Name     : nl_NL
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME API version: '4.0 20250515'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features/'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'feature_vegetation.fmw'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2025.1.2.0'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 26100)
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Platform: WIN64
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|System Status: 131.41 GB of disk space available in the FME temporary folder (C:\Users\yairr\AppData\Local\Temp\wbrun_1760691827150_19344\fmetmp_4c)
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|System Status: 15.78 GB of physical memory available
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|System Status: 63.11 GB of virtual memory available
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|START - ProcessID: 3060, peak process memory usage: 41968 kB, current process memory usage: 41968 kB
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features\wb-xlate-1760697653113_19344' `--FME_LAUNCH_VIEWER_APP' `WORKBENCH' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `61691' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `58398'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\yairr\AppData\Roaming\Safe Software\FME\'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\yairr\Documents\FME\Formats
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\yairr\AppData\Roaming\Safe Software\FME\Packages\25630-win64\transformers;C:\Program Files\FME\transformers;C:\Users\yairr\AppData\Roaming\Safe Software\FME\FME Store\Transformers
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\yairr\Documents\FME\CoordinateSystems
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\yairr\Documents\FME\CoordinateSystemExceptions
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\yairr\Documents\FME\CoordinateSystemGridOverrides
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\yairr\Documents\FME\CsmapTransformationExceptions
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\yairr\Documents\FME\TransformerCategories
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\yairr\AppData\Local\Temp\wbrun_1760691827150_19344\fmetmp_4c', set from environment variable `FME_TEMP'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Users\yairr\AppData\Local\Temp'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 47.33 GB
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 35.50 GB
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Creating writer for format: 
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Creating reader for format: 
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Using MultiWriter with keyword `MULTI_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|FME Configuration: Using FME Reprojection Engine
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): The following statistics will be calculated '_band{0}.value.value_count'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): The following statistics will be calculated '_band{0}.value.value_count'
-2025-10-17 12:40:53|   0.0|  0.0|INFORM|Emptying factory pipeline
-2025-10-17 12:40:53|   0.0|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2025-10-17 12:40:53|   0.0|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-17 12:40:53|   0.0|  0.0|STATS |public.side_channels_POSTGIS_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-17 12:40:53|   0.0|  0.0|STATS |GEOTIFF_GEOTIFF_1 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-17 12:40:53|   0.0|  0.0|STATS |GEOTIFF_GEOTIFF_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-17 12:40:53|   0.0|  0.0|STATS |Restoring 49 feature(s) from FME feature store file `C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_public.side_channels -1 6 -1  0  4494fcb7859b78ecaf5989240ffa2d9480f01541.ffs'
-2025-10-17 12:40:53|   0.3|  0.3|STATS |Restoring 1 feature(s) from FME feature store file `C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_GEOTIFF -1 3 -1  0  c757a7e1ca7936ba211baa7f82cb0fd32da727ca.ffs'
-2025-10-17 12:40:53|   0.3|  0.0|INFORM|Creating reader for format: GeoTIFF (Geo-referenced Tagged Image File Format)
-2025-10-17 12:40:54|   0.4|  0.1|INFORM|Trying to find a DYNAMIC plugin for reader named `GEOTIFF'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Directive '_READ_OFFSETS_IN_CS_UNITS' has value 'No'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Directive '_PREFER_FILE_CS_UNITS' has value 'Yes'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Directive '_IGNORE_RASTER_TYPE_KEY' has value 'No'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Directive '_LENIENT_READ' has value 'Yes'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Opening file 'C:\Users\yairr\Downloads\yearly-classified-geotiffs_classified-image-2024.tif'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Directive '_SCALE_COLOR_TO_STANDARD_BIT_DEPTH' has value 'YES'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|GEOTIFF reader: Directive '_APPLY_GCPS' has the value 'NO'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|The EPSG number of the FME coordinate system 'LL-WGS84' is '4326'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|FME Configuration: Source coordinate system for reader R_1[GEOTIFF] set to `LL-WGS84' as read from input data
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|Coordinate System `LL-WGS84' parameters: CS_NAME=`LL-WGS84' DESC_NM=`WGS84 Lat/Longs' DT_NAME=`WGS84' GROUP=`LL' MAP_SCL=`1' PROJ=`LL' QUAD=`1' SCL_RED=`1' UNIT=`DEGREE'
-2025-10-17 12:40:54|   0.4|  0.0|INFORM|CS-MAP Reprojector: Transformation will be automatically selected for 'LL-WGS84' -> 'Amersfoort-RDNew', and is not guaranteed to remain the same in future releases of FME
-2025-10-17 12:40:54|   0.5|  0.1|INFORM|Reprojector: Using transformation `Amersfoort/b_to_WGS84,Inverse(Bursa Wolf,EPSG:4833)' when reprojecting from LL-WGS84 to Amersfoort-RDNew
-2025-10-17 12:40:54|   0.5|  0.0|INFORM|Reprojector: Reprojecting from source coordinate system 'LL-WGS84' to destination coordinate system 'Amersfoort-RDNew'
-2025-10-17 12:40:54|   0.7|  0.2|INFORM|Reprojector: Recalculating raster number of rows and columns from (21779, 21255) to (21921, 21619)
-2025-10-17 12:40:54|   0.7|  0.0|INFORM|Reprojector: Recalculating raster cell size from (8.983152841195215e-5, 8.983152841195215e-5) to (6.237362434062227, 9.950874090533539)
-2025-10-17 12:40:54|   0.7|  0.0|INFORM|Reprojector: Recalculating raster extents from (4.481515289415468, 50.72067757195642), (6.390884425811511, 52.67711842924033) to (91038.99128418343, 303413.10666830104), (225884.52974617473, 521546.21760688676)
-2025-10-17 12:40:54|   1.1|  0.4|STATS |Bufferer BUFFERED Splitter (TeeFactory): Cloned 49 input feature(s) into 98 output feature(s)
-2025-10-17 12:40:54|   1.1|  0.0|STATS |RasterBandNodataSetter (ExecuteFunctionFactory): Executed FME Functions on 1 input feature(s) -- 1 feature(s) completed and 0 feature(s) rejected
-2025-10-17 12:40:54|   1.2|  0.1|INFORM|CS-MAP Reprojector: Transformation will be automatically selected for 'Amersfoort-RDNew' -> 'LL-WGS84', and is not guaranteed to remain the same in future releases of FME
-2025-10-17 12:40:54|   1.2|  0.0|INFORM|Reprojector: Using transformation `Amersfoort/b_to_WGS84,Forward(Bursa Wolf,EPSG:4833)' when reprojecting from Amersfoort-RDNew to LL-WGS84
-2025-10-17 12:40:54|   1.3|  0.1|INFORM|FFS writer: Writing point cloud with 16334 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1.fts'
-2025-10-17 12:40:54|   1.3|  0.0|INFORM|Spatial Index: Adding 16334 features
-2025-10-17 12:40:54|   1.3|  0.0|INFORM|FFS writer: Writing point cloud with 8021 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_1.fts'
-2025-10-17 12:40:54|   1.4|  0.1|INFORM|Spatial Index: Adding 8021 features
-2025-10-17 12:40:55|   1.5|  0.1|INFORM|FFS writer: Writing point cloud with 12080 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_2.fts'
-2025-10-17 12:40:55|   1.5|  0.0|INFORM|Spatial Index: Adding 12080 features
-2025-10-17 12:40:55|   1.5|  0.0|INFORM|FFS writer: Writing point cloud with 9066 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_3.fts'
-2025-10-17 12:40:55|   1.5|  0.0|INFORM|Spatial Index: Adding 9066 features
-2025-10-17 12:40:55|   1.6|  0.1|INFORM|FFS writer: Writing point cloud with 7625 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_4.fts'
-2025-10-17 12:40:55|   1.6|  0.0|INFORM|Spatial Index: Adding 7625 features
-2025-10-17 12:40:55|   1.7|  0.1|INFORM|FFS writer: Writing point cloud with 24846 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_5.fts'
-2025-10-17 12:40:55|   1.8|  0.1|INFORM|Spatial Index: Adding 24846 features
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|FFS writer: Writing point cloud with 4648 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_6.fts'
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|Spatial Index: Adding 4648 features
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|FFS writer: Writing point cloud with 3181 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_7.fts'
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|Spatial Index: Adding 3181 features
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|RasterCellCoercer_OUTPUT Feature Recorder -1 2147614745 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|FFS writer: Writing point cloud with 3886 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_8.fts'
-2025-10-17 12:40:55|   1.8|  0.0|INFORM|Spatial Index: Adding 3886 features
-2025-10-17 12:40:55|   1.9|  0.1|INFORM|RasterCellCoercer_OUTPUT Feature Recorder -1 2147614745 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:55|   1.9|  0.0|INFORM|FFS writer: Writing point cloud with 8535 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_9.fts'
-2025-10-17 12:40:55|   1.9|  0.0|INFORM|Spatial Index: Adding 8535 features
-2025-10-17 12:40:55|   2.0|  0.1|INFORM|FFS writer: Writing point cloud with 12173 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_10.fts'
-2025-10-17 12:40:55|   2.0|  0.0|INFORM|Spatial Index: Adding 12173 features
-2025-10-17 12:40:55|   2.1|  0.1|INFORM|FFS writer: Writing point cloud with 4652 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_11.fts'
-2025-10-17 12:40:55|   2.1|  0.0|INFORM|Spatial Index: Adding 4652 features
-2025-10-17 12:40:55|   2.1|  0.0|INFORM|FFS writer: Writing point cloud with 5816 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_12.fts'
-2025-10-17 12:40:55|   2.1|  0.0|INFORM|Spatial Index: Adding 5816 features
-2025-10-17 12:40:56|   2.4|  0.3|INFORM|FFS writer: Writing point cloud with 12695 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_13.fts'
-2025-10-17 12:40:56|   2.4|  0.0|INFORM|Spatial Index: Adding 12695 features
-2025-10-17 12:40:56|   2.6|  0.2|INFORM|FFS writer: Writing point cloud with 19424 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_14.fts'
-2025-10-17 12:40:56|   2.6|  0.0|INFORM|Spatial Index: Adding 19424 features
-2025-10-17 12:40:56|   2.6|  0.0|INFORM|RasterCellCoercer_OUTPUT Feature Recorder -1 2147614745 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:56|   2.6|  0.0|INFORM|FFS writer: Writing point cloud with 11826 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_15.fts'
-2025-10-17 12:40:56|   2.6|  0.0|INFORM|Spatial Index: Adding 11826 features
-2025-10-17 12:40:56|   2.7|  0.1|INFORM|FFS writer: Writing point cloud with 7509 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_16.fts'
-2025-10-17 12:40:56|   2.7|  0.0|INFORM|Spatial Index: Adding 7509 features
-2025-10-17 12:40:56|   2.7|  0.0|INFORM|FFS writer: Writing point cloud with 10506 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_17.fts'
-2025-10-17 12:40:56|   2.7|  0.0|INFORM|Spatial Index: Adding 10506 features
-2025-10-17 12:40:56|   2.7|  0.0|INFORM|FFS writer: Writing point cloud with 5783 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_18.fts'
-2025-10-17 12:40:56|   2.7|  0.0|INFORM|Spatial Index: Adding 5783 features
-2025-10-17 12:40:56|   2.8|  0.1|INFORM|FFS writer: Writing point cloud with 10068 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_19.fts'
-2025-10-17 12:40:56|   2.8|  0.0|INFORM|Spatial Index: Adding 10068 features
-2025-10-17 12:40:56|   2.8|  0.0|INFORM|FFS writer: Writing point cloud with 4325 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_20.fts'
-2025-10-17 12:40:56|   2.8|  0.0|INFORM|Spatial Index: Adding 4325 features
-2025-10-17 12:40:56|   2.8|  0.0|INFORM|RasterCellCoercer_OUTPUT Feature Recorder -1 2147614745 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:56|   2.9|  0.1|INFORM|FFS writer: Writing point cloud with 5601 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_21.fts'
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|Spatial Index: Adding 5601 features
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|FFS writer: Writing point cloud with 2078 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_22.fts'
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|Spatial Index: Adding 2078 features
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|FFS writer: Writing point cloud with 2061 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_23.fts'
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|Spatial Index: Adding 2061 features
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|FFS writer: Writing point cloud with 2542 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_24.fts'
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|Spatial Index: Adding 2542 features
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|FFS writer: Writing point cloud with 3699 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_25.fts'
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|Spatial Index: Adding 3699 features
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|FFS writer: Writing point cloud with 4136 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_26.fts'
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|Spatial Index: Adding 4136 features
-2025-10-17 12:40:56|   2.9|  0.0|INFORM|RasterCellCoercer_OUTPUT Feature Recorder -1 2147614745 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:56|   3.0|  0.1|INFORM|FFS writer: Writing point cloud with 2892 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_27.fts'
-2025-10-17 12:40:56|   3.0|  0.0|INFORM|Spatial Index: Adding 2892 features
-2025-10-17 12:40:56|   3.1|  0.1|INFORM|FFS writer: Writing point cloud with 6063 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_28.fts'
-2025-10-17 12:40:56|   3.1|  0.0|INFORM|Spatial Index: Adding 6063 features
-2025-10-17 12:40:56|   3.1|  0.0|INFORM|FFS writer: Writing point cloud with 3295 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_29.fts'
-2025-10-17 12:40:56|   3.1|  0.0|INFORM|Spatial Index: Adding 3295 features
-2025-10-17 12:40:57|   3.1|  0.0|INFORM|FFS writer: Writing point cloud with 5466 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_30.fts'
-2025-10-17 12:40:57|   3.1|  0.0|INFORM|Spatial Index: Adding 5466 features
-2025-10-17 12:40:57|   3.2|  0.1|INFORM|FFS writer: Writing point cloud with 3905 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_31.fts'
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|Spatial Index: Adding 3905 features
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|FFS writer: Writing point cloud with 4834 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_32.fts'
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|Spatial Index: Adding 4834 features
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|FFS writer: Writing point cloud with 7561 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_33.fts'
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|Spatial Index: Adding 7561 features
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|FFS writer: Writing point cloud with 11699 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_34.fts'
-2025-10-17 12:40:57|   3.2|  0.0|INFORM|Spatial Index: Adding 11699 features
-2025-10-17 12:40:57|   3.4|  0.2|INFORM|FFS writer: Writing point cloud with 25720 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_35.fts'
-2025-10-17 12:40:57|   3.4|  0.0|INFORM|Spatial Index: Adding 25720 features
-2025-10-17 12:40:57|   3.4|  0.0|INFORM|FFS writer: Writing point cloud with 3358 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_36.fts'
-2025-10-17 12:40:57|   3.4|  0.0|INFORM|Spatial Index: Adding 3358 features
-2025-10-17 12:40:57|   3.5|  0.1|INFORM|FFS writer: Writing point cloud with 5480 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_37.fts'
-2025-10-17 12:40:57|   3.5|  0.0|INFORM|Spatial Index: Adding 5480 features
-2025-10-17 12:40:57|   3.5|  0.0|INFORM|FFS writer: Writing point cloud with 2213 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_38.fts'
-2025-10-17 12:40:57|   3.5|  0.0|INFORM|Spatial Index: Adding 2213 features
-2025-10-17 12:40:57|   3.5|  0.0|INFORM|FFS writer: Writing point cloud with 3752 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_39.fts'
-2025-10-17 12:40:57|   3.5|  0.0|INFORM|Spatial Index: Adding 3752 features
-2025-10-17 12:40:57|   3.6|  0.1|INFORM|FFS writer: Writing point cloud with 25430 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_40.fts'
-2025-10-17 12:40:57|   3.6|  0.0|INFORM|Spatial Index: Adding 25430 features
-2025-10-17 12:40:57|   3.6|  0.0|INFORM|FFS writer: Writing point cloud with 2681 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_41.fts'
-2025-10-17 12:40:57|   3.6|  0.0|INFORM|Spatial Index: Adding 2681 features
-2025-10-17 12:40:57|   3.7|  0.1|INFORM|FFS writer: Writing point cloud with 7791 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_42.fts'
-2025-10-17 12:40:57|   3.7|  0.0|INFORM|Spatial Index: Adding 7791 features
-2025-10-17 12:40:57|   3.7|  0.0|INFORM|FFS writer: Writing point cloud with 4210 point(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_RasterCellCoercer -1 25 fo 0 OUTPUT  0  1ecd7ae43415432f8107585e4375b0f50cbb4fc1_43.fts'
-2025-10-17 12:40:57|   3.7|  0.0|INFORM|Spatial Index: Adding 4210 features
-2025-10-17 12:40:57|   3.7|  0.0|STATS |RasterCellCoercer (RasterToVectorFactory): Processed 49 features. 49 converted to vector successfully, 0 failed. 355585 features output
-2025-10-17 12:40:57|   3.8|  0.1|INFORM|FFS writer: Writing 16331 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8.fts'
-2025-10-17 12:40:57|   3.8|  0.0|INFORM|Spatial Index: Adding 16331 features
-2025-10-17 12:40:57|   3.8|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 16331 features into groups
-2025-10-17 12:40:57|   3.8|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:57|   3.9|  0.1|INFORM|FFS writer: Writing 6107 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180.fts'
-2025-10-17 12:40:57|   3.9|  0.0|INFORM|Spatial Index: Adding 6107 features
-2025-10-17 12:40:57|   3.9|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 6107 features into groups
-2025-10-17 12:40:57|   3.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:57|   3.9|  0.0|INFORM|FFS writer: Writing 10224 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29.fts'
-2025-10-17 12:40:57|   3.9|  0.0|INFORM|Spatial Index: Adding 10224 features
-2025-10-17 12:40:57|   3.9|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   3.9|  0.0|INFORM|FFS writer: Writing 8020 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_1.fts'
-2025-10-17 12:40:58|   4.0|  0.1|INFORM|Spatial Index: Adding 8020 features
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 8020 features into groups
-2025-10-17 12:40:58|   4.0|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|FFS writer: Writing 4648 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_1.fts'
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|Spatial Index: Adding 4648 features
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 4648 features into groups
-2025-10-17 12:40:58|   4.0|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|FFS writer: Writing 3372 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_1.fts'
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|Spatial Index: Adding 3372 features
-2025-10-17 12:40:58|   4.0|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.1|  0.1|INFORM|FFS writer: Writing 12078 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_2.fts'
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|Spatial Index: Adding 12078 features
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 12078 features into groups
-2025-10-17 12:40:58|   4.1|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|FFS writer: Writing 6640 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_2.fts'
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|Spatial Index: Adding 6640 features
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 6640 features into groups
-2025-10-17 12:40:58|   4.1|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|FFS writer: Writing 5438 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_2.fts'
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|Spatial Index: Adding 5438 features
-2025-10-17 12:40:58|   4.1|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.3|  0.2|INFORM|FFS writer: Writing 9064 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_3.fts'
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|Spatial Index: Adding 9064 features
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 9064 features into groups
-2025-10-17 12:40:58|   4.3|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|FFS writer: Writing 2931 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_3.fts'
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|Spatial Index: Adding 2931 features
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2931 features into groups
-2025-10-17 12:40:58|   4.3|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|FFS writer: Writing 6133 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_3.fts'
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|Spatial Index: Adding 6133 features
-2025-10-17 12:40:58|   4.3|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.4|  0.1|INFORM|FFS writer: Writing 7623 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_4.fts'
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|Spatial Index: Adding 7623 features
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 7623 features into groups
-2025-10-17 12:40:58|   4.4|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|FFS writer: Writing 5264 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_4.fts'
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|Spatial Index: Adding 5264 features
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 5264 features into groups
-2025-10-17 12:40:58|   4.4|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|FFS writer: Writing 2359 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_4.fts'
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|Spatial Index: Adding 2359 features
-2025-10-17 12:40:58|   4.4|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.5|  0.1|INFORM|FFS writer: Writing 24841 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_5.fts'
-2025-10-17 12:40:58|   4.5|  0.0|INFORM|Spatial Index: Adding 24841 features
-2025-10-17 12:40:58|   4.6|  0.1|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 24841 features into groups
-2025-10-17 12:40:58|   4.6|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|FFS writer: Writing 19199 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_5.fts'
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|Spatial Index: Adding 19199 features
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 19199 features into groups
-2025-10-17 12:40:58|   4.6|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|FFS writer: Writing 5642 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_5.fts'
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|Spatial Index: Adding 5642 features
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|SpatialFilter (SpatialFilterFactory): Processed 'Candidate' 77.973 / 355.585
-2025-10-17 12:40:58|   4.6|  0.0|INFORM|FFS writer: Writing 4647 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_6.fts'
-2025-10-17 12:40:58|   4.7|  0.1|INFORM|Spatial Index: Adding 4647 features
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 4647 features into groups
-2025-10-17 12:40:58|   4.7|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|FFS writer: Writing 2407 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_6.fts'
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|Spatial Index: Adding 2407 features
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2407 features into groups
-2025-10-17 12:40:58|   4.7|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|FFS writer: Writing 2240 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_6.fts'
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|Spatial Index: Adding 2240 features
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|FFS writer: Writing 3180 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_7.fts'
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|Spatial Index: Adding 3180 features
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3180 features into groups
-2025-10-17 12:40:58|   4.7|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.7|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.7|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.7|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.7|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.8|  0.1|INFORM|FFS writer: Writing 3885 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_8.fts'
-2025-10-17 12:40:58|   4.9|  0.1|INFORM|Spatial Index: Adding 3885 features
-2025-10-17 12:40:58|   4.9|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3885 features into groups
-2025-10-17 12:40:58|   4.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:58|   4.9|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:58|   4.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   4.9|  0.0|INFORM|FFS writer: Writing 2507 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_7.fts'
-2025-10-17 12:40:59|   4.9|  0.0|INFORM|Spatial Index: Adding 2507 features
-2025-10-17 12:40:59|   4.9|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   4.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   4.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.1|  0.2|INFORM|FFS writer: Writing 8534 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_9.fts'
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|Spatial Index: Adding 8534 features
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 8534 features into groups
-2025-10-17 12:40:59|   5.1|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|FFS writer: Writing 2366 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_7.fts'
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|Spatial Index: Adding 2366 features
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2366 features into groups
-2025-10-17 12:40:59|   5.1|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|FFS writer: Writing 6168 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_8.fts'
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|Spatial Index: Adding 6168 features
-2025-10-17 12:40:59|   5.1|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.2|  0.1|INFORM|FFS writer: Writing 12172 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_10.fts'
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|Spatial Index: Adding 12172 features
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 12172 features into groups
-2025-10-17 12:40:59|   5.2|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|FFS writer: Writing 5943 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_8.fts'
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|Spatial Index: Adding 5943 features
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 5943 features into groups
-2025-10-17 12:40:59|   5.2|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|FFS writer: Writing 6229 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_9.fts'
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|Spatial Index: Adding 6229 features
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|FFS writer: Writing 4650 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_11.fts'
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|Spatial Index: Adding 4650 features
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 4650 features into groups
-2025-10-17 12:40:59|   5.2|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.2|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|FFS writer: Writing 3882 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_10.fts'
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|Spatial Index: Adding 3882 features
-2025-10-17 12:40:59|   5.2|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.3|  0.1|INFORM|FFS writer: Writing 5813 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_12.fts'
-2025-10-17 12:40:59|   5.3|  0.0|INFORM|Spatial Index: Adding 5813 features
-2025-10-17 12:40:59|   5.3|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 5813 features into groups
-2025-10-17 12:40:59|   5.3|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.3|  0.0|INFORM|FFS writer: Writing 4317 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_9.fts'
-2025-10-17 12:40:59|   5.3|  0.0|INFORM|Spatial Index: Adding 4317 features
-2025-10-17 12:40:59|   5.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 4317 features into groups
-2025-10-17 12:40:59|   5.3|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.3|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.4|  0.1|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.5|  0.1|INFORM|FFS writer: Writing 12693 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_13.fts'
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|Spatial Index: Adding 12693 features
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 12693 features into groups
-2025-10-17 12:40:59|   5.5|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|FFS writer: Writing 7359 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_10.fts'
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|Spatial Index: Adding 7359 features
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 7359 features into groups
-2025-10-17 12:40:59|   5.5|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|FFS writer: Writing 5334 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_11.fts'
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|Spatial Index: Adding 5334 features
-2025-10-17 12:40:59|   5.5|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.6|  0.1|INFORM|FFS writer: Writing 19420 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_14.fts'
-2025-10-17 12:40:59|   5.7|  0.1|INFORM|Spatial Index: Adding 19420 features
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 19420 features into groups
-2025-10-17 12:40:59|   5.7|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|FFS writer: Writing 9344 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_11.fts'
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|Spatial Index: Adding 9344 features
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 9344 features into groups
-2025-10-17 12:40:59|   5.7|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|FFS writer: Writing 10076 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_12.fts'
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|Spatial Index: Adding 10076 features
-2025-10-17 12:40:59|   5.7|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:40:59|   5.7|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.7|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:40:59|   5.8|  0.1|INFORM|FFS writer: Writing 11825 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_15.fts'
-2025-10-17 12:41:00|   5.8|  0.0|INFORM|Spatial Index: Adding 11825 features
-2025-10-17 12:41:00|   5.8|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 11825 features into groups
-2025-10-17 12:41:00|   5.8|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   5.8|  0.0|INFORM|FFS writer: Writing 5745 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_12.fts'
-2025-10-17 12:41:00|   5.8|  0.0|INFORM|Spatial Index: Adding 5745 features
-2025-10-17 12:41:00|   5.8|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 5745 features into groups
-2025-10-17 12:41:00|   5.8|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   5.8|  0.0|INFORM|FFS writer: Writing 6080 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_13.fts'
-2025-10-17 12:41:00|   5.9|  0.1|INFORM|Spatial Index: Adding 6080 features
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|FFS writer: Writing 7509 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_16.fts'
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|Spatial Index: Adding 7509 features
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 7509 features into groups
-2025-10-17 12:41:00|   5.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|FFS writer: Writing 4457 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_13.fts'
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|Spatial Index: Adding 4457 features
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 4457 features into groups
-2025-10-17 12:41:00|   5.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   5.9|  0.0|INFORM|FFS writer: Writing 3052 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_14.fts'
-2025-10-17 12:41:00|   6.0|  0.1|INFORM|Spatial Index: Adding 3052 features
-2025-10-17 12:41:00|   6.1|  0.1|INFORM|FFS writer: Writing 10505 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_17.fts'
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|Spatial Index: Adding 10505 features
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 10505 features into groups
-2025-10-17 12:41:00|   6.1|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|FFS writer: Writing 6615 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_14.fts'
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|Spatial Index: Adding 6615 features
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 6615 features into groups
-2025-10-17 12:41:00|   6.1|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|FFS writer: Writing 3890 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_15.fts'
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|Spatial Index: Adding 3890 features
-2025-10-17 12:41:00|   6.1|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.2|  0.1|INFORM|FFS writer: Writing 5783 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_18.fts'
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|Spatial Index: Adding 5783 features
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 5783 features into groups
-2025-10-17 12:41:00|   6.2|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|FFS writer: Writing 2855 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_15.fts'
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|Spatial Index: Adding 2855 features
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2855 features into groups
-2025-10-17 12:41:00|   6.2|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|FFS writer: Writing 2928 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_16.fts'
-2025-10-17 12:41:00|   6.2|  0.0|INFORM|Spatial Index: Adding 2928 features
-2025-10-17 12:41:00|   6.3|  0.1|INFORM|FFS writer: Writing 10068 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_19.fts'
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|Spatial Index: Adding 10068 features
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 10068 features into groups
-2025-10-17 12:41:00|   6.3|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|FFS writer: Writing 5057 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_16.fts'
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|Spatial Index: Adding 5057 features
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 5057 features into groups
-2025-10-17 12:41:00|   6.3|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|FFS writer: Writing 5011 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_17.fts'
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|Spatial Index: Adding 5011 features
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|FFS writer: Writing 4325 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_20.fts'
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|Spatial Index: Adding 4325 features
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 4325 features into groups
-2025-10-17 12:41:00|   6.3|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|FFS writer: Writing 3069 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_17.fts'
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|Spatial Index: Adding 3069 features
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 3069 features into groups
-2025-10-17 12:41:00|   6.3|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.3|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.4|  0.1|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.4|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.4|  0.0|INFORM|FFS writer: Writing 5599 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_21.fts'
-2025-10-17 12:41:00|   6.4|  0.0|INFORM|Spatial Index: Adding 5599 features
-2025-10-17 12:41:00|   6.4|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 5599 features into groups
-2025-10-17 12:41:00|   6.4|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.4|  0.0|INFORM|FFS writer: Writing 4427 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_18.fts'
-2025-10-17 12:41:00|   6.5|  0.1|INFORM|Spatial Index: Adding 4427 features
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 4427 features into groups
-2025-10-17 12:41:00|   6.5|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|FFS writer: Writing 2078 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_22.fts'
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|Spatial Index: Adding 2078 features
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 2078 features into groups
-2025-10-17 12:41:00|   6.5|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.5|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.5|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.6|  0.1|INFORM|FFS writer: Writing 2061 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_23.fts'
-2025-10-17 12:41:00|   6.6|  0.0|INFORM|Spatial Index: Adding 2061 features
-2025-10-17 12:41:00|   6.6|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 2061 features into groups
-2025-10-17 12:41:00|   6.6|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.6|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.6|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.7|  0.1|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.7|  0.0|INFORM|FFS writer: Writing 2542 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_24.fts'
-2025-10-17 12:41:00|   6.7|  0.0|INFORM|Spatial Index: Adding 2542 features
-2025-10-17 12:41:00|   6.7|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 2542 features into groups
-2025-10-17 12:41:00|   6.7|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.7|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.7|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.7|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.8|  0.1|INFORM|FFS writer: Writing 3699 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_25.fts'
-2025-10-17 12:41:00|   6.8|  0.0|INFORM|Spatial Index: Adding 3699 features
-2025-10-17 12:41:00|   6.8|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3699 features into groups
-2025-10-17 12:41:00|   6.8|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.8|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:00|   6.8|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:00|   6.8|  0.0|INFORM|FFS writer: Writing 2891 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_18.fts'
-2025-10-17 12:41:00|   6.8|  0.0|INFORM|Spatial Index: Adding 2891 features
-2025-10-17 12:41:01|   6.8|  0.0|INFORM|FFS writer: Writing 4134 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_26.fts'
-2025-10-17 12:41:01|   6.8|  0.0|INFORM|Spatial Index: Adding 4134 features
-2025-10-17 12:41:01|   6.9|  0.1|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 4134 features into groups
-2025-10-17 12:41:01|   6.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   6.9|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   6.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   6.9|  0.0|INFORM|FFS writer: Writing 2136 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_19.fts'
-2025-10-17 12:41:01|   6.9|  0.0|INFORM|Spatial Index: Adding 2136 features
-2025-10-17 12:41:01|   6.9|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   6.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   6.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.0|  0.1|INFORM|FFS writer: Writing 2892 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_27.fts'
-2025-10-17 12:41:01|   7.0|  0.0|INFORM|Spatial Index: Adding 2892 features
-2025-10-17 12:41:01|   7.0|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 2892 features into groups
-2025-10-17 12:41:01|   7.0|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.0|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.0|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.0|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.1|  0.1|INFORM|FFS writer: Writing 6062 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_28.fts'
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|Spatial Index: Adding 6062 features
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 6062 features into groups
-2025-10-17 12:41:01|   7.1|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|FFS writer: Writing 3793 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_19.fts'
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|Spatial Index: Adding 3793 features
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 3793 features into groups
-2025-10-17 12:41:01|   7.1|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|FFS writer: Writing 2269 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_20.fts'
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|Spatial Index: Adding 2269 features
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|FFS writer: Writing 3293 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_29.fts'
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|Spatial Index: Adding 3293 features
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3293 features into groups
-2025-10-17 12:41:01|   7.1|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|FFS writer: Writing 2412 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_20.fts'
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|Spatial Index: Adding 2412 features
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2412 features into groups
-2025-10-17 12:41:01|   7.1|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.1|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.2|  0.1|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.2|  0.0|INFORM|FFS writer: Writing 5464 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_30.fts'
-2025-10-17 12:41:01|   7.2|  0.0|INFORM|Spatial Index: Adding 5464 features
-2025-10-17 12:41:01|   7.2|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 5464 features into groups
-2025-10-17 12:41:01|   7.2|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.2|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.2|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.2|  0.0|INFORM|FFS writer: Writing 3816 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_21.fts'
-2025-10-17 12:41:01|   7.3|  0.1|INFORM|Spatial Index: Adding 3816 features
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|FFS writer: Writing 3904 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_31.fts'
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|Spatial Index: Adding 3904 features
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3904 features into groups
-2025-10-17 12:41:01|   7.3|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|FFS writer: Writing 2448 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_21.fts'
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|Spatial Index: Adding 2448 features
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2448 features into groups
-2025-10-17 12:41:01|   7.3|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.3|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.4|  0.1|INFORM|FFS writer: Writing 4833 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_32.fts'
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|Spatial Index: Adding 4833 features
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 4833 features into groups
-2025-10-17 12:41:01|   7.4|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|FFS writer: Writing 2538 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_22.fts'
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|Spatial Index: Adding 2538 features
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2538 features into groups
-2025-10-17 12:41:01|   7.4|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|FFS writer: Writing 2295 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_22.fts'
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|Spatial Index: Adding 2295 features
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|FFS writer: Writing 7561 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_33.fts'
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|Spatial Index: Adding 7561 features
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 7561 features into groups
-2025-10-17 12:41:01|   7.4|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|FFS writer: Writing 3340 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_23.fts'
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|Spatial Index: Adding 3340 features
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 3340 features into groups
-2025-10-17 12:41:01|   7.4|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.4|  0.0|INFORM|FFS writer: Writing 4221 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_23.fts'
-2025-10-17 12:41:01|   7.5|  0.1|INFORM|Spatial Index: Adding 4221 features
-2025-10-17 12:41:01|   7.5|  0.0|INFORM|FFS writer: Writing 11698 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_34.fts'
-2025-10-17 12:41:01|   7.6|  0.1|INFORM|Spatial Index: Adding 11698 features
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 11698 features into groups
-2025-10-17 12:41:01|   7.6|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|FFS writer: Writing 8374 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_24.fts'
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|Spatial Index: Adding 8374 features
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 8374 features into groups
-2025-10-17 12:41:01|   7.6|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|FFS writer: Writing 3324 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_24.fts'
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|Spatial Index: Adding 3324 features
-2025-10-17 12:41:01|   7.6|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   7.7|  0.1|INFORM|FFS writer: Writing 25716 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_35.fts'
-2025-10-17 12:41:02|   7.8|  0.1|INFORM|Spatial Index: Adding 25716 features
-2025-10-17 12:41:02|   7.8|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 25716 features into groups
-2025-10-17 12:41:02|   7.8|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   7.8|  0.0|INFORM|FFS writer: Writing 7417 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_25.fts'
-2025-10-17 12:41:02|   7.8|  0.0|INFORM|Spatial Index: Adding 7417 features
-2025-10-17 12:41:02|   7.8|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 7417 features into groups
-2025-10-17 12:41:02|   7.8|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   7.8|  0.0|INFORM|FFS writer: Writing 18299 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_25.fts'
-2025-10-17 12:41:02|   7.8|  0.0|INFORM|Spatial Index: Adding 18299 features
-2025-10-17 12:41:02|   7.9|  0.1|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|FFS writer: Writing 3358 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_36.fts'
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|Spatial Index: Adding 3358 features
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3358 features into groups
-2025-10-17 12:41:02|   7.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   7.9|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|FFS writer: Writing 2171 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_26.fts'
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|Spatial Index: Adding 2171 features
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|FFS writer: Writing 5480 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_37.fts'
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|Spatial Index: Adding 5480 features
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 5480 features into groups
-2025-10-17 12:41:02|   7.9|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   7.9|  0.0|INFORM|FFS writer: Writing 2963 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_26.fts'
-2025-10-17 12:41:02|   8.0|  0.1|INFORM|Spatial Index: Adding 2963 features
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 2963 features into groups
-2025-10-17 12:41:02|   8.0|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|FFS writer: Writing 2517 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_27.fts'
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|Spatial Index: Adding 2517 features
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|FFS writer: Writing 2213 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_38.fts'
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|Spatial Index: Adding 2213 features
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 2213 features into groups
-2025-10-17 12:41:02|   8.0|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.0|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|FFS writer: Writing 3751 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_39.fts'
-2025-10-17 12:41:02|   8.0|  0.0|INFORM|Spatial Index: Adding 3751 features
-2025-10-17 12:41:02|   8.1|  0.1|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 3751 features into groups
-2025-10-17 12:41:02|   8.1|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.1|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.1|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.1|  0.0|INFORM|FFS writer: Writing 2167 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_28.fts'
-2025-10-17 12:41:02|   8.1|  0.0|INFORM|Spatial Index: Adding 2167 features
-2025-10-17 12:41:02|   8.1|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.2|  0.1|INFORM|FFS writer: Writing 25424 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_40.fts'
-2025-10-17 12:41:02|   8.2|  0.0|INFORM|Spatial Index: Adding 25424 features
-2025-10-17 12:41:02|   8.2|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 25424 features into groups
-2025-10-17 12:41:02|   8.3|  0.1|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.3|  0.0|INFORM|FFS writer: Writing 11594 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_27.fts'
-2025-10-17 12:41:02|   8.3|  0.0|INFORM|Spatial Index: Adding 11594 features
-2025-10-17 12:41:02|   8.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 11594 features into groups
-2025-10-17 12:41:02|   8.3|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.3|  0.0|INFORM|FFS writer: Writing 13830 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_29.fts'
-2025-10-17 12:41:02|   8.3|  0.0|INFORM|Spatial Index: Adding 13830 features
-2025-10-17 12:41:02|   8.3|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.4|  0.1|INFORM|FFS writer: Writing 2681 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_41.fts'
-2025-10-17 12:41:02|   8.4|  0.0|INFORM|Spatial Index: Adding 2681 features
-2025-10-17 12:41:02|   8.4|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 2681 features into groups
-2025-10-17 12:41:02|   8.4|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.4|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.4|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.5|  0.1|INFORM|Tester_2_FAILED Feature Recorder -1 2147680297 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.5|  0.0|INFORM|FFS writer: Writing 7790 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_42.fts'
-2025-10-17 12:41:02|   8.6|  0.1|INFORM|Spatial Index: Adding 7790 features
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 7790 features into groups
-2025-10-17 12:41:02|   8.6|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|FFS writer: Writing 5480 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 0 PASSED  0  5cd1cdfe536485a74683a070001de69875b1d180_28.fts'
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|Spatial Index: Adding 5480 features
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Preparing to divide 5480 features into groups
-2025-10-17 12:41:02|   8.6|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|FFS writer: Writing 2310 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_30.fts'
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|Spatial Index: Adding 2310 features
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|SpatialFilter (SpatialFilterFactory): Processed 'Candidate' 355.585 / 355.585
-2025-10-17 12:41:02|   8.6|  0.0|INFORM|FFS writer: Writing 4208 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_SpatialFilter -1 30 fo 0 PASSED  0  04f273e76967cd4e5e10147b6a0a53345795d9a8_43.fts'
-2025-10-17 12:41:03|   8.6|  0.0|INFORM|Spatial Index: Adding 4208 features
-2025-10-17 12:41:03|   8.6|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Preparing to divide 4208 features into groups
-2025-10-17 12:41:03|   8.6|  0.0|WARN  |StatisticsCalculator_3 (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:03|   8.6|  0.0|INFORM|Tester_2_PASSED Feature Recorder -1 2147614761 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:03|   8.6|  0.0|WARN  |StatisticsCalculator (StatisticsCalculatorFactory): No schema information found for Attribute '_band{0}.value' during setup. This may cause numeric statistic result types to become 64 bit reals
-2025-10-17 12:41:03|   8.7|  0.1|INFORM|FFS writer: Writing 2632 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_Tester_2 -1 41 fo 1 FAILED  0  4c841759215bf82888502242a8a097f6af0b7c29_31.fts'
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|Spatial Index: Adding 2632 features
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|SpatialFilter_FAILED Feature Recorder -1 2147680286 (RecorderFactory): Splitting bulk features into individual features
-2025-10-17 12:41:03|   8.7|  0.0|STATS |SpatialFilter (SpatialFilterFactory): Total: Processed 355634 input feature(s): 49 'Filter' feature(s) and 355585 'Candidate' feature(s). 355525 feature(s) PASSED
-2025-10-17 12:41:03|   8.7|  0.0|STATS |SpatialFilter PASSED Splitter (TeeFactory): Cloned 355525 input feature(s) into 711050 output feature(s)
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|FFS writer: Writing 19420 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2.fts'
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|Spatial Index: Adding 19420 features
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|FFS writer: Writing 12078 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_1.fts'
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|Spatial Index: Adding 12078 features
-2025-10-17 12:41:03|   8.7|  0.0|INFORM|FFS writer: Writing 12172 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_2.fts'
-2025-10-17 12:41:03|   8.8|  0.1|INFORM|Spatial Index: Adding 12172 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 11698 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_3.fts'
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|Spatial Index: Adding 11698 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 2681 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_4.fts'
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|Spatial Index: Adding 2681 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 7623 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_5.fts'
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|Spatial Index: Adding 7623 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 7561 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_6.fts'
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|Spatial Index: Adding 7561 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 2213 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_7.fts'
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|Spatial Index: Adding 2213 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 4208 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_8.fts'
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|Spatial Index: Adding 4208 features
-2025-10-17 12:41:03|   8.8|  0.0|INFORM|FFS writer: Writing 11825 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_9.fts'
-2025-10-17 12:41:03|   8.9|  0.1|INFORM|Spatial Index: Adding 11825 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 3699 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_10.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 3699 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 9064 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_11.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 9064 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 5480 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_12.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 5480 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 10068 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_13.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 10068 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 2542 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_14.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 2542 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 7790 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_15.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 7790 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 8534 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_16.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 8534 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 12693 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_17.fts'
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|Spatial Index: Adding 12693 features
-2025-10-17 12:41:03|   8.9|  0.0|INFORM|FFS writer: Writing 16331 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_18.fts'
-2025-10-17 12:41:03|   9.0|  0.1|INFORM|Spatial Index: Adding 16331 features
-2025-10-17 12:41:03|   9.0|  0.0|INFORM|FFS writer: Writing 25424 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_19.fts'
-2025-10-17 12:41:03|   9.0|  0.0|INFORM|Spatial Index: Adding 25424 features
-2025-10-17 12:41:03|   9.1|  0.1|INFORM|FFS writer: Writing 10505 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_20.fts'
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|Spatial Index: Adding 10505 features
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|FFS writer: Writing 4134 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_21.fts'
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|Spatial Index: Adding 4134 features
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|FFS writer: Writing 3293 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_22.fts'
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|Spatial Index: Adding 3293 features
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|FFS writer: Writing 4833 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_23.fts'
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|Spatial Index: Adding 4833 features
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|FFS writer: Writing 25716 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_24.fts'
-2025-10-17 12:41:03|   9.1|  0.0|INFORM|Spatial Index: Adding 25716 features
-2025-10-17 12:41:03|   9.2|  0.1|INFORM|FFS writer: Writing 5783 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_25.fts'
-2025-10-17 12:41:03|   9.2|  0.0|INFORM|Spatial Index: Adding 5783 features
-2025-10-17 12:41:03|   9.2|  0.0|INFORM|FFS writer: Writing 3904 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_26.fts'
-2025-10-17 12:41:03|   9.2|  0.0|INFORM|Spatial Index: Adding 3904 features
-2025-10-17 12:41:03|   9.2|  0.0|INFORM|FFS writer: Writing 5464 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_27.fts'
-2025-10-17 12:41:03|   9.3|  0.1|INFORM|Spatial Index: Adding 5464 features
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|FFS writer: Writing 3885 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_28.fts'
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|Spatial Index: Adding 3885 features
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|FFS writer: Writing 4325 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_29.fts'
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|Spatial Index: Adding 4325 features
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|FFS writer: Writing 5599 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_30.fts'
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|Spatial Index: Adding 5599 features
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|FFS writer: Writing 24841 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_31.fts'
-2025-10-17 12:41:03|   9.3|  0.0|INFORM|Spatial Index: Adding 24841 features
-2025-10-17 12:41:03|   9.4|  0.1|INFORM|FFS writer: Writing 6062 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_32.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 6062 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 4650 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_33.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 4650 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 5813 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_34.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 5813 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 3358 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_35.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 3358 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 2892 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_36.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 2892 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 8020 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_37.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 8020 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 4647 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_38.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 4647 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 3751 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_39.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 3751 features
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|FFS writer: Writing 2061 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_40.fts'
-2025-10-17 12:41:03|   9.4|  0.0|INFORM|Spatial Index: Adding 2061 features
-2025-10-17 12:41:03|   9.5|  0.1|INFORM|FFS writer: Writing 2078 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_41.fts'
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|Spatial Index: Adding 2078 features
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|FFS writer: Writing 3180 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_42.fts'
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|Spatial Index: Adding 3180 features
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|FFS writer: Writing 7509 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator_3 -1 35 fo 1 COMPLETE  0  e11bd913bdd5b35a49b384f1cce3fb0465fd6bf2_43.fts'
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|Spatial Index: Adding 7509 features
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|StatisticsCalculator_3 (StatisticsCalculatorFactory): Processing complete
-2025-10-17 12:41:03|   9.5|  0.0|STATS |Tester_2 (TestFactory): Tested 355525 input feature(s) -- 183261 feature(s) passed and 172264 feature(s) failed
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|FFS writer: Writing 9344 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7.fts'
-2025-10-17 12:41:03|   9.5|  0.0|INFORM|Spatial Index: Adding 9344 features
-2025-10-17 12:41:03|   9.6|  0.1|INFORM|FFS writer: Writing 6640 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_1.fts'
-2025-10-17 12:41:03|   9.6|  0.0|INFORM|Spatial Index: Adding 6640 features
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|FFS writer: Writing 5943 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_2.fts'
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|Spatial Index: Adding 5943 features
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|FFS writer: Writing 8374 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_3.fts'
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|Spatial Index: Adding 8374 features
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|FFS writer: Writing 5264 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_4.fts'
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|Spatial Index: Adding 5264 features
-2025-10-17 12:41:04|   9.6|  0.0|INFORM|FFS writer: Writing 3340 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_5.fts'
-2025-10-17 12:41:04|   9.7|  0.1|INFORM|Spatial Index: Adding 3340 features
-2025-10-17 12:41:04|   9.8|  0.1|INFORM|FFS writer: Writing 5745 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_6.fts'
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|Spatial Index: Adding 5745 features
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|FFS writer: Writing 2931 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_7.fts'
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|Spatial Index: Adding 2931 features
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|FFS writer: Writing 2963 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_8.fts'
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|Spatial Index: Adding 2963 features
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|FFS writer: Writing 5057 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_9.fts'
-2025-10-17 12:41:04|   9.8|  0.0|INFORM|Spatial Index: Adding 5057 features
-2025-10-17 12:41:04|   9.9|  0.1|INFORM|FFS writer: Writing 5480 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_10.fts'
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|Spatial Index: Adding 5480 features
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|FFS writer: Writing 2366 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_11.fts'
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|Spatial Index: Adding 2366 features
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|FFS writer: Writing 7359 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_12.fts'
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|Spatial Index: Adding 7359 features
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|FFS writer: Writing 6107 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_13.fts'
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|Spatial Index: Adding 6107 features
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|FFS writer: Writing 11594 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_14.fts'
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|Spatial Index: Adding 11594 features
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|FFS writer: Writing 6615 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_15.fts'
-2025-10-17 12:41:04|   9.9|  0.0|INFORM|Spatial Index: Adding 6615 features
-2025-10-17 12:41:04|  10.0|  0.1|INFORM|FFS writer: Writing 2412 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_16.fts'
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|Spatial Index: Adding 2412 features
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|FFS writer: Writing 2538 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_17.fts'
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|Spatial Index: Adding 2538 features
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|FFS writer: Writing 7417 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_18.fts'
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|Spatial Index: Adding 7417 features
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|FFS writer: Writing 2855 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_19.fts'
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|Spatial Index: Adding 2855 features
-2025-10-17 12:41:04|  10.0|  0.0|INFORM|FFS writer: Writing 2448 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_20.fts'
-2025-10-17 12:41:04|  10.1|  0.1|INFORM|Spatial Index: Adding 2448 features
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|FFS writer: Writing 3069 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_21.fts'
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|Spatial Index: Adding 3069 features
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|FFS writer: Writing 4427 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_22.fts'
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|Spatial Index: Adding 4427 features
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|FFS writer: Writing 19199 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_23.fts'
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|Spatial Index: Adding 19199 features
-2025-10-17 12:41:04|  10.1|  0.0|INFORM|FFS writer: Writing 3793 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_24.fts'
-2025-10-17 12:41:04|  10.2|  0.1|INFORM|Spatial Index: Adding 3793 features
-2025-10-17 12:41:04|  10.2|  0.0|INFORM|FFS writer: Writing 4317 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_25.fts'
-2025-10-17 12:41:04|  10.2|  0.0|INFORM|Spatial Index: Adding 4317 features
-2025-10-17 12:41:04|  10.2|  0.0|INFORM|FFS writer: Writing 4648 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_26.fts'
-2025-10-17 12:41:04|  10.2|  0.0|INFORM|Spatial Index: Adding 4648 features
-2025-10-17 12:41:04|  10.2|  0.0|INFORM|FFS writer: Writing 2407 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_27.fts'
-2025-10-17 12:41:04|  10.2|  0.0|INFORM|Spatial Index: Adding 2407 features
-2025-10-17 12:41:04|  10.3|  0.1|INFORM|FFS writer: Writing 4457 feature(s) to file 'C:\Users\yairr\AppData\Local\Temp\wb-cache-feature_vegetation-ZUOvDr\Main_StatisticsCalculator -1 39 fo 1 COMPLETE  0  2a1352646db63f7d4b069ac4ae6ffd4848074ec7_28.fts'
-2025-10-17 12:41:04|  10.3|  0.0|INFORM|Spatial Index: Adding 4457 features
-2025-10-17 12:41:04|  10.3|  0.0|INFORM|StatisticsCalculator (StatisticsCalculatorFactory): Processing complete
-2025-10-17 12:41:04|  10.5|  0.2|STATS |FeatureMerger (ReferenceFactory): Total Results: 49 Complete Feature(s), 0 Incomplete Feature(s), 49 Referenced Feature(s), 0 Unreferenced Feature(s), 0 Referencer Feature(s) (NO REFERENCES), 0 Referencee Feature(s) (NO Referencee fields defined), and 0 Duplicate Referencee Feature(s)
-2025-10-17 12:41:06|  11.8|  1.3|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 0 input feature(s), wrote 0 output feature(s): 0 matched merge filters, 0 were routed to output, 0 could not be routed.
-2025-10-17 12:41:06|  11.8|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
-2025-10-17 12:41:06|  11.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-17 12:41:06|  11.8|  0.0|STATS |                            Features Read Summary
-2025-10-17 12:41:06|  11.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-17 12:41:06|  11.8|  0.0|STATS |==============================================================================
-2025-10-17 12:41:06|  11.8|  0.0|STATS |Total Features Read                                                          0
-2025-10-17 12:41:06|  11.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-17 12:41:06|  11.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-17 12:41:06|  11.8|  0.0|STATS |                           Features Written Summary
-2025-10-17 12:41:06|  11.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-17 12:41:06|  11.8|  0.0|STATS |==============================================================================
-2025-10-17 12:41:06|  11.8|  0.0|STATS |Total Features Written                                                       0
-2025-10-17 12:41:06|  11.8|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~                                                                             ~-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~      Data caches have been recorded at every stage of the translation.      ~-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~                click the data cache icons next to the ports.                ~-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~                                                                             ~-
-2025-10-17 12:41:06|  11.8|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
-2025-10-17 12:41:06|  11.8|  0.0|INFORM|Translation was SUCCESSFUL with 105 warning(s) (0 feature(s) output)
-2025-10-17 12:41:06|  11.8|  0.0|INFORM|FME Session Duration: 13 seconds. (CPU: 9.8s user, 2.0s system)
-2025-10-17 12:41:06|  11.8|  0.0|INFORM|END - ProcessID: 3060, peak process memory usage: 637964 kB, current process memory usage: 315396 kB
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Current FME version: FME 2025.1.2.0 (20250829 - Build 25630 - WIN64)
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|System Time: 20251021125016 UTC
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME_HOME is 'C:\Program Files\FME\'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME license: FME Student Edition (node locked-crc)
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Serial Number: 1K9ICPC2H0B7D8MSYWSH
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Machine host name is: LaptopYair
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|OS Locale Name     : nl_NL
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|OS Locale Encoding : windows-1252
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Process Encoding   : UTF-8
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME API version: '4.0 20250515'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: FME_BASE is 'no'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: FME_MF_DIR is 'C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features/'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: FME_MF_NAME is 'feature_vegetation.fmw'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: FME_PRODUCT_NAME is 'FME(R) 2025.1.2.0'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Operating System: Microsoft Windows 11 64-bit  (Build 26100)
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Platform: WIN64
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|System Status: 130.48 GB of disk space available in the FME temporary folder (C:\Users\yairr\AppData\Local\Temp\wbrun_1761050995070_3228\fmetmp_0)
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|System Status: 15.78 GB of physical memory available
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|System Status: 63.11 GB of virtual memory available
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|START - ProcessID: 10784, peak process memory usage: 41260 kB, current process memory usage: 41252 kB
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Command line arguments are `C:\Program Files\FME\fme.exe' `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features\wb-xlate-1761051015353_3228' `--FME_LAUNCH_VIEWER_APP' `WORKBENCH' `LOG_STANDARDOUT' `YES' `LOG_TIMINGS' `YES' `LogCountServerName' `56912' `LOG_STANDARDOUT' `No' `WORKBENCH_LOG_SERVER' `58247'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Connection Storage: 'C:\Users\yairr\AppData\Roaming\Safe Software\FME\'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for formats are : C:\Program Files\FME\datasources;C:\Users\yairr\Documents\FME\Formats
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for transformers are : C:\Users\yairr\AppData\Roaming\Safe Software\FME\Packages\25630-win64\transformers;C:\Program Files\FME\transformers;C:\Users\yairr\AppData\Roaming\Safe Software\FME\FME Store\Transformers
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for coordinate systems are : C:\Users\yairr\Documents\FME\CoordinateSystems
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for coordinate system exceptions are : C:\Users\yairr\Documents\FME\CoordinateSystemExceptions
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for coordinate system grid overrides are : C:\Users\yairr\Documents\FME\CoordinateSystemGridOverrides
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for CS-MAP transformation exceptions are : C:\Users\yairr\Documents\FME\CsmapTransformationExceptions
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Shared folders for transformer categories are : C:\Users\yairr\Documents\FME\TransformerCategories
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: No destination coordinate system set
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Current working folder is `C:\Users\yairr\OneDrive - Delft University of Technology\GEOIT1501_Synthesis_Project_VanOord\FME\Workspaces\Features'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Temporary folder is `C:\Users\yairr\AppData\Local\Temp\wbrun_1761050995070_3228\fmetmp_0', set from environment variable `FME_TEMP'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Cache folder is 'C:\Users\yairr\AppData\Local\Temp'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: FME_HOME is `C:\Program Files\FME\'
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Start freeing memory when the process exceeds 47.33 GB
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|FME Configuration: Stop freeing memory when the process is below 35.50 GB
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Creating writer for format: 
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Creating reader for format: 
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Will fail with first member reader failure
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|MULTI_READER(MULTI_READER): Adding POSTGIS Reader with keyword POSTGIS_1
+2025-10-21 14:50:15|   0.0|  0.0|INFORM|Using Multi Reader with keyword `MULTI_READER' to read multiple datasets
+2025-10-21 14:50:16|   0.2|  0.2|INFORM|FME Configuration: Using connection values from 'featurebase' for POSTGIS_1
+2025-10-21 14:50:16|   0.2|  0.0|INFORM|Creating reader for format: PostGIS
+2025-10-21 14:50:16|   0.2|  0.0|INFORM|Trying to find a DYNAMIC plugin for reader named `POSTGIS'
+2025-10-21 14:50:16|   0.2|  0.0|INFORM|Opening POSTGIS reader for dataset 'postgres'
+2025-10-21 14:50:16|   0.2|  0.0|INFORM|PostGIS client encoding: 'UTF8'
+2025-10-21 14:50:17|   0.2|  0.0|INFORM|PostgreSQL 17.6 on aarch64-unknown-linux-gnu, compiled by gcc (GCC) 13.2.0, 64-bit
+2025-10-21 14:50:17|   0.2|  0.0|INFORM|3.3 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
+2025-10-21 14:50:17|   0.2|  0.0|INFORM|POSTGIS reader: Creating bulk features from individual features
+2025-10-21 14:50:17|   0.2|  0.0|INFORM|Using MultiWriter with keyword `MULTI_DEST' to output data (ID_ATTRIBUTE is `multi_writer_id')
+2025-10-21 14:50:17|   0.2|  0.0|INFORM|Executing data query: 'declare "public_side_channels_crsr" cursor for select "scid","name","area","perimeter", ST_AsEWKB("geom") as "geom" from "public"."side_channels"'
+2025-10-21 14:50:17|   0.2|  0.0|INFORM|Reading POSTGIS table: 'public.side_channels'...
+2025-10-21 14:50:17|   0.3|  0.1|INFORM|FME Configuration: Source coordinate system for reader POSTGIS_1[POSTGIS] set to `EPSG:28992' as read from input data
+2025-10-21 14:50:17|   0.5|  0.2|INFORM|Coordinate System `EPSG:28992' parameters: CS_NAME=`Netherlands-RDNew-2008' DESC_NM=`Netherlands, Amersfoort RD 2008 datum, New System' DT_NAME=`Amersfoort-RD-2008' GROUP=`EUROPE' MAP_SCL=`1' ORG_LAT=`52.15616055555556' ORG_LNG=`5.387638888888889' PROJ=`OSTERO' QUAD=`1' SCL_RED=`0.9999079' SOURCE=`Kadaster' UNIT=`METER' X_OFF=`155000' Y_OFF=`463000'
+2025-10-21 14:50:18|   0.5|  0.0|INFORM|public.side_channels Feature Recorder -1 2147549190 (RecorderFactory): Splitting bulk features into individual features
+2025-10-21 14:50:18|   0.6|  0.1|INFORM|Successfully closed POSTGIS database reader
+2025-10-21 14:50:18|   0.6|  0.0|INFORM|Successfully closed POSTGIS database reader
+2025-10-21 14:50:18|   0.6|  0.0|INFORM|MULTI_READER(MULTI_READER): Done reading 49 features from 1 readers
+2025-10-21 14:50:18|   0.6|  0.0|INFORM|Emptying factory pipeline
+2025-10-21 14:50:18|   0.6|  0.0|STATS |Router and Unexpected Input Remover (RoutingFactory): Tested 49 input feature(s), wrote 49 output feature(s): 49 matched merge filters, 49 were routed to output, 0 could not be routed.
+2025-10-21 14:50:18|   0.6|  0.0|STATS |Unwanted Router Input Nuker (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-21 14:50:18|   0.6|  0.0|STATS |GEOTIFF_GEOTIFF_2 Splitter (TeeFactory): Cloned 0 input feature(s) into 0 output feature(s)
+2025-10-21 14:50:18|   0.6|  0.0|STATS |public.side_channels_POSTGIS_1 Splitter (TeeFactory): Cloned 49 input feature(s) into 49 output feature(s)
+2025-10-21 14:50:18|   0.6|  0.0|STATS |Destination Feature Type Routing Correlator (RoutingFactory): Tested 49 input feature(s), wrote 49 output feature(s): 0 matched merge filters, 0 were routed to output, 49 could not be routed.
+2025-10-21 14:50:18|   0.6|  0.0|STATS |Final Output Nuker (TeeFactory): Cloned 49 input feature(s) into 0 output feature(s)
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |      Features not written - verify feature type fanout/dynamic settings
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |  (Check that fanout/dynamic feature type attribute exists and has a value)
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |                                                                            49
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |==============================================================================
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |Total features not written                                                  49
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|STATS |                            Features Read Summary
+2025-10-21 14:50:18|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|STATS |public.side_channels                                                        49
+2025-10-21 14:50:18|   0.6|  0.0|STATS |==============================================================================
+2025-10-21 14:50:18|   0.6|  0.0|STATS |Total Features Read                                                         49
+2025-10-21 14:50:18|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|STATS |                           Features Written Summary
+2025-10-21 14:50:18|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|STATS |==============================================================================
+2025-10-21 14:50:18|   0.6|  0.0|STATS |Total Features Written                                                       0
+2025-10-21 14:50:18|   0.6|  0.0|STATS |=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~                                                                             ~-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~      Data caches have been recorded at every stage of the translation.      ~-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~                      To inspect the recorded features,                      ~-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~                click the data cache icons next to the ports.                ~-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~                                                                             ~-
+2025-10-21 14:50:18|   0.6|  0.0|WARN  |-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-~-
+2025-10-21 14:50:18|   0.6|  0.0|INFORM|Translation was SUCCESSFUL with 16 warning(s) (0 feature(s) output)
+2025-10-21 14:50:18|   0.6|  0.0|INFORM|FME Session Duration: 2.4 seconds. (CPU: 0.4s user, 0.2s system)
+2025-10-21 14:50:18|   0.6|  0.0|INFORM|END - ProcessID: 10784, peak process memory usage: 98944 kB, current process memory usage: 98916 kB
