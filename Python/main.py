@@ -6,14 +6,18 @@ from sqlalchemy import create_engine
 from sklearn.preprocessing import MinMaxScaler
 from itertools import combinations
 
+DB_CONNECTION_URL = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
+
 def calculate_difference(scid):
     df_2024 = load_db_data(
         "SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+        index_col='tid',
         params={"scid": scid}
     )
 
     df_2025 = load_db_data(
         "SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2025;",
+        index_col='tid',
         params={"scid": scid}
     )
 
@@ -51,11 +55,10 @@ def calculate_descriptive_stats(df):
     return stats_df.T
 
 
-def load_db_data(query, params=None):
+def load_db_data(query, index_col, params=None):
     #Load data from PostGIS
-    db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
-    con = create_engine(db_connection_url)
-    df = pd.read_sql(query, con, index_col="tid", params=params)
+    con = create_engine(DB_CONNECTION_URL)
+    df = pd.read_sql(query, con, index_col=index_col, params=params)
     df.sort_index(inplace=True)
 
     return df
@@ -147,8 +150,7 @@ def get_usable_scids(year1, year2):
     }
 
     # Database connection setup (using the connection URL defined in your existing code)
-    db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
-    con = create_engine(db_connection_url)
+    con = create_engine(DB_CONNECTION_URL)
 
     # Read the data using the query and parameters
     df_scids = pd.read_sql(query, con, params=params)
@@ -168,18 +170,20 @@ def make_scatterplot_for_each_channel(feature):
         # ----------------- Load Data -----------------
         df = load_db_data(
             "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+            index_col= 'tid',
             params={"scid": scid}
             )
         df['change'] = df_diff['change']
 
         plot_scatter(df, feature, 'change', scid)
 
-def make_plots_for_tiles_in_one_channel(scid):
+def make_plots_for_tiles_in_one_channel(scid, features):
     df_diff = calculate_difference(scid=scid)
 
     # ----------------- Load Data -----------------
     df = load_db_data(
         "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+        index_col = 'tid',
         params={"scid": scid}
         )
     # df = load_db_data("SELECT * FROM side_channels;")
@@ -188,10 +192,6 @@ def make_plots_for_tiles_in_one_channel(scid):
     # export df to excel
     print(df.head(50))
     # df.to_excel(f"Output/scid_{scid}_data.xlsx")
-
-    # Define the features to analyze
-    features =  ['bed_level', 'slope', 'roughness', 'aspect', 'change'] # local features
-    # features = ['area', 'perimeter', 'channel_length'] # global features
 
     statistics_result = calculate_descriptive_stats(df)
     print("--- Descriptive Statistics for Features ---")
@@ -229,8 +229,12 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
 def main():
-    # make_plots_for_tiles_in_one_channel(5)
+    # Define the features to analyze
+    # features = ['area', 'perimeter', 'channel_length'] # global features
     features =  ['bed_level', 'slope', 'roughness', 'aspect'] # local features
+
+    # make_plots_for_tiles_in_one_channel(5, features=features)
+
     for feature in features:
         make_scatterplot_for_each_channel(feature)
 
