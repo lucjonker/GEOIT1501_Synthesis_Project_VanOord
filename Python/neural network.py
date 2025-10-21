@@ -6,16 +6,25 @@ from keras import layers
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
-df_2024 = load_db_data("SELECT tid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid=1 AND year=2024;")
+df_2024 = load_db_data("SELECT tid,scid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2024;")
 
-df_2025 = load_db_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=1 AND year=2025;")
+df_2025 = load_db_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2025;")
 
-df_width = load_db_data("SELECT tid,width,min_flow_threshold FROM tiles WHERE scid=1;")
+df_width = load_db_data("SELECT tid,width,min_flow_threshold FROM tiles WHERE scid IN (1,5,6,19,24,42);")
+
+df_water_height = pd.read_csv("output/water_level.csv")
 
 df_change = pd.merge(df_2024, df_2025, on='tid', how='inner')
 df_change["change"] = df_change["bed_level_y"] - df_change["bed_level_x"]
 
-df = pd.merge(df_change, df_width, on='tid', how='inner')
+df_water = pd.merge(df_change, df_water_height, on='scid', how='left', left_index = False)
+df_water["depth"] = df_water["bed_level_x"] - df_water["water_level"] / 100
+df_water.index = df_change.index
+
+print(df_water.head())
+print(df_water.tail())
+
+df = pd.merge(df_water, df_width, on='tid', how='inner')
 df.dropna(inplace=True)
 
 y = df['change'].values.reshape(-1,1)
@@ -25,7 +34,7 @@ df['change_norm'] = y_scaled
 
 print(df.head())
 
-X = df[['bed_level_x', 'slope', 'width', 'roughness', 'aspect', 'min_flow_threshold']].values
+X = df[['depth', 'slope', 'width', 'roughness', 'min_flow_threshold']].values
 print("Look here")
 print(df.head())
 y = df['change_norm'].values
@@ -54,7 +63,7 @@ model.fit(X_train, y_train, epochs=20, batch_size=4, validation_data=(X_test, y_
 loss, acc = model.evaluate(X_test, y_test)
 print(f"mae: {acc:.3f}")
 
-X_all = df[['bed_level_x', 'slope', 'width', 'roughness', 'aspect', 'min_flow_threshold']].values
+X_all = df[['depth', 'slope', 'width', 'roughness', 'min_flow_threshold']].values
 X_all_scaled = scaler.fit_transform(X_all)
 y_pred_norm = model.predict(X_all_scaled)
 df['predicted_target_norm'] = y_pred_norm

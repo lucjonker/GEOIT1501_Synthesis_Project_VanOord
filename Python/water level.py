@@ -65,16 +65,13 @@ for scid, row in channels.iterrows():
 
     results.append({
         "scid": scid,
-        "name": row["name"],
-        "X": x_c,
-        "Y": y_c,
-        "height_interpolated": height
+        "water_level": round(height,3)
     })
 
 # Create DataFrame with results
 df_results = pd.DataFrame(results)
 
 # Save results to CSV (optional)
-df_results.to_csv("output/sidechannel_heights.csv", index=False)
+df_results.to_csv("output/water_level.csv", index=False)
 
 print(df_results.head())
