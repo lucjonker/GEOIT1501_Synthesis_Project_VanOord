@@ -22,6 +22,7 @@ def calculate_difference(scid):
     df["change"] = df["bed_level_y"] - df["bed_level_x"]
     return df
 
+
 def calculate_descriptive_stats(df):
     """
     Calculates key descriptive statistics (min, max, mean, std, skewness, kurtosis)
@@ -49,6 +50,7 @@ def calculate_descriptive_stats(df):
 
     return stats_df.T
 
+
 def load_db_data(query, params=None):
     #Load data from PostGIS
     db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
@@ -57,6 +59,7 @@ def load_db_data(query, params=None):
     df.sort_index(inplace=True)
 
     return df
+
 
 def min_max_normalize(df, features_to_scale):
     # 1. Initialize the MinMaxScaler
@@ -69,6 +72,7 @@ def min_max_normalize(df, features_to_scale):
     # 4. Create new normalized columns in your GeoDataFrame
     for norm_feature in features_to_scale:
         df[f"{norm_feature}_norm"] = normalized_data_array[:, 0]
+
 
 def plot_scatter(df, x, y, scid):
     num_points= df.shape[0]
@@ -91,6 +95,7 @@ def plot_scatter(df, x, y, scid):
 
     plt.show()
 
+
 def plot_histogram(df, x):
     fig_hist, ax_hist = plt.subplots(1, 1, figsize=(10, 6))
 
@@ -111,8 +116,50 @@ def plot_histogram(df, x):
 
     plt.show()
 
+
+def get_usable_scids(year1, year2):
+    """
+    Queries the database to find side channel IDs (scid) that have
+    corresponding tile observations (tid) in both the specified years.
+
+    Args:
+        year1 (int): The first year to check for data availability.
+        year2 (int): The second year to check for data availability.
+
+    Returns:
+        list: A list of usable SCIDs (integers).
+    """
+    # SQL query to find scid that have bed_level values in both years.
+    query = """
+            SELECT scid
+            FROM tile_observations
+                     JOIN observations USING (oid)
+            WHERE year IN (%(year1)s \
+                , %(year2)s)
+            GROUP BY scid
+            HAVING COUNT (DISTINCT year) = 2; \
+            """
+
+    # Parameters dictionary to map placeholders to Python variables
+    params = {
+        'year1': year1,
+        'year2': year2
+    }
+
+    # Database connection setup (using the connection URL defined in your existing code)
+    db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
+    con = create_engine(db_connection_url)
+
+    # Read the data using the query and parameters
+    df_scids = pd.read_sql(query, con, params=params)
+
+    # Extract the 'scid' column and convert to a list of integers
+    usable_scids = df_scids['scid'].astype(int).tolist()
+
+    return usable_scids
+
 def make_scatterplot_for_each_channel(feature):
-    usable_scids = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17, 19, 24, 26, 28, 36, 37, 39, 40, 41, 42, 43, 48, 49]
+    usable_scids = get_usable_scids(2024, 2025)
     for scid in usable_scids:
         print(f"Processing SCID: {scid}")
 
