@@ -6,6 +6,22 @@ from sqlalchemy import create_engine
 from sklearn.preprocessing import MinMaxScaler
 from itertools import combinations
 
+def calculate_difference(scid):
+    df_2024 = load_db_data(
+        "SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+        params={"scid": scid}
+    )
+
+    df_2025 = load_db_data(
+        "SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2025;",
+        params={"scid": scid}
+    )
+
+    df = pd.merge(df_2024, df_2025, on='tid', how='inner')
+    df.dropna(inplace=True)
+    df["change"] = df["bed_level_y"] - df["bed_level_x"]
+    return df
+
 def calculate_descriptive_stats(df):
     """
     Calculates key descriptive statistics (min, max, mean, std, skewness, kurtosis)
@@ -33,11 +49,11 @@ def calculate_descriptive_stats(df):
 
     return stats_df.T
 
-def load_db_data(query):
+def load_db_data(query, params=None):
     #Load data from PostGIS
     db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
     con = create_engine(db_connection_url)
-    df = pd.read_sql(query, con, index_col="tid")
+    df = pd.read_sql(query, con, index_col="tid", params=params)
     df.sort_index(inplace=True)
 
     return df
@@ -54,7 +70,8 @@ def min_max_normalize(df, features_to_scale):
     for norm_feature in features_to_scale:
         df[f"{norm_feature}_norm"] = normalized_data_array[:, 0]
 
-def plot_scatter(df, x, y):
+def plot_scatter(df, x, y, scid):
+    num_points= df.shape[0]
     fig_scatter, ax_scatter = plt.subplots(1, 1, figsize=(10, 6))
 
     df.plot(
@@ -65,7 +82,7 @@ def plot_scatter(df, x, y):
         color='red',
         marker='o',
         s=50,
-        title=f'Scatterplot of {x} vs. {y}'
+        title=f'Scatterplot of {x} vs. {y} for SCID: {scid} (N={num_points} points)'
     )
 
     ax_scatter.set_xlabel(x)
@@ -94,24 +111,50 @@ def plot_histogram(df, x):
 
     plt.show()
 
-# Set pandas options to display all rows and columns (in its entirety)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
+def make_scatterplot_for_each_channel(feature):
+    usable_scids = [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 17, 19, 24, 26, 28, 36, 37, 39, 40, 41, 42, 43, 48, 49]
+    for scid in usable_scids:
+        print(f"Processing SCID: {scid}")
 
-def main():
+        df_diff = calculate_difference(scid=scid)
+
+        # ----------------- Load Data -----------------
+        df = load_db_data(
+            "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+            params={"scid": scid}
+            )
+        df['change'] = df_diff['change']
+
+        plot_scatter(df, feature, 'change', scid)
+
+def make_plots_for_tiles_in_one_channel(scid):
+    df_diff = calculate_difference(scid=scid)
+
     # ----------------- Load Data -----------------
-    df = load_db_data("SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=5 AND year=2024;")
-    statistics_result = calculate_descriptive_stats(df)
+    df = load_db_data(
+        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+        params={"scid": scid}
+        )
+    # df = load_db_data("SELECT * FROM side_channels;")
+    df['change'] = df_diff['change']
 
+    # export df to excel
+    print(df.head(50))
+    # df.to_excel(f"Output/scid_{scid}_data.xlsx")
+
+    # Define the features to analyze
+    features =  ['bed_level', 'slope', 'roughness', 'aspect', 'change'] # local features
+    # features = ['area', 'perimeter', 'channel_length'] # global features
+
+    statistics_result = calculate_descriptive_stats(df)
     print("--- Descriptive Statistics for Features ---")
-    # Use .T to transpose the result for better readability (features as rows)
     print("Note: The table is transposed for easier reading (features as rows).")
     print(statistics_result)
     print("-" * 35)
 
     #----------------- Data Normalization -----------------
     # 2. Select the columns you want to normalize (must be passed as a DataFrame/2D array)
-    features_to_scale = df[['slope', 'roughness', 'bed_level']]
+    features_to_scale = df[features]
     min_max_normalize(df, features_to_scale)
     # Print the original and normalized values to check the result
     print(df.head())
@@ -120,19 +163,29 @@ def main():
 
     # ----------------- Correlation Analysis -----------------
     # Calculate the Pearson correlation coefficient
-
-    correction_matrix = df[['slope', 'roughness', 'bed_level']].corr(method='pearson')
+    correction_matrix = df[features].corr(method='pearson')
     print(f"--- Correlation between features ---")
     print(correction_matrix)
 
     # ----------------- Plotting -----------------
+
     # Scatterplot
-    for i, j in combinations(['slope', 'roughness', 'bed_level'],2):
-        plot_scatter(df, i, j)
+    for i, j in combinations(features,2):
+        plot_scatter(df, i, j, scid)
 
     # Histogram
-    for feature in ['slope', 'roughness', 'bed_level']:
+    for feature in features:
         plot_histogram(df, feature)
+
+# Set pandas options to display all rows and columns (in its entirety)
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+
+def main():
+    # make_plots_for_tiles_in_one_channel(5)
+    features =  ['bed_level', 'slope', 'roughness', 'aspect'] # local features
+    for feature in features:
+        make_scatterplot_for_each_channel(feature)
 
 if __name__ == '__main__':
     main()
