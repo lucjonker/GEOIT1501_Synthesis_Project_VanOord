@@ -6,11 +6,14 @@ from keras import layers
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 
-df_2024 = load_db_data("SELECT tid,scid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2024;")
+df_2024 = load_db_data("SELECT tid,scid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2024;",
+                       index_col='tid')
 
-df_2025 = load_db_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2025;")
+df_2025 = load_db_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2025;",
+                       index_col='tid')
 
-df_width = load_db_data("SELECT tid,width,min_flow_threshold FROM tiles WHERE scid IN (1,5,6,19,24,42);")
+df_width = load_db_data("SELECT tid,width,min_flow_threshold FROM tiles WHERE scid IN (1,5,6,19,24,42);",
+                        index_col='tid')
 
 df_water_height = pd.read_csv("output/water_level.csv")
 
