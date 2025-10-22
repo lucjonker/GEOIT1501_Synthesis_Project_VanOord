@@ -3,8 +3,9 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
-from sklearn.preprocessing import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
 from itertools import combinations
+import seaborn as sns
 
 DB_CONNECTION_URL = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
 
@@ -64,17 +65,34 @@ def load_db_data(query, index_col, params=None):
     return df
 
 
-def min_max_normalize(df, features_to_scale):
-    # 1. Initialize the MinMaxScaler
-    scaler = MinMaxScaler()
+def normalize_features(df, features, method='min_max'):
+    """
+    Applies MinMax, Standard, or Robust scaling to features and
+    returns a new DataFrame with only the normalized columns.
+    """
 
-    # 3. Fit the scaler to the data and transform it
-    # The output is a NumPy array
-    normalized_data_array = scaler.fit_transform(features_to_scale)
+    # Select scaler based on method
+    if method == 'min_max':
+        scaler = MinMaxScaler()
+    elif method == 'standard':
+        scaler = StandardScaler()
+    elif method == 'robust':
+        scaler = RobustScaler()
+    else:
+        raise ValueError(f"Invalid method: '{method}'")
 
-    # 4. Create new normalized columns in your GeoDataFrame
-    for norm_feature in features_to_scale:
-        df[f"{norm_feature}_norm"] = normalized_data_array[:, 0]
+    # Fit and transform the data
+    data_to_scale = df[features].copy()
+    scaled_array = scaler.fit_transform(data_to_scale)
+
+    # Create normalized DataFrame
+    df_normalized = pd.DataFrame(
+        scaled_array,
+        columns=features,
+        index=df.index
+    )
+
+    return df_normalized
 
 
 def plot_scatter(df, x, y, scid):
@@ -160,6 +178,29 @@ def get_usable_scids(year1, year2):
 
     return usable_scids
 
+
+def transform_circular_aspect(df):
+    """
+    Transforms the circular 'aspect' column (in degrees) into two linear
+    Cartesian components ('aspect_x' and 'aspect_y') using sine and cosine.
+    The original 'aspect' column is dropped from the DataFrame.
+    """
+    if 'aspect' not in df.columns:
+        return df
+
+    # Convert degrees to radians (numpy trigonometric functions require radians)
+    df['aspect_rad'] = np.deg2rad(df['aspect'])
+
+    # Calculate the sine and cosine components
+    df['aspect_x'] = np.cos(df['aspect_rad']) # cos(theta)
+    df['aspect_y'] = np.sin(df['aspect_rad']) # sin(theta)
+
+    # Drop the original circular column and the temporary radians column
+    df.drop(columns=['aspect', 'aspect_rad'], inplace=True)
+
+    return df
+
+
 def make_scatterplot_for_each_channel(feature):
     usable_scids = get_usable_scids(2024, 2025)
     for scid in usable_scids:
@@ -177,6 +218,32 @@ def make_scatterplot_for_each_channel(feature):
 
         plot_scatter(df, feature, 'change', scid)
 
+
+def correlation_matrix(df, features):
+    """Computes and displays the correlation matrix heatmap."""
+
+    matrix = df[features].corr()
+
+    fig_heatmap, ax_heatmap = plt.subplots(1, 1, figsize=(8, 7))
+
+    sns.heatmap(
+        matrix,
+        annot=True,
+        fmt=".3f",
+        cmap='coolwarm',
+        linewidths=.5,
+        linecolor='white',
+        ax=ax_heatmap
+    )
+
+    ax_heatmap.set_title("Correlation Matrix", fontsize=14)
+    plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for better readability
+    plt.yticks(rotation=0)
+
+    plt.tight_layout()  # Adjust layout to prevent labels from being cut off
+    plt.show()
+
+
 def make_plots_for_tiles_in_one_channel(scid, features):
     df_diff = calculate_difference(scid=scid)
 
@@ -189,40 +256,41 @@ def make_plots_for_tiles_in_one_channel(scid, features):
     # df = load_db_data("SELECT * FROM side_channels;")
     df['change'] = df_diff['change']
 
+    #----------------- Display correlation matrix -----------------
+    correlation_matrix(df,['bed_level', 'slope', 'roughness', 'aspect'])
+
+    #----------------- Cosine-sine encode aspect feature -----------------
+    print(f"Before transforming circular aspect:")
+    print(df.head(10))
+    df = transform_circular_aspect(df)
+    print(f"After transforming circular aspect:")
+    print(df.head(10))
+
     # export df to excel
-    print(df.head(50))
     # df.to_excel(f"Output/scid_{scid}_data.xlsx")
 
+    #----------------- Calculate Statistics -----------------
     statistics_result = calculate_descriptive_stats(df)
     print("--- Descriptive Statistics for Features ---")
-    print("Note: The table is transposed for easier reading (features as rows).")
     print(statistics_result)
-    print("-" * 35)
 
     #----------------- Data Normalization -----------------
     # 2. Select the columns you want to normalize (must be passed as a DataFrame/2D array)
-    features_to_scale = df[features]
-    min_max_normalize(df, features_to_scale)
-    # Print the original and normalized values to check the result
-    print(df.head())
-    print("\n--- Original vs. Normalized Values (First 5 Rows) ---")
-    print(df[['bed_level', 'bed_level_norm', 'slope', 'slope_norm', 'roughness', 'roughness_norm']].head())
-
-    # ----------------- Correlation Analysis -----------------
-    # Calculate the Pearson correlation coefficient
-    correction_matrix = df[features].corr(method='pearson')
-    print(f"--- Correlation between features ---")
-    print(correction_matrix)
+    df_norm = normalize_features(df, features, method='min_max') # method = min_max / standard / robust
+    print("Normalization Result:")
+    print(df_norm.head(10))
 
     # ----------------- Plotting -----------------
 
-    # Scatterplot
-    for i, j in combinations(features,2):
-        plot_scatter(df, i, j, scid)
-
-    # Histogram
-    for feature in features:
-        plot_histogram(df, feature)
+    # # Scatterplot
+    # for i, j in combinations(features,2):
+    #     plot_scatter(df, i, j, scid)
+    #     # plot_scatter(df_norm, i, j, scid)
+    #
+    # # Histogram
+    # for feature in features:
+    #     plot_histogram(df, feature)
+    #     # plot_histogram(df_norm, feature)
 
 # Set pandas options to display all rows and columns (in its entirety)
 pd.set_option('display.max_rows', None)
@@ -231,12 +299,12 @@ pd.set_option('display.max_columns', None)
 def main():
     # Define the features to analyze
     # features = ['area', 'perimeter', 'channel_length'] # global features
-    features =  ['bed_level', 'slope', 'roughness', 'aspect'] # local features
+    features =  ['bed_level', 'slope', 'roughness', 'aspect_x', 'aspect_y'] # local features
 
-    # make_plots_for_tiles_in_one_channel(5, features=features)
+    make_plots_for_tiles_in_one_channel(5, features=features)
 
-    for feature in features:
-        make_scatterplot_for_each_channel(feature)
+    # for feature in features:
+    #     make_scatterplot_for_each_channel(feature)
 
 if __name__ == '__main__':
     main()
