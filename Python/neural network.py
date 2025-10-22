@@ -1,77 +1,152 @@
 from main import load_db_data
 import pandas as pd
-# import numpy as np
+import geopandas as gpd
 import keras
 from keras import layers
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sqlalchemy import create_engine
+import folium
 
-df_2024 = load_db_data("SELECT tid,scid,slope,roughness,bed_level,aspect FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2024;",
-                       index_col='tid')
+def main():
+    side_channels = "1,5,6,19,24,42"
+    df = prepare_data(side_channels,2024,2025)
+    train_neural_network(df, ['depth', 'slope', 'width', 'roughness', 'min_flow_threshold','area','channel_length'], size=3000)
+    html_visualizer(df, side_channels)
 
-df_2025 = load_db_data("SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN (1,5,6,19,24,42) AND year=2025;",
-                       index_col='tid')
+def prepare_data(side_channels,year_1,year_2):
 
-df_width = load_db_data("SELECT tid,width,min_flow_threshold FROM tiles WHERE scid IN (1,5,6,19,24,42);",
-                        index_col='tid')
+    # load all the database tables into pandas
+    df_year_1 = load_db_data(f"SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_1};",
+                           index_col='tid')
 
-df_water_height = pd.read_csv("output/water_level.csv")
+    df_year_2 = load_db_data(f"SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_2};",
+                           index_col='tid')
 
-df_change = pd.merge(df_2024, df_2025, on='tid', how='inner')
-df_change["change"] = df_change["bed_level_y"] - df_change["bed_level_x"]
+    df_tiles = load_db_data(f"SELECT tid,width,min_flow_threshold FROM tiles WHERE scid IN ({side_channels});",
+                            index_col='tid')
 
-df_water = pd.merge(df_change, df_water_height, on='scid', how='left', left_index = False)
-df_water["depth"] = df_water["bed_level_x"] - df_water["water_level"] / 100
-df_water.index = df_change.index
+    df_side_channels = load_db_data(f"SELECT scid,area,perimeter,groynevak,channel_connections,tidal,bank,channel_length FROM side_channels WHERE scid IN ({side_channels});",
+                            index_col='scid')
 
-print(df_water.head())
-print(df_water.tail())
+    df_observations = load_db_data(f"SELECT scid, vegetation_percentage FROM observations WHERE scid IN ({side_channels}) AND year={year_1};",
+                            index_col='scid')
 
-df = pd.merge(df_water, df_width, on='tid', how='inner')
-df.dropna(inplace=True)
+    # load the water_level data
+    df_water_level = pd.read_csv("output/water_level.csv")
 
-y = df['change'].values.reshape(-1,1)
-y_scaler = StandardScaler()
-y_scaled = y_scaler.fit_transform(y)
-df['change_norm'] = y_scaled
+    # calculate the bed_level change
+    df_change = pd.merge(df_tiles,pd.merge(df_year_1, df_year_2, on='tid', how='inner'),on='tid', how='inner')
+    df_change["change"] = df_change["bed_level_y"] - df_change["bed_level_x"]
 
-print(df.head())
+    df_sc_all = pd.merge(df_observations,pd.merge(df_side_channels,df_water_level, on='scid', how='left'),on='scid', how='left')
 
-X = df[['depth', 'slope', 'width', 'roughness', 'min_flow_threshold']].values
-print("Look here")
-print(df.head())
-y = df['change_norm'].values
+    df = pd.merge(df_change, df_sc_all, on='scid', how='left', left_index = False)
+    df["depth"] = df["water_level"] / 100 - df["bed_level_x"]
+    df.index = df_change.index
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    df.dropna(inplace=True)
 
-scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)
-X_test = scaler.transform(X_test)
+    print(df.head())
 
-model = keras.Sequential([
-    layers.Input(shape=(X_train.shape[1],)),
-    layers.Dense(64, activation='relu'),
-    layers.Dense(32, activation='tanh'),
-    layers.Dense(16, activation='relu'),
-    layers.Dense(8, activation='tanh'),
-    layers.Dense(1)
-])
+    return df
 
-model.compile(optimizer='adam',
-              loss='mse',
-              metrics=['mae'])
+def train_neural_network(df,features,size=2000):
 
-model.fit(X_train, y_train, epochs=20, batch_size=4, validation_data=(X_test, y_test))
+    y = df['change'].values.reshape(-1,1)
+    y_scaler = StandardScaler()
+    y_scaled = y_scaler.fit_transform(y)
+    df['change_norm'] = y_scaled
 
-loss, acc = model.evaluate(X_test, y_test)
-print(f"mae: {acc:.3f}")
+    df_sampled = (
+        df.groupby("scid", group_keys=False)
+          .apply(lambda x: x.sample(n=min(len(x), size), random_state=23))
+    )
 
-X_all = df[['depth', 'slope', 'width', 'roughness', 'min_flow_threshold']].values
-X_all_scaled = scaler.fit_transform(X_all)
-y_pred_norm = model.predict(X_all_scaled)
-df['predicted_target_norm'] = y_pred_norm
-y_pred = y_scaler.inverse_transform(y_pred_norm)
-df['predicted_target'] = y_pred
-print(df.head())
+    X = df_sampled[features].values
+    print("Look here")
+    print(df_sampled.head())
+    y = df_sampled['change_norm'].values
 
-df.to_csv("Output/result.csv")
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=9)
+
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
+
+    model = keras.Sequential([
+        layers.Input(shape=(X_train.shape[1],)),
+        layers.Dense(64, activation='relu'),
+        layers.Dense(32, activation='tanh'),
+        layers.Dense(16, activation='relu'),
+        layers.Dense(8, activation='tanh'),
+        layers.Dense(1)
+    ])
+
+    model.compile(optimizer='adam',
+                  loss='mse',
+                  metrics=['mae'])
+
+    model.fit(X_train, y_train, epochs=20, batch_size=4, validation_data=(X_test, y_test))
+
+    loss, acc = model.evaluate(X_test, y_test)
+    print(f"mae: {acc:.3f}")
+
+    X_all = df[features].values
+    X_all_scaled = scaler.fit_transform(X_all)
+    y_pred_norm = model.predict(X_all_scaled)
+    df['predicted_target_norm'] = y_pred_norm
+    y_pred = y_scaler.inverse_transform(y_pred_norm)
+    df['predicted_target'] = y_pred
+    print(df.head())
+
+    df.to_csv("Output/result.csv")
+
+    return df
+
+def html_visualizer(df,side_channels):
+    db_connection_url = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
+    con = create_engine(db_connection_url)
+    tiles = gpd.read_postgis(f"SELECT tid,geom FROM tiles WHERE scid IN ({side_channels})", con, geom_col="geom", index_col="tid")
+
+    # Merge prediction dataframe with tile geometries
+    gdf = tiles.merge(df[["change", "predicted_target"]], left_index=True, right_index=True, how="inner")
+
+    # Compute prediction error (difference)
+    gdf["difference"] = gdf["predicted_target"] - gdf["change"]
+
+    # Convert to WGS84 for Folium visualization (EPSG:4326)
+    gdf = gdf.to_crs(epsg=4326)
+
+    # Create Folium map centered on data
+    m = folium.Map(location=[gdf.geometry.centroid.y.mean(), gdf.geometry.centroid.x.mean()], zoom_start=12)
+
+    # Helper function for adding choropleth-style layers
+    def add_layer(column_name, color_map, layer_name):
+        folium.Choropleth(
+            geo_data=gdf,
+            name=layer_name,
+            data=gdf,
+            columns=[gdf.index, column_name],
+            key_on="feature.id",
+            fill_color=color_map,
+            fill_opacity=0.7,
+            line_opacity=0.2,
+            legend_name=layer_name,
+        ).add_to(m)
+
+    # Add layers for change, predicted, and difference
+    add_layer("change", "YlGnBu", "Observed Change")
+    add_layer("predicted_target", "YlOrRd", "Predicted Change")
+    add_layer("difference", "PuOr", "Prediction Error")
+
+    # Add layer control and save to HTML
+    folium.LayerControl().add_to(m)
+
+    output_path = "Output/prediction_visualization.html"
+    m.save(output_path)
+
+    return 0
+
+if __name__ == '__main__':
+    main()

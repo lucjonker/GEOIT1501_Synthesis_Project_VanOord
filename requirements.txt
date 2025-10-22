@@ -10,3 +10,6 @@ numpy==2.3.3
 # Deep Learning Libraries
 keras==3.11.3
 tensorflow==2.20.0
+
+# Map visualization
+folium==0.20.0
