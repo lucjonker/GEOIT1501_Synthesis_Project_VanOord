@@ -1,30 +1,32 @@
-from main import load_db_data
+from main import load_db_data, transform_circular_aspect, transform_circular_flow
 import pandas as pd
 import geopandas as gpd
 import keras
 from keras import layers
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler, MinMaxScaler
+from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 from sqlalchemy import create_engine
 import folium
 
 def main():
-    side_channels = "1,5,6,19,24,42"
+    side_channels = "24"
     df = prepare_data(side_channels,2024,2025)
-    train_neural_network(df, ['depth', 'slope', 'width', 'roughness', 'min_flow_threshold','area','channel_length'], size=3000)
-    html_visualizer(df, side_channels)
+    train_neural_network(df, ['depth', 'slope', 'width','roughness','aspect_x','aspect_y','distance_to_bank','distance_from_inlet','flow_x','flow_y'], size=3000)
+    # html_visualizer(df, side_channels)
 
 def prepare_data(side_channels,year_1,year_2):
 
     # load all the database tables into pandas
-    df_year_1 = load_db_data(f"SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_1};",
+    df_year_1 = load_db_data(f"SELECT tid,bed_level,slope,aspect,roughness,scid FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_1};",
                            index_col='tid')
+    transform_circular_aspect(df_year_1)
 
     df_year_2 = load_db_data(f"SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_2};",
                            index_col='tid')
 
-    df_tiles = load_db_data(f"SELECT tid,width,min_flow_threshold FROM tiles WHERE scid IN ({side_channels});",
+    df_tiles = load_db_data(f"SELECT tid,width,min_flow_threshold,flow_direction,distance_from_inlet,distance_to_bank FROM tiles WHERE scid IN ({side_channels});",
                             index_col='tid')
+    transform_circular_flow(df_tiles)
 
     df_side_channels = load_db_data(f"SELECT scid,area,perimeter,groynevak,channel_connections,tidal,bank,channel_length FROM side_channels WHERE scid IN ({side_channels});",
                             index_col='scid')
@@ -45,8 +47,6 @@ def prepare_data(side_channels,year_1,year_2):
     df["depth"] = df["water_level"] / 100 - df["bed_level_x"]
     df.index = df_change.index
 
-    df.dropna(inplace=True)
-
     print(df.head())
 
     return df
@@ -54,14 +54,18 @@ def prepare_data(side_channels,year_1,year_2):
 def train_neural_network(df,features,size=2000):
 
     y = df['change'].values.reshape(-1,1)
-    y_scaler = StandardScaler()
+    y_scaler = RobustScaler()
     y_scaled = y_scaler.fit_transform(y)
     df['change_norm'] = y_scaled
 
-    df_sampled = (
+    df_samp = (
         df.groupby("scid", group_keys=False)
           .apply(lambda x: x.sample(n=min(len(x), size), random_state=23))
     )
+
+    features_change = features + ["change_norm"]
+    df_sampled = df_samp[features_change].copy()
+    df_sampled.dropna(inplace=True)
 
     X = df_sampled[features].values
     print("Look here")
@@ -70,7 +74,7 @@ def train_neural_network(df,features,size=2000):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=9)
 
-    scaler = StandardScaler()
+    scaler = RobustScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
@@ -85,12 +89,12 @@ def train_neural_network(df,features,size=2000):
 
     model.compile(optimizer='adam',
                   loss='mse',
-                  metrics=['mae'])
+                  metrics=['mae', keras.metrics.R2Score()])
 
     model.fit(X_train, y_train, epochs=20, batch_size=4, validation_data=(X_test, y_test))
 
-    loss, acc = model.evaluate(X_test, y_test)
-    print(f"mae: {acc:.3f}")
+    loss, mae, r2 = model.evaluate(X_test, y_test)
+    print(f"Test results — Loss: {loss:.3f}, MAE: {mae:.3f}, R²: {r2:.3f}")
 
     X_all = df[features].values
     X_all_scaled = scaler.fit_transform(X_all)

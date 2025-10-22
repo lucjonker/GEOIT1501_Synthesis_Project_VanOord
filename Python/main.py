@@ -200,6 +200,27 @@ def transform_circular_aspect(df):
 
     return df
 
+def transform_circular_flow(df):
+    """
+    Transforms the circular 'aspect' column (in degrees) into two linear
+    Cartesian components ('aspect_x' and 'aspect_y') using sine and cosine.
+    The original 'aspect' column is dropped from the DataFrame.
+    """
+    if 'flow_direction' not in df.columns:
+        return df
+
+    # Convert degrees to radians (numpy trigonometric functions require radians)
+    df['flow_rad'] = np.deg2rad(df['flow_direction'])
+
+    # Calculate the sine and cosine components
+    df['flow_x'] = np.cos(df['flow_rad']) # cos(theta)
+    df['flow_y'] = np.sin(df['flow_rad']) # sin(theta)
+
+    # Drop the original circular column and the temporary radians column
+    df.drop(columns=['flow_direction', 'flow_rad'], inplace=True)
+
+    return df
+
 
 def make_scatterplot_for_each_channel(feature):
     usable_scids = get_usable_scids(2024, 2025)
