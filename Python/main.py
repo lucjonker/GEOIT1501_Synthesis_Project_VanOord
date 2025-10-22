@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from sqlalchemy import create_engine
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
 from itertools import combinations
+import seaborn as sns
 
 DB_CONNECTION_URL = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
 
@@ -92,6 +93,7 @@ def normalize_features(df, features, method='min_max'):
     )
 
     return df_normalized
+
 
 def plot_scatter(df, x, y, scid):
     num_points= df.shape[0]
@@ -198,6 +200,7 @@ def transform_circular_aspect(df):
 
     return df
 
+
 def make_scatterplot_for_each_channel(feature):
     usable_scids = get_usable_scids(2024, 2025)
     for scid in usable_scids:
@@ -215,6 +218,32 @@ def make_scatterplot_for_each_channel(feature):
 
         plot_scatter(df, feature, 'change', scid)
 
+
+def correlation_matrix(df, features):
+    """Computes and displays the correlation matrix heatmap."""
+
+    matrix = df[features].corr()
+
+    fig_heatmap, ax_heatmap = plt.subplots(1, 1, figsize=(8, 7))
+
+    sns.heatmap(
+        matrix,
+        annot=True,
+        fmt=".3f",
+        cmap='coolwarm',
+        linewidths=.5,
+        linecolor='white',
+        ax=ax_heatmap
+    )
+
+    ax_heatmap.set_title("Correlation Matrix", fontsize=14)
+    plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for better readability
+    plt.yticks(rotation=0)
+
+    plt.tight_layout()  # Adjust layout to prevent labels from being cut off
+    plt.show()
+
+
 def make_plots_for_tiles_in_one_channel(scid, features):
     df_diff = calculate_difference(scid=scid)
 
@@ -227,44 +256,41 @@ def make_plots_for_tiles_in_one_channel(scid, features):
     # df = load_db_data("SELECT * FROM side_channels;")
     df['change'] = df_diff['change']
 
-    #----------------- replace circular aspect with two linear components -----------------
-    print(f"Before transforming circular aspect: {df.head(100)}")
+    #----------------- Display correlation matrix -----------------
+    correlation_matrix(df,['bed_level', 'slope', 'roughness', 'aspect'])
+
+    #----------------- Cosine-sine encode aspect feature -----------------
+    print(f"Before transforming circular aspect:")
+    print(df.head(10))
     df = transform_circular_aspect(df)
-    print(f"After transforming circular aspect: {df.head(100)}")
+    print(f"After transforming circular aspect:")
+    print(df.head(10))
 
     # export df to excel
-    # print(df.head(50))
     # df.to_excel(f"Output/scid_{scid}_data.xlsx")
 
+    #----------------- Calculate Statistics -----------------
     statistics_result = calculate_descriptive_stats(df)
     print("--- Descriptive Statistics for Features ---")
     print(statistics_result)
-    print("-" * 35)
 
     #----------------- Data Normalization -----------------
     # 2. Select the columns you want to normalize (must be passed as a DataFrame/2D array)
-    features_to_scale = features
-    df_norm = normalize_features(df, features_to_scale, method='min_max') # method = min_max / standard / robust
-    # Print the original and normalized values to check the result
-    print(df_norm.head(50))
-
-    # ----------------- Correlation Analysis -----------------
-    # Calculate the Pearson correlation coefficient
-    correction_matrix = df[features].corr(method='pearson')
-    print(f"--- Correlation between features ---")
-    print(correction_matrix)
+    df_norm = normalize_features(df, features, method='min_max') # method = min_max / standard / robust
+    print("Normalization Result:")
+    print(df_norm.head(10))
 
     # ----------------- Plotting -----------------
 
-    # Scatterplot
-    for i, j in combinations(features,2):
-        plot_scatter(df, i, j, scid)
-        # plot_scatter(df_norm, i, j, scid)
-
-    # Histogram
-    for feature in features:
-        plot_histogram(df, feature)
-        # plot_histogram(df_norm, feature)
+    # # Scatterplot
+    # for i, j in combinations(features,2):
+    #     plot_scatter(df, i, j, scid)
+    #     # plot_scatter(df_norm, i, j, scid)
+    #
+    # # Histogram
+    # for feature in features:
+    #     plot_histogram(df, feature)
+    #     # plot_histogram(df_norm, feature)
 
 # Set pandas options to display all rows and columns (in its entirety)
 pd.set_option('display.max_rows', None)
