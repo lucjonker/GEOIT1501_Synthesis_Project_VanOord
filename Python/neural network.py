@@ -5,14 +5,48 @@ import keras
 from keras import layers
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
+from sklearn.decomposition import PCA
 from sqlalchemy import create_engine
 import folium
 
 def main():
-    side_channels = "24"
+    side_channels = "3,7,8,9,10,11,13,17,19,20,28,34,36,41,43,44,49,37"
     df = prepare_data(side_channels,2024,2025)
-    train_neural_network(df, ['depth', 'slope', 'width','roughness','aspect_x','aspect_y','distance_to_bank','distance_from_inlet','flow_x','flow_y'], size=3000)
+    features = forward_insertion(df, ['depth','slope', 'width','roughness','area','channel_length','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','relative_channel_length','vegetation_percentage'], size=200, amount=6)
+    train_neural_network(df, features, size=500)
+    # df = pca_data(df,n=6,exclude=['flow_direction','distance_from_inlet'])
+    # train_neural_network(df,['pca_1','pca_2','pca_3','pca_4','pca_5'],size=500)
     # html_visualizer(df, side_channels)
+
+def pca_data(df,exclude=None,n=4):
+    # Separate features
+    if exclude is not None:
+        df.drop(columns=exclude,inplace=True)
+    df.dropna(inplace=True)
+    features = df.drop(columns=['scid', 'change'])
+
+
+    # Standardize features
+    scaler = StandardScaler()
+    scaled_features = scaler.fit_transform(features)
+
+    # Apply PCA
+    pca = PCA(n_components=n)
+    pca_features = pca.fit_transform(scaled_features)
+
+    # Create PCA DataFrame
+    pca_cols = [f"pca_{i+1}" for i in range(pca_features.shape[1])]
+    df_pca = pd.DataFrame(pca_features, columns=pca_cols, index=df.index)
+
+    # Combine results
+    df_out = pd.concat([df[['scid', 'change']], df_pca], axis=1)
+
+    # Optionally print explained variance
+    explained = pca.explained_variance_ratio_.sum()
+    print(f"PCA completed: retained {pca_features.shape[1]} components explaining {explained:.2%} of variance")
+    print(df_out.head())
+
+    return df_out
 
 def prepare_data(side_channels,year_1,year_2):
 
@@ -26,12 +60,12 @@ def prepare_data(side_channels,year_1,year_2):
 
     df_tiles = load_db_data(f"SELECT tid,width,min_flow_threshold,flow_direction,distance_from_inlet,distance_to_bank FROM tiles WHERE scid IN ({side_channels});",
                             index_col='tid')
-    transform_circular_flow(df_tiles)
+    #transform_circular_flow(df_tiles)
 
-    df_side_channels = load_db_data(f"SELECT scid,area,perimeter,groynevak,channel_connections,tidal,bank,channel_length FROM side_channels WHERE scid IN ({side_channels});",
+    df_side_channels = load_db_data(f"SELECT scid,area,perimeter,groynevak,channel_length,relative_channel_length FROM side_channels WHERE scid IN ({side_channels});",
                             index_col='scid')
 
-    df_observations = load_db_data(f"SELECT scid, vegetation_percentage FROM observations WHERE scid IN ({side_channels}) AND year={year_1};",
+    df_observations = load_db_data(f"SELECT scid,vegetation_percentage FROM observations WHERE scid IN ({side_channels}) AND year={year_1};",
                             index_col='scid')
 
     # load the water_level data
@@ -47,20 +81,43 @@ def prepare_data(side_channels,year_1,year_2):
     df["depth"] = df["water_level"] / 100 - df["bed_level_x"]
     df.index = df_change.index
 
+    df.drop(columns=['water_level','bed_level_x','bed_level_y'], inplace=True)
+
     print(df.head())
 
     return df
 
-def train_neural_network(df,features,size=2000):
+def forward_insertion(df,features,size=2000,amount=3):
+    features_to_keep = []
+    n = 0
+    while n < amount:
+        print(f"feature {n+1}")
+        min_loss = 1000
+        feature_to_keep = ""
+        for feature in features:
+            print(feature)
+            loss = train_neural_network(df,features_to_keep + [feature],size,test=True)
+            if loss < min_loss:
+                min_loss = loss
+                feature_to_keep = feature
+        print(f"added: {feature_to_keep} - loss: {min_loss}")
+        features_to_keep.append(feature_to_keep)
+        features.remove(feature_to_keep)
+        n += 1
+
+    print(features_to_keep)
+    return features_to_keep
+
+def train_neural_network(df,features,size=2000,test=False):
 
     y = df['change'].values.reshape(-1,1)
-    y_scaler = RobustScaler()
+    y_scaler = StandardScaler()
     y_scaled = y_scaler.fit_transform(y)
     df['change_norm'] = y_scaled
 
     df_samp = (
         df.groupby("scid", group_keys=False)
-          .apply(lambda x: x.sample(n=min(len(x), size), random_state=23))
+          .apply(lambda x: x.sample(n=min(len(x), size), random_state=23),include_groups=False)
     )
 
     features_change = features + ["change_norm"]
@@ -68,33 +125,42 @@ def train_neural_network(df,features,size=2000):
     df_sampled.dropna(inplace=True)
 
     X = df_sampled[features].values
-    print("Look here")
-    print(df_sampled.head())
     y = df_sampled['change_norm'].values
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=9)
 
-    scaler = RobustScaler()
+    scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
 
     model = keras.Sequential([
         layers.Input(shape=(X_train.shape[1],)),
+        layers.Dense(128, activation='relu'),
         layers.Dense(64, activation='relu'),
-        layers.Dense(32, activation='tanh'),
+        layers.Dense(32, activation='relu'),
         layers.Dense(16, activation='relu'),
-        layers.Dense(8, activation='tanh'),
+        layers.Dense(8, activation='relu'),
         layers.Dense(1)
     ])
 
-    model.compile(optimizer='adam',
+    model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.0005),
                   loss='mse',
                   metrics=['mae', keras.metrics.R2Score()])
 
-    model.fit(X_train, y_train, epochs=20, batch_size=4, validation_data=(X_test, y_test))
+    if test:
+        e = 5
+        v = 0
+    else:
+        e = 20
+        v = "auto"
+
+    model.fit(X_train, y_train, epochs=e, batch_size=4, validation_data=(X_test, y_test),verbose=v)
 
     loss, mae, r2 = model.evaluate(X_test, y_test)
     print(f"Test results — Loss: {loss:.3f}, MAE: {mae:.3f}, R²: {r2:.3f}")
+
+    if test == True:
+        return loss
 
     X_all = df[features].values
     X_all_scaled = scaler.fit_transform(X_all)
@@ -102,6 +168,7 @@ def train_neural_network(df,features,size=2000):
     df['predicted_target_norm'] = y_pred_norm
     y_pred = y_scaler.inverse_transform(y_pred_norm)
     df['predicted_target'] = y_pred
+    df['error'] = df['change'] - df['predicted_target']
     print(df.head())
 
     df.to_csv("Output/result.csv")
@@ -134,14 +201,14 @@ def html_visualizer(df,side_channels):
             columns=[gdf.index, column_name],
             key_on="feature.id",
             fill_color=color_map,
-            fill_opacity=0.7,
-            line_opacity=0.2,
+            fill_opacity=1,
+            line_opacity=0,
             legend_name=layer_name,
         ).add_to(m)
 
     # Add layers for change, predicted, and difference
     add_layer("change", "YlGnBu", "Observed Change")
-    add_layer("predicted_target", "YlOrRd", "Predicted Change")
+    add_layer("predicted_target", "YlGnBu", "Predicted Change")
     add_layer("difference", "PuOr", "Prediction Error")
 
     # Add layer control and save to HTML
