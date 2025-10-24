@@ -6,6 +6,9 @@ from sqlalchemy import create_engine
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
 from itertools import combinations
 import seaborn as sns
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+from statsmodels.tools.tools import add_constant
+
 
 DB_CONNECTION_URL = "postgresql://postgres.miiedebavuhxxbzpndeq:SYbFFBRcyttS3XQy@aws-1-eu-west-3.pooler.supabase.com:5432/postgres"
 
@@ -200,6 +203,7 @@ def transform_circular_aspect(df):
 
     return df
 
+
 def transform_circular_flow(df):
     """
     Transforms the circular 'aspect' column (in degrees) into two linear
@@ -317,12 +321,56 @@ def make_plots_for_tiles_in_one_channel(scid, features):
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 
+
+def calculate_collinearity_stats(scid, features):
+    """
+    Calculates Variance Inflation Factor (VIF) and Tolerance
+    for a given set of predictor variables in a DataFrame.
+    """
+    df_diff = calculate_difference(scid=scid)
+
+    # ----------------- Load Data -----------------
+    df = load_db_data(
+        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+        index_col='tid',
+        params={"scid": scid}
+    )
+    # df = load_db_data("SELECT * FROM side_channels;")
+    df['change'] = df_diff['change']
+
+    df = transform_circular_aspect(df)
+
+    # 1. Create a new DataFrame 'X' containing only predictors
+    X = df[features].dropna()
+
+    # 2. Add a constant (intercept) term
+    X_with_const = add_constant(X)
+
+    # 3. Create a DataFrame to store the VIF results
+    vif_data = pd.DataFrame()
+    vif_data["Feature"] = X_with_const.columns
+
+    # 4. Calculate VIF for each feature
+    vif_data["VIF"] = [variance_inflation_factor(X_with_const.values, i)
+                       for i in range(X_with_const.shape[1])]
+
+    # 5. Calculate Tolerance (1 / VIF)
+    vif_data["Tolerance"] = 1 / vif_data["VIF"].replace(0, float('inf'))
+
+    # 6. Filter out the 'const' row before returning
+    vif_data = vif_data[vif_data.Feature != 'const'].reset_index(drop=True)
+
+    return vif_data
+
 def main():
     # Define the features to analyze
     # features = ['area', 'perimeter', 'channel_length'] # global features
     features =  ['bed_level', 'slope', 'roughness', 'aspect_x', 'aspect_y'] # local features
 
-    make_plots_for_tiles_in_one_channel(5, features=features)
+    vif_data = calculate_collinearity_stats(5, features)
+    print(vif_data)
+
+    # make_plots_for_tiles_in_one_channel(5, features=features)
 
     # for feature in features:
     #     make_scatterplot_for_each_channel(feature)
