@@ -362,13 +362,48 @@ def calculate_collinearity_stats(scid, features):
 
     return vif_data
 
+
+def calculate_correlation_merit(scid, features, target_column='change'):
+    """
+    Calculates the Merit of features based on their Pearson
+    correlation (absolute value) with the target variable
+    """
+    df_diff = calculate_difference(scid=scid)
+    df = load_db_data(
+        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
+        index_col='tid',
+        params={"scid": scid}
+    )
+    df['change'] = df_diff['change']
+    df = transform_circular_aspect(df)
+
+    cols_to_correlate = features + [target_column]
+    df_clean = df[cols_to_correlate].dropna()
+
+    # Calculate the Pearson correlation matrix
+    correlation_matrix = df_clean.corr(method='pearson')
+
+    #Extract the correlation values between predictors and the target
+    merit_series = correlation_matrix[target_column].drop(target_column)
+
+    # Create the final results DataFrame
+    cae_results = pd.DataFrame({
+        'Feature': merit_series.index,
+        'Merit': merit_series.abs().values
+    })
+
+    return cae_results
+
 def main():
     # Define the features to analyze
     # features = ['area', 'perimeter', 'channel_length'] # global features
     features =  ['bed_level', 'slope', 'roughness', 'aspect_x', 'aspect_y'] # local features
 
-    vif_data = calculate_collinearity_stats(5, features)
-    print(vif_data)
+    mertis_data = calculate_correlation_merit(5, features)
+    print(mertis_data)
+
+    # vif_data = calculate_collinearity_stats(5, features)
+    # print(vif_data)
 
     # make_plots_for_tiles_in_one_channel(5, features=features)
 
