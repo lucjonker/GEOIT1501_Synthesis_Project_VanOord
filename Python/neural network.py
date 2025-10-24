@@ -1,4 +1,4 @@
-from main import load_db_data, transform_circular_aspect, transform_circular_flow
+from main import load_db_data, transform_circular_feature
 import pandas as pd
 import geopandas as gpd
 import keras
@@ -53,7 +53,7 @@ def prepare_data(side_channels,year_1,year_2):
     # load all the database tables into pandas
     df_year_1 = load_db_data(f"SELECT tid,bed_level,slope,aspect,roughness,scid FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_1};",
                            index_col='tid')
-    transform_circular_aspect(df_year_1)
+    transform_circular_feature(df_year_1, 'aspect')
 
     df_year_2 = load_db_data(f"SELECT tid,bed_level FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_2};",
                            index_col='tid')

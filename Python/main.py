@@ -182,46 +182,27 @@ def get_usable_scids(year1, year2):
     return usable_scids
 
 
-def transform_circular_aspect(df):
+def transform_circular_feature(df, feature_name):
     """
-    Transforms the circular 'aspect' column (in degrees) into two linear
-    Cartesian components ('aspect_x' and 'aspect_y') using sine and cosine.
-    The original 'aspect' column is dropped from the DataFrame.
+    Transforms a circular feature (in degrees) into two linear
+    Cartesian components (X and Y) using sine and cosine.
+    The original circular column is dropped.
     """
-    if 'aspect' not in df.columns:
-        return df
 
-    # Convert degrees to radians (numpy trigonometric functions require radians)
-    df['aspect_rad'] = np.deg2rad(df['aspect'])
+    # Define new column names
+    rad_col = f'{feature_name}_rad'
+    x_col = f'{feature_name}_x'
+    y_col = f'{feature_name}_y'
+
+    # Convert degrees to radians
+    df[rad_col] = np.deg2rad(df[feature_name])
 
     # Calculate the sine and cosine components
-    df['aspect_x'] = np.cos(df['aspect_rad']) # cos(theta)
-    df['aspect_y'] = np.sin(df['aspect_rad']) # sin(theta)
+    df[x_col] = np.cos(df[rad_col]) # cos(theta)
+    df[y_col] = np.sin(df[rad_col]) # sin(theta)
 
     # Drop the original circular column and the temporary radians column
-    df.drop(columns=['aspect', 'aspect_rad'], inplace=True)
-
-    return df
-
-
-def transform_circular_flow(df):
-    """
-    Transforms the circular 'aspect' column (in degrees) into two linear
-    Cartesian components ('aspect_x' and 'aspect_y') using sine and cosine.
-    The original 'aspect' column is dropped from the DataFrame.
-    """
-    if 'flow_direction' not in df.columns:
-        return df
-
-    # Convert degrees to radians (numpy trigonometric functions require radians)
-    df['flow_rad'] = np.deg2rad(df['flow_direction'])
-
-    # Calculate the sine and cosine components
-    df['flow_x'] = np.cos(df['flow_rad']) # cos(theta)
-    df['flow_y'] = np.sin(df['flow_rad']) # sin(theta)
-
-    # Drop the original circular column and the temporary radians column
-    df.drop(columns=['flow_direction', 'flow_rad'], inplace=True)
+    df.drop(columns=[feature_name, rad_col], inplace=True)
 
     return df
 
@@ -231,15 +212,7 @@ def make_scatterplot_for_each_channel(feature):
     for scid in usable_scids:
         print(f"Processing SCID: {scid}")
 
-        df_diff = calculate_difference(scid=scid)
-
-        # ----------------- Load Data -----------------
-        df = load_db_data(
-            "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
-            index_col= 'tid',
-            params={"scid": scid}
-            )
-        df['change'] = df_diff['change']
+        df = load_and_process_channel_data(scid=scid, year=2024)
 
         plot_scatter(df, feature, 'change', scid)
 
@@ -269,30 +242,10 @@ def correlation_matrix(df, features):
     plt.show()
 
 
-def make_plots_for_tiles_in_one_channel(scid, features):
-    df_diff = calculate_difference(scid=scid)
-
-    # ----------------- Load Data -----------------
-    df = load_db_data(
-        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
-        index_col = 'tid',
-        params={"scid": scid}
-        )
-    # df = load_db_data("SELECT * FROM side_channels;")
-    df['change'] = df_diff['change']
+def make_plots_for_tiles_in_one_channel(df, features, scid):
 
     #----------------- Display correlation matrix -----------------
-    correlation_matrix(df,['bed_level', 'slope', 'roughness', 'aspect'])
-
-    #----------------- Cosine-sine encode aspect feature -----------------
-    print(f"Before transforming circular aspect:")
-    print(df.head(10))
-    df = transform_circular_aspect(df)
-    print(f"After transforming circular aspect:")
-    print(df.head(10))
-
-    # export df to excel
-    # df.to_excel(f"Output/scid_{scid}_data.xlsx")
+    correlation_matrix(df,features)
 
     #----------------- Calculate Statistics -----------------
     statistics_result = calculate_descriptive_stats(df)
@@ -307,38 +260,43 @@ def make_plots_for_tiles_in_one_channel(scid, features):
 
     # ----------------- Plotting -----------------
 
-    # # Scatterplot
-    # for i, j in combinations(features,2):
-    #     plot_scatter(df, i, j, scid)
-    #     # plot_scatter(df_norm, i, j, scid)
-    #
-    # # Histogram
-    # for feature in features:
-    #     plot_histogram(df, feature)
-    #     # plot_histogram(df_norm, feature)
+    # Scatterplot
+    for i, j in combinations(features,2):
+        plot_scatter(df, i, j, scid)
+        # plot_scatter(df_norm, i, j)
 
-# Set pandas options to display all rows and columns (in its entirety)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.max_columns', None)
+    # Histogram
+    for feature in features:
+        plot_histogram(df, feature)
+        # plot_histogram(df_norm, feature)
 
 
-def calculate_collinearity_stats(scid, features):
+def load_and_process_channel_data(scid, year=2024, circular_features=['aspect']):
+    """
+    LOADS, MERGES, and TRANSFORMS all necessary data for a given scid.
+    """
+    df = load_db_data(
+        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=%(year)s;",
+        index_col='tid',
+        params={"scid": scid, "year": year}
+    )
+
+    # Calculate the change (target variable)
+    df_diff = calculate_difference(scid=scid)
+    df = df.join(df_diff, how='inner') # Join on 'tid' index
+
+    # Apply circular transformations
+    for feature in circular_features:
+        df = transform_circular_feature(df, feature)
+
+    return df
+
+
+def calculate_collinearity_stats(df, features):
     """
     Calculates Variance Inflation Factor (VIF) and Tolerance
     for a given set of predictor variables in a DataFrame.
     """
-    df_diff = calculate_difference(scid=scid)
-
-    # ----------------- Load Data -----------------
-    df = load_db_data(
-        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
-        index_col='tid',
-        params={"scid": scid}
-    )
-    # df = load_db_data("SELECT * FROM side_channels;")
-    df['change'] = df_diff['change']
-
-    df = transform_circular_aspect(df)
 
     # 1. Create a new DataFrame 'X' containing only predictors
     X = df[features].dropna()
@@ -363,20 +321,11 @@ def calculate_collinearity_stats(scid, features):
     return vif_data
 
 
-def calculate_correlation_merit(scid, features, target_column='change'):
+def calculate_correlation_merit(df, features, target_column='change'):
     """
     Calculates the Merit of features based on their Pearson
     correlation (absolute value) with the target variable
     """
-    df_diff = calculate_difference(scid=scid)
-    df = load_db_data(
-        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=2024;",
-        index_col='tid',
-        params={"scid": scid}
-    )
-    df['change'] = df_diff['change']
-    df = transform_circular_aspect(df)
-
     cols_to_correlate = features + [target_column]
     df_clean = df[cols_to_correlate].dropna()
 
@@ -394,21 +343,27 @@ def calculate_correlation_merit(scid, features, target_column='change'):
 
     return cae_results
 
+
 def main():
     # Define the features to analyze
     # features = ['area', 'perimeter', 'channel_length'] # global features
     features =  ['bed_level', 'slope', 'roughness', 'aspect_x', 'aspect_y'] # local features
 
-    mertis_data = calculate_correlation_merit(5, features)
-    print(mertis_data)
+    df = load_and_process_channel_data(scid=5, year=2025)
 
-    # vif_data = calculate_collinearity_stats(5, features)
-    # print(vif_data)
+    merit_data = calculate_correlation_merit(df, features)
+    print(merit_data)
 
-    # make_plots_for_tiles_in_one_channel(5, features=features)
+    vif_data = calculate_collinearity_stats(df, features)
+    print(vif_data)
+
+    make_plots_for_tiles_in_one_channel(df, features, 5)
 
     # for feature in features:
     #     make_scatterplot_for_each_channel(feature)
 
 if __name__ == '__main__':
+    # Set pandas options to display all rows and columns
+    pd.set_option('display.max_rows', None)
+    pd.set_option('display.max_columns', None)
     main()
