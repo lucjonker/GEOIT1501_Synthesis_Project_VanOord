@@ -1,3 +1,5 @@
+from operator import index
+
 from main import load_db_data, transform_circular_feature
 import pandas as pd
 import geopandas as gpd
@@ -7,15 +9,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, MinMaxScaler, RobustScaler
 from sklearn.decomposition import PCA
 from sqlalchemy import create_engine
+from matplotlib import pyplot as plt
+import numpy as np
 import folium
 
 def main():
-    side_channels = "3,7,8,9,10,11,13,17,19,20,28,34,36,41,43,44,49,37"
+    side_channels = "5,48,28,24"
+    pca_n = 9
     df = prepare_data(side_channels,2024,2025)
-    features = forward_insertion(df, ['depth','slope', 'width','roughness','area','channel_length','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','relative_channel_length','vegetation_percentage'], size=200, amount=6)
-    train_neural_network(df, features, size=500)
-    # df = pca_data(df,n=6,exclude=['flow_direction','distance_from_inlet'])
-    # train_neural_network(df,['pca_1','pca_2','pca_3','pca_4','pca_5'],size=500)
+    # features = forward_insertion(df, ['depth','slope','width','roughness','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','flow_direction_x','flow_direction_y','distance_from_inlet'], size=200, amount=6)
+    # train_neural_network(df, ['aspect_y', 'min_flow_threshold', 'distance_from_inlet', 'width', 'depth', 'distance_to_bank'], size=5000)
+    df = pca_data(df,n=pca_n)
+    train_neural_network(df,[f"pca_{i+1}" for i in range(pca_n)],size=2000)
     # html_visualizer(df, side_channels)
 
 def pca_data(df,exclude=None,n=4):
@@ -60,9 +65,9 @@ def prepare_data(side_channels,year_1,year_2):
 
     df_tiles = load_db_data(f"SELECT tid,width,min_flow_threshold,flow_direction,distance_from_inlet,distance_to_bank FROM tiles WHERE scid IN ({side_channels});",
                             index_col='tid')
-    #transform_circular_flow(df_tiles)
+    transform_circular_feature(df_tiles, 'flow_direction')
 
-    df_side_channels = load_db_data(f"SELECT scid,area,perimeter,groynevak,channel_length,relative_channel_length FROM side_channels WHERE scid IN ({side_channels});",
+    df_side_channels = load_db_data(f"SELECT scid,area,perimeter,channel_length,relative_channel_length FROM side_channels WHERE scid IN ({side_channels});",
                             index_col='scid')
 
     df_observations = load_db_data(f"SELECT scid,vegetation_percentage FROM observations WHERE scid IN ({side_channels}) AND year={year_1};",
@@ -70,6 +75,10 @@ def prepare_data(side_channels,year_1,year_2):
 
     # load the water_level data
     df_water_level = pd.read_csv("output/water_level.csv")
+
+    # load the more_morph data
+    df_more_morph = pd.read_csv("input/more_morphology.txt", sep="\t", index_col='tid')
+    df_more_morph.drop(columns=['wkt_geom'], inplace=True)
 
     # calculate the bed_level change
     df_change = pd.merge(df_tiles,pd.merge(df_year_1, df_year_2, on='tid', how='inner'),on='tid', how='inner')
@@ -115,6 +124,7 @@ def train_neural_network(df,features,size=2000,test=False):
     y_scaled = y_scaler.fit_transform(y)
     df['change_norm'] = y_scaled
 
+
     df_samp = (
         df.groupby("scid", group_keys=False)
           .apply(lambda x: x.sample(n=min(len(x), size), random_state=23),include_groups=False)
@@ -129,21 +139,21 @@ def train_neural_network(df,features,size=2000,test=False):
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=9)
 
-    scaler = StandardScaler()
-    X_train = scaler.fit_transform(X_train)
-    X_test = scaler.transform(X_test)
+    # scaler = StandardScaler()
+    # X_train = scaler.fit_transform(X_train)
+    # X_test = scaler.transform(X_test)
 
     model = keras.Sequential([
         layers.Input(shape=(X_train.shape[1],)),
-        layers.Dense(128, activation='relu'),
+        layers.Dense(256, activation='relu'),
+        layers.Dense(256, activation='relu'),
         layers.Dense(64, activation='relu'),
-        layers.Dense(32, activation='relu'),
-        layers.Dense(16, activation='relu'),
-        layers.Dense(8, activation='relu'),
         layers.Dense(1)
     ])
 
-    model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.0005),
+    model.add(layers.Dropout(0.1))
+
+    model.compile(optimizer=keras.optimizers.Adam(learning_rate=0.0001),
                   loss='mse',
                   metrics=['mae', keras.metrics.R2Score()])
 
@@ -151,25 +161,32 @@ def train_neural_network(df,features,size=2000,test=False):
         e = 5
         v = 0
     else:
-        e = 20
+        e = 50
         v = "auto"
 
-    model.fit(X_train, y_train, epochs=e, batch_size=4, validation_data=(X_test, y_test),verbose=v)
+    history = model.fit(X_train, y_train, epochs=e, batch_size=4, validation_data=(X_test, y_test),verbose=v)
 
     loss, mae, r2 = model.evaluate(X_test, y_test)
     print(f"Test results — Loss: {loss:.3f}, MAE: {mae:.3f}, R²: {r2:.3f}")
+    if not test:
+        plt.plot(history.history['loss'])
+        plt.plot(history.history['val_loss'])
+        plt.title('Model loss (MSE)')
+        plt.ylabel('Loss')
+        plt.xlabel('Epoch')
+        plt.legend(['Train', 'Test'], loc='upper left')
+        plt.show()
 
     if test == True:
         return loss
 
     X_all = df[features].values
-    X_all_scaled = scaler.fit_transform(X_all)
-    y_pred_norm = model.predict(X_all_scaled)
+    # X_all_scaled = scaler.fit_transform(X_all)
+    y_pred_norm = model.predict(X_all)
     df['predicted_target_norm'] = y_pred_norm
     y_pred = y_scaler.inverse_transform(y_pred_norm)
     df['predicted_target'] = y_pred
-    df['error'] = df['change'] - df['predicted_target']
-    print(df.head())
+    df['error'] = df['predicted_target'] - df['change']
 
     df.to_csv("Output/result.csv")
 
