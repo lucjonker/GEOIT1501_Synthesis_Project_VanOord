@@ -14,13 +14,14 @@ import numpy as np
 import folium
 
 def main():
-    side_channels = "5,48,28,24"
-    pca_n = 9
+    side_channels = "11, 17, 36, 40, 43, 49"
+    pca_n = 6
     df = prepare_data(side_channels,2024,2025)
     # features = forward_insertion(df, ['depth','slope','width','roughness','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','flow_direction_x','flow_direction_y','distance_from_inlet'], size=200, amount=6)
-    # train_neural_network(df, ['aspect_y', 'min_flow_threshold', 'distance_from_inlet', 'width', 'depth', 'distance_to_bank'], size=5000)
+    # train_neural_network(df, ['depth','slope','width','roughness','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','flow_direction_x','flow_direction_y','distance_from_inlet'], size=5000)
     df = pca_data(df,n=pca_n)
-    train_neural_network(df,[f"pca_{i+1}" for i in range(pca_n)],size=2000)
+    # train_neural_network(df,[f"pca_{i+1}" for i in range(pca_n)],size=2000)
+    multiple_runs(df, [f"pca_{i + 1}" for i in range(pca_n)], size=1000, runs=1)
     # html_visualizer(df, side_channels)
 
 def pca_data(df,exclude=None,n=4):
@@ -65,7 +66,10 @@ def prepare_data(side_channels,year_1,year_2):
 
     df_tiles = load_db_data(f"SELECT tid,width,min_flow_threshold,flow_direction,distance_from_inlet,distance_to_bank FROM tiles WHERE scid IN ({side_channels});",
                             index_col='tid')
-    transform_circular_feature(df_tiles, 'flow_direction')
+    try:
+        transform_circular_feature(df_tiles, 'flow_direction')
+    except:
+        df_tiles.drop(columns=['flow_direction','distance_from_inlet'], inplace=True)
 
     df_side_channels = load_db_data(f"SELECT scid,area,perimeter,channel_length,relative_channel_length FROM side_channels WHERE scid IN ({side_channels});",
                             index_col='scid')
@@ -105,7 +109,7 @@ def forward_insertion(df,features,size=2000,amount=3):
         feature_to_keep = ""
         for feature in features:
             print(feature)
-            loss = train_neural_network(df,features_to_keep + [feature],size,test=True)
+            loss = train_neural_network(df,features_to_keep + [feature],size,test=True,graph=False)
             if loss < min_loss:
                 min_loss = loss
                 feature_to_keep = feature
@@ -117,7 +121,7 @@ def forward_insertion(df,features,size=2000,amount=3):
     print(features_to_keep)
     return features_to_keep
 
-def train_neural_network(df,features,size=2000,test=False):
+def train_neural_network(df,features,size=2000,test=False,graph=True,hist=False):
 
     y = df['change'].values.reshape(-1,1)
     y_scaler = StandardScaler()
@@ -160,6 +164,9 @@ def train_neural_network(df,features,size=2000,test=False):
     if test:
         e = 5
         v = 0
+    elif hist:
+        e = 50
+        v = 0
     else:
         e = 50
         v = "auto"
@@ -168,7 +175,7 @@ def train_neural_network(df,features,size=2000,test=False):
 
     loss, mae, r2 = model.evaluate(X_test, y_test)
     print(f"Test results — Loss: {loss:.3f}, MAE: {mae:.3f}, R²: {r2:.3f}")
-    if not test:
+    if graph:
         plt.plot(history.history['loss'])
         plt.plot(history.history['val_loss'])
         plt.title('Model loss (MSE)')
@@ -178,7 +185,10 @@ def train_neural_network(df,features,size=2000,test=False):
         plt.show()
 
     if test == True:
-        return loss
+        if hist:
+            return history, loss
+        else:
+            return loss
 
     X_all = df[features].values
     # X_all_scaled = scaler.fit_transform(X_all)
@@ -189,6 +199,55 @@ def train_neural_network(df,features,size=2000,test=False):
     df['error'] = df['predicted_target'] - df['change']
 
     df.to_csv("Output/result.csv")
+    if hist:
+        return history, df
+    else:
+        return df
+
+def multiple_runs(df,features,size=2000,runs=5):
+    n = 0
+    train_loss = None
+    val_loss = None
+    while n < runs:
+        history, df_out = train_neural_network(df.copy(),features,size=size,graph=False,hist=True)
+        if n == 0:
+            df['predicted_target_norm'] = df_out['predicted_target_norm'] / runs
+            df['predicted_target'] = df_out['predicted_target'] / runs
+            df['change_norm'] = df_out['change_norm']
+            train_loss = np.array(history.history['loss'])
+            val_loss = np.array(history.history['val_loss'])
+        else:
+            df['predicted_target_norm'] += df_out['predicted_target_norm'] / runs
+            df['predicted_target'] += df_out['predicted_target'] / runs
+            train_loss = train_loss + np.array(history.history['loss'])
+            val_loss = val_loss + np.array(history.history['val_loss'])
+        n += 1
+
+    df['error'] = df['predicted_target_norm'] - df['change_norm']
+    df['sq_error'] = df['error'] ** 2
+    MSE = df['sq_error'].mean()
+    df.drop(columns=['sq_error'], inplace=True)
+    print("MSE: ", MSE)
+    print("Train loss: ", train_loss[-1] / runs)
+    print("Test loss: ", val_loss[-1] / runs)
+
+    df['error'] = df['predicted_target'] - df['change']
+    total_tiles = df['error'].count()
+    print("0 - 1 cm: ", round(df.query("abs(error) < 0.01")['error'].count() / total_tiles * 100, 2), "%")
+    print("1 - 2 cm: ", round(df.query("abs(error) < 0.02 & abs(error) >= 0.01")['error'].count() / total_tiles * 100, 2), "%")
+    print("2 - 5 cm: ", round(df.query("abs(error) < 0.05 & abs(error) >= 0.02")['error'].count() / total_tiles * 100, 2), "%")
+    print(" 5 +  cm: ", round(df.query("abs(error) >= 0.05")['error'].count() / total_tiles * 100, 2), "%")
+    print("right   : ", round(df.query("(change > 0 & predicted_target > 0) | (change < 0 & predicted_target < 0)")['error'].count() / total_tiles * 100, 2), "%")
+
+    df.to_csv("Output/result.csv")
+
+    plt.plot(train_loss / runs)
+    plt.plot(val_loss / runs)
+    plt.title('Model loss (MSE)')
+    plt.ylabel('Loss')
+    plt.xlabel('Epoch')
+    plt.legend(['Train', 'Test'], loc='upper left')
+    plt.show()
 
     return df
 
