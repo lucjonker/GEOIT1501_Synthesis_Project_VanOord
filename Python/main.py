@@ -123,6 +123,8 @@ def plot_scatter(df, x, y, scid):
 def plot_histogram(df, x):
     fig_hist, ax_hist = plt.subplots(1, 1, figsize=(10, 6))
 
+    num_points = df.shape[0]
+
     df[f"{x}"].plot(
         kind='hist',
         ax=ax_hist,
@@ -130,7 +132,7 @@ def plot_histogram(df, x):
         edgecolor='black',
         alpha=0.7,
         color='darkblue',
-        title=f'Distribution of {x}'
+        title=f'Distribution of {x} (N={num_points})'
     )
 
     # Add labels for the histogram
@@ -198,8 +200,8 @@ def transform_circular_feature(df, feature_name):
     df[rad_col] = np.deg2rad(df[feature_name])
 
     # Calculate the sine and cosine components
-    df[x_col] = np.cos(df[rad_col]) # cos(theta)
-    df[y_col] = np.sin(df[rad_col]) # sin(theta)
+    df[x_col] = np.sin(df[rad_col]) # cos(theta)
+    df[y_col] = np.cos(df[rad_col]) # sin(theta)
 
     # Drop the original circular column and the temporary radians column
     df.drop(columns=[feature_name, rad_col], inplace=True)
@@ -231,7 +233,9 @@ def correlation_matrix(df, features):
         cmap='coolwarm',
         linewidths=.5,
         linecolor='white',
-        ax=ax_heatmap
+        ax=ax_heatmap,
+        vmin=-1,
+        vmax=1
     )
 
     ax_heatmap.set_title("Correlation Matrix", fontsize=14)
@@ -271,15 +275,23 @@ def make_plots_for_tiles_in_one_channel(df, features, scid):
         # plot_histogram(df_norm, feature)
 
 
-def load_and_process_channel_data(scid, year=2024, circular_features=['aspect']):
+def load_and_process_channel_data(scid, year=2024, circular_features=['aspect', 'flow_direction']):
     """
     LOADS, MERGES, and TRANSFORMS all necessary data for a given scid.
     """
-    df = load_db_data(
-        "SELECT * FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=%(year)s;",
+    df_observations = load_db_data(
+        "SELECT tid,bed_level,slope,aspect,roughness,scid FROM tile_observations JOIN observations USING (oid) WHERE scid=%(scid)s AND year=%(year)s;",
         index_col='tid',
         params={"scid": scid, "year": year}
     )
+
+    df_tiles = load_db_data(
+        "SELECT tid,width,min_flow_threshold,flow_direction,distance_from_inlet,distance_to_bank FROM tiles WHERE scid=%(scid)s;",
+        index_col='tid',
+        params={"scid": scid}
+    )
+
+    df = pd.merge(df_tiles, df_observations, left_index=True, right_index=True, how='inner')
 
     # Calculate the change (target variable)
     df_diff = calculate_difference(scid=scid)
@@ -347,7 +359,7 @@ def calculate_correlation_merit(df, features, target_column='change'):
 def main():
     # Define the features to analyze
     # features = ['area', 'perimeter', 'channel_length'] # global features
-    features =  ['bed_level', 'slope', 'roughness', 'aspect_x', 'aspect_y'] # local features
+    features =  ['bed_level', 'slope', 'roughness', 'aspect_x', 'aspect_y', 'width', 'min_flow_threshold', 'flow_direction_x', 'flow_direction_y','distance_from_inlet','distance_to_bank'] # local features
 
     df = load_and_process_channel_data(scid=5, year=2025)
 
@@ -357,7 +369,7 @@ def main():
     vif_data = calculate_collinearity_stats(df, features)
     print(vif_data)
 
-    make_plots_for_tiles_in_one_channel(df, features, 5)
+    make_plots_for_tiles_in_one_channel(df, features, 1)
 
     # for feature in features:
     #     make_scatterplot_for_each_channel(feature)
