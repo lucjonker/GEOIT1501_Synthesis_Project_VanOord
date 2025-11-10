@@ -1,5 +1,3 @@
-from operator import index
-
 from main import load_db_data, transform_circular_feature
 import pandas as pd
 import geopandas as gpd
@@ -15,46 +13,27 @@ import folium
 
 def main():
     side_channels = "11, 17, 36, 40, 43, 49"
-    pca_n = 6
     df = prepare_data(side_channels,2024,2025)
-    # features = forward_insertion(df, ['depth','slope','width','roughness','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','flow_direction_x','flow_direction_y','distance_from_inlet'], size=200, amount=6)
-    # train_neural_network(df, ['depth','slope','width','roughness','aspect_x','min_flow_threshold','aspect_y','distance_to_bank','flow_direction_x','flow_direction_y','distance_from_inlet'], size=5000)
-    df = pca_data(df,n=pca_n)
-    # train_neural_network(df,[f"pca_{i+1}" for i in range(pca_n)],size=2000)
-    multiple_runs(df, [f"pca_{i + 1}" for i in range(pca_n)], size=1000, runs=1)
-    # html_visualizer(df, side_channels)
-
-def pca_data(df,exclude=None,n=4):
-    # Separate features
-    if exclude is not None:
-        df.drop(columns=exclude,inplace=True)
-    df.dropna(inplace=True)
-    features = df.drop(columns=['scid', 'change'])
-
-
-    # Standardize features
-    scaler = StandardScaler()
-    scaled_features = scaler.fit_transform(features)
-
-    # Apply PCA
-    pca = PCA(n_components=n)
-    pca_features = pca.fit_transform(scaled_features)
-
-    # Create PCA DataFrame
-    pca_cols = [f"pca_{i+1}" for i in range(pca_features.shape[1])]
-    df_pca = pd.DataFrame(pca_features, columns=pca_cols, index=df.index)
-
-    # Combine results
-    df_out = pd.concat([df[['scid', 'change']], df_pca], axis=1)
-
-    # Optionally print explained variance
-    explained = pca.explained_variance_ratio_.sum()
-    print(f"PCA completed: retained {pca_features.shape[1]} components explaining {explained:.2%} of variance")
-    print(df_out.head())
-
-    return df_out
+    df = run_model(df,feature_reduction="pca",features_n=6,size=2000,runs=5)
+    html_visualizer(df, side_channels)
 
 def prepare_data(side_channels,year_1,year_2):
+    """
+    Prepares and consolidates all relevant data for the specified side channels and years.
+
+    Parameters
+    ----------
+    side_channels : str
+        Comma-separated list of side channel IDs to include.
+    year_1 : int
+        First observation year (used as baseline for change calculation).
+    year_2 : int
+        Second observation year (used to compute bed-level change).
+
+    Returns
+    -------
+    pandas.DataFrame
+    """
 
     # load all the database tables into pandas
     df_year_1 = load_db_data(f"SELECT tid,bed_level,slope,aspect,roughness,scid FROM tile_observations JOIN observations USING (oid) WHERE scid IN ({side_channels}) AND year={year_1};",
@@ -80,25 +59,92 @@ def prepare_data(side_channels,year_1,year_2):
     # load the water_level data
     df_water_level = pd.read_csv("output/water_level.csv")
 
-    # load the more_morph data
-    df_more_morph = pd.read_csv("input/more_morphology.txt", sep="\t", index_col='tid')
-    df_more_morph.drop(columns=['wkt_geom'], inplace=True)
-
     # calculate the bed_level change
     df_change = pd.merge(df_tiles,pd.merge(df_year_1, df_year_2, on='tid', how='inner'),on='tid', how='inner')
     df_change["change"] = df_change["bed_level_y"] - df_change["bed_level_x"]
 
+    # merge all data
     df_sc_all = pd.merge(df_observations,pd.merge(df_side_channels,df_water_level, on='scid', how='left'),on='scid', how='left')
-
     df = pd.merge(df_change, df_sc_all, on='scid', how='left', left_index = False)
     df["depth"] = df["water_level"] / 100 - df["bed_level_x"]
     df.index = df_change.index
 
+    # drop useless columns
     df.drop(columns=['water_level','bed_level_x','bed_level_y'], inplace=True)
 
-    print(df.head())
-
     return df
+
+def run_model(df, features=None, feature_reduction=None, features_n=6, size=2000, runs=1):
+    """
+    Runs a neural network model on the prepared dataset with optional feature reduction and multiple runs.
+
+    Parameters
+    ----------
+    df : pandas.DataFrame
+        Input dataset
+    features : list, optional
+        List of feature column names to use for training.
+    feature_reduction : str, optional
+        Method for feature reduction ('pca' or 'forward_insertion').
+    features_n : int, default=6
+        Number of features or PCA components to retain.
+    size : int, default=2000
+        Number of samples per side channel used for training.
+    runs : int, default=1
+        Number of independent training runs to average results.
+
+    Returns
+    -------
+    pandas.DataFrame
+        DataFrame with model predictions and errors for each tile.
+    """
+    if feature_reduction == "pca":
+        df = pca_data(df, n=features_n)
+        if runs > 1:
+            df_out = multiple_runs(df, [f"pca_{i + 1}" for i in range(features_n)], size=size, runs=runs)
+        else:
+            df_out = train_neural_network(df, [f"pca_{i + 1}" for i in range(features_n)], size=size)
+    elif feature_reduction == "forward_insertion":
+        insert = forward_insertion(df, features, size=200, amount=features_n)
+        if runs > 1:
+            df_out = multiple_runs(df, insert, size=size, runs=runs, scale=True)
+        else:
+            df_out = train_neural_network(df, insert, size=size, scale=True)
+    else:
+        if runs > 1:
+            df_out = multiple_runs(df, features, size=size, runs=runs, scale=True)
+        else:
+            df_out = train_neural_network(df, features, size=size, scale=True)
+    return df_out
+
+def pca_data(df,exclude=None,n=4):
+    # Separate features
+    if exclude is not None:
+        df.drop(columns=exclude,inplace=True)
+    df.dropna(inplace=True)
+    features = df.drop(columns=['scid', 'change'])
+
+
+    # Standardize features
+    scaler = StandardScaler()
+    scaled_features = scaler.fit_transform(features)
+
+    # Apply PCA
+    pca = PCA(n_components=n)
+    pca_features = pca.fit_transform(scaled_features)
+
+    # Create PCA DataFrame
+    pca_cols = [f"pca_{i+1}" for i in range(pca_features.shape[1])]
+    df_pca = pd.DataFrame(pca_features, columns=pca_cols, index=df.index)
+
+    # Combine results
+    df_out = pd.concat([df[['scid', 'change']], df_pca], axis=1)
+
+    # Print explained variance
+    explained = pca.explained_variance_ratio_.sum()
+    print(f"PCA completed: retained {pca_features.shape[1]} components explaining {explained:.2%} of variance")
+
+    return df_out
 
 def forward_insertion(df,features,size=2000,amount=3):
     features_to_keep = []
@@ -121,7 +167,7 @@ def forward_insertion(df,features,size=2000,amount=3):
     print(features_to_keep)
     return features_to_keep
 
-def train_neural_network(df,features,size=2000,test=False,graph=True,hist=False):
+def train_neural_network(df,features,size=2000,test=False,graph=True,hist=False,scale=False):
 
     y = df['change'].values.reshape(-1,1)
     y_scaler = StandardScaler()
@@ -143,9 +189,10 @@ def train_neural_network(df,features,size=2000,test=False,graph=True,hist=False)
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=9)
 
-    # scaler = StandardScaler()
-    # X_train = scaler.fit_transform(X_train)
-    # X_test = scaler.transform(X_test)
+    if scale:
+        scaler = StandardScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
 
     model = keras.Sequential([
         layers.Input(shape=(X_train.shape[1],)),
@@ -191,7 +238,8 @@ def train_neural_network(df,features,size=2000,test=False,graph=True,hist=False)
             return loss
 
     X_all = df[features].values
-    # X_all_scaled = scaler.fit_transform(X_all)
+    if scale:
+        X_all = scaler.fit_transform(X_all)
     y_pred_norm = model.predict(X_all)
     df['predicted_target_norm'] = y_pred_norm
     y_pred = y_scaler.inverse_transform(y_pred_norm)
@@ -204,12 +252,12 @@ def train_neural_network(df,features,size=2000,test=False,graph=True,hist=False)
     else:
         return df
 
-def multiple_runs(df,features,size=2000,runs=5):
+def multiple_runs(df,features,size=2000,runs=5,scale=False):
     n = 0
     train_loss = None
     val_loss = None
     while n < runs:
-        history, df_out = train_neural_network(df.copy(),features,size=size,graph=False,hist=True)
+        history, df_out = train_neural_network(df.copy(),features,size=size,graph=False,hist=True,scale=scale)
         if n == 0:
             df['predicted_target_norm'] = df_out['predicted_target_norm'] / runs
             df['predicted_target'] = df_out['predicted_target'] / runs
